@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Inter:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --blue: #1B3F6B;
-  --blue-light: #2B5499;
-  --blue-muted: #EEF3FA;
-  --accent: #E8B84B;
-  --bg: #F7F8FA;
-  --card: #FFFFFF;
-  --text: #0F1923;
-  --text-muted: #6B7280;
-  --border: #E5E9EF;
+  --blue: #1b3f6b;
+  --blue-light: #2b5499;
+  --blue-muted: #eef3fa;
+  --accent: #e8b84b;
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --text: #0f1923;
+  --text-muted: #6b7280;
+  --border: #e5e9ef;
   --radius: 16px;
 }
 
@@ -22,19 +22,22 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   line-height: 1.5;
   overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-  font-family: 'Unbounded', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Unbounded", sans-serif;
   line-height: 1.2;
 }
