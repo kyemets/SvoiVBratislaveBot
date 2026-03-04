@@ -1,7 +1,7 @@
 {
-  "/events/page": "app/events/page.js",
-  "/page": "app/page.js",
-  "/catalog/page": "app/catalog/page.js",
   "/listings/page": "app/listings/page.js",
-  "/catalog/[...slug]/page": "app/catalog/[...slug]/page.js"
+  "/page": "app/page.js",
+  "/events/page": "app/events/page.js",
+  "/catalog/[...slug]/page": "app/catalog/[...slug]/page.js",
+  "/catalog/page": "app/catalog/page.js"
 }

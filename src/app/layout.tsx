@@ -11,11 +11,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru">
       <body>
-        <main style={{ paddingBottom: '80px', minHeight: '100vh' }}>
-          {children}
-        </main>
-        <BottomNav />
-      </body>
+  <script dangerouslySetInnerHTML={{ __html: `
+    if (window.Telegram?.WebApp) {
+      window.Telegram.WebApp.expand();
+      window.Telegram.WebApp.disableClosingConfirmation();
+    }
+  `}} />
+  <main style={{ paddingBottom: '80px', minHeight: '100vh' }}>
+    {children}
+  </main>
+  <BottomNav />
+</body>
     </html>
   )
 }
