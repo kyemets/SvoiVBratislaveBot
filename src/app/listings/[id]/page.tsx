@@ -3,6 +3,9 @@ import Link from "next/link";
 import { LISTINGS } from "@/data/mock";
 import { LISTING_TYPE_LABELS } from "@/types";
 import { Card, Badge } from "@/components/ui";
+import { ViewCount } from "@/components/ui/ViewCount";
+import { AuthorAvatar } from "@/src/components/ui/AuthorAvatar";
+import { ShareButton } from "@/src/components/ui/ShareButton";
 
 interface Props {
   params: { id: string };
@@ -92,6 +95,20 @@ export default function ListingDetailPage({ params }: Props) {
               {listing.price}€
             </span>
           )}
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <ViewCount id={listing.id} />
+            <AuthorAvatar addedBy={listing.addedBy} />
+          </div>
+          <ShareButton title={listing.title} url={`/listings/${listing.id}`} />
         </div>
 
         <Card style={{ padding: "18px" }}>
