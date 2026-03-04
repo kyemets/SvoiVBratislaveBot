@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SPECIALISTS, LISTINGS, EVENTS, JOBS, HOUSING } from "@/data/mock";
 import { CATEGORY_LABELS, LISTING_TYPE_LABELS } from "@/types";
 import { Card, Badge } from "@/components/ui";
@@ -85,8 +85,15 @@ const ANIMATION_STYLES = `
   .anim-recent-1 { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 910ms; }
   .anim-recent-2 { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 970ms; }
 
+  /* ── Skip all entrance animations on repeat visits ── */
+  /* Any .anim-* class inside .animations-done is instantly visible */
+  .animations-done [class*="anim-"] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   /* ── Tap / press feedback ── */
-  /* Scale down on press, spring back slightly over 1 on release */
   .pressable {
     transition: transform 150ms var(--ease-spring);
     -webkit-tap-highlight-color: transparent;
@@ -108,6 +115,9 @@ const ANIMATION_STYLES = `
     transition: transform 200ms var(--ease-out), opacity 200ms var(--ease-out);
   }
 `;
+
+// Session key — animations play once per browser session (tab lifetime)
+const ANIM_SESSION_KEY = "home_anim_played";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -199,12 +209,14 @@ function AnimatedCounter({
   count,
   label,
   delay,
+  duration = 1100,
 }: {
   count: number;
   label: string;
   delay: number;
+  duration?: number;
 }) {
-  const ref = useCountUp(count, 1100, delay);
+  const ref = useCountUp(count, duration, delay);
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -250,11 +262,27 @@ export default function HomePage() {
     housing: HOUSING.length,
   };
 
-  // Counter delays are offset from the hero-counters animation delay (200ms)
-  const counterBaseDelay = 400;
+  // True if user has already seen the entrance animation this session.
+  // Read synchronously so the first render already has the correct class —
+  // no flicker, no layout shift.
+  const [animDone] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return sessionStorage.getItem(ANIM_SESSION_KEY) === "1";
+  });
+
+  // Mark as played after mount so next visit skips animations
+  useEffect(() => {
+    sessionStorage.setItem(ANIM_SESSION_KEY, "1");
+  }, []);
+
+  // Counter delays are offset from the hero-counters animation delay (200ms).
+  // When animDone is true, useCountUp still runs but starts at the target
+  // immediately (delay 0, duration 0).
+  const counterBaseDelay = animDone ? 0 : 400;
+  const counterDuration = animDone ? 0 : 1100;
 
   return (
-    <div>
+    <div className={animDone ? "animations-done" : ""}>
       {/* Inject animation styles once */}
       <style dangerouslySetInnerHTML={{ __html: ANIMATION_STYLES }} />
 
@@ -343,21 +371,25 @@ export default function HomePage() {
             count={counts.specialists}
             label="специалистов"
             delay={counterBaseDelay}
+            duration={counterDuration}
           />
           <AnimatedCounter
             count={counts.listings}
             label="объявлений"
             delay={counterBaseDelay + 80}
+            duration={counterDuration}
           />
           <AnimatedCounter
             count={counts.events}
             label="событий"
             delay={counterBaseDelay + 160}
+            duration={counterDuration}
           />
           <AnimatedCounter
             count={counts.jobs}
             label="вакансий"
             delay={counterBaseDelay + 240}
+            duration={counterDuration}
           />
         </div>
       </div>
