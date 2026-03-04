@@ -7,6 +7,8 @@ export function OnboardingGate() {
   const router = useRouter();
   const pathname = usePathname();
 
+  if (pathname === "/onboarding") return null;
+
   useEffect(() => {
     if (pathname === "/onboarding") return;
     const done = localStorage.getItem("onboarding_done");

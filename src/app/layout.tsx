@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { BottomNav } from "@/components/layout/BottomNav";
-import { OnboardingGate } from '@/components/ui/OnboardingGate'
+import { OnboardingGate } from "@/components/ui/OnboardingGate";
 
 export const metadata: Metadata = {
   title: "Свои в Братиславе",
