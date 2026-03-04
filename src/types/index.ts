@@ -14,6 +14,8 @@ export type ListingType =
   | "wanted"
   | "rent"
   | "rentout";
+export type JobType = "vacancy" | "resume";
+export type HousingType = "rent" | "buy" | "roommate";
 
 export interface Specialist {
   id: string;
@@ -50,6 +52,43 @@ export interface Event {
   createdAt: string;
 }
 
+export interface BlacklistEntry {
+  id: string;
+  name: string;
+  type: "person" | "employer" | "company" | "landlord" | "other";
+  description: string;
+  contact?: string;
+  addedBy: string;
+  createdAt: string;
+}
+
+export interface Job {
+  id: string;
+  type: JobType;
+  title: string;
+  company?: string;
+  description: string;
+  salary?: string;
+  contact: string;
+  remote: boolean;
+  addedBy: string;
+  createdAt: string;
+}
+
+export interface Housing {
+  id: string;
+  type: HousingType;
+  title: string;
+  description: string;
+  price?: number;
+  address?: string;
+  rooms?: number;
+  photo?: string;
+  contact: string;
+  addedBy: string;
+  createdAt: string;
+}
+
 export const CATEGORY_LABELS: Record<Category, string> = {
   doctors: "Врачи",
   lawyers: "Юристы",
@@ -79,16 +118,16 @@ export const LISTING_TYPE_LABELS: Record<ListingType, string> = {
   rentout: "Сдам",
 };
 
-export interface BlacklistEntry {
-  id: string;
-  name: string;
-  type: "person" | "employer" | "company" | "landlord" | "other";
-  description: string;
-  contact?: string;
-  proof?: string;
-  addedBy: string;
-  createdAt: string;
-}
+export const JOB_TYPE_LABELS: Record<JobType, string> = {
+  vacancy: "Вакансия",
+  resume: "Резюме",
+};
+
+export const HOUSING_TYPE_LABELS: Record<HousingType, string> = {
+  rent: "Аренда",
+  buy: "Продажа",
+  roommate: "Ищу соседа",
+};
 
 export const BLACKLIST_TYPE_LABELS: Record<BlacklistEntry["type"], string> = {
   person: "Мошенник",

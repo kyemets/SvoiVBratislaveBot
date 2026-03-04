@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 const TABS = [
   { href: "/", icon: "🏠", label: "Главная" },
   { href: "/catalog", icon: "🗂", label: "Каталог" },
-  { href: "/listings", icon: "📢", label: "Объявления" },
-  { href: "/events", icon: "🎉", label: "События" },
+  { href: "/search", icon: "🔍", label: "Поиск" },
   { href: "/add", icon: "＋", label: "Добавить" },
+  { href: "/more", icon: "⋯", label: "Ещё" },
 ];
 
 export function BottomNav() {

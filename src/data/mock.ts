@@ -1,4 +1,5 @@
 import type { Specialist, Listing, Event } from "@/types";
+import type { BlacklistEntry } from "@/types";
 
 export const SPECIALISTS: Specialist[] = [
   {
@@ -196,7 +197,129 @@ export const EVENTS: Event[] = [
   },
 ];
 
-import type { BlacklistEntry } from "@/types";
+import type { Job, Housing } from "@/types";
+
+export const JOBS: Job[] = [
+  {
+    id: "j1",
+    type: "vacancy",
+    title: "Водитель категории B/C",
+    company: "Slovak Logistics s.r.o.",
+    description:
+      "Развозка товаров по Братиславе и окрестностям. Опыт от 1 года. Оформление официальное, зарплата вовремя.",
+    salary: "1400–1700€",
+    contact: "@slovak_logistics",
+    remote: false,
+    addedBy: "user_30",
+    createdAt: "2024-03-10",
+  },
+  {
+    id: "j2",
+    type: "vacancy",
+    title: "Разработчик React / Next.js",
+    company: "Стартап (удалённо)",
+    description:
+      "Ищем фронтенд-разработчика в небольшую команду. Проект интересный, стек современный. Оплата в евро.",
+    salary: "2500–3500€",
+    contact: "@dev_hiring_ba",
+    remote: true,
+    addedBy: "user_31",
+    createdAt: "2024-03-11",
+  },
+  {
+    id: "j3",
+    type: "resume",
+    title: "Ищу работу — бухгалтер / финансист",
+    description:
+      "8 лет опыта, знаю словацкое законодательство, работала в s.r.o. Готова к частичной занятости или полной. Русский, словацкий, английский.",
+    contact: "@irina_fin",
+    remote: false,
+    addedBy: "user_32",
+    createdAt: "2024-03-12",
+  },
+  {
+    id: "j4",
+    type: "vacancy",
+    title: "Повар / помощник повара",
+    company: "Ресторан в центре",
+    description:
+      "Русская и европейская кухня. Опыт обязателен. Условия обсуждаем лично. Легальное оформление.",
+    salary: "1200–1500€",
+    contact: "+421 902 345 678",
+    remote: false,
+    addedBy: "user_33",
+    createdAt: "2024-03-13",
+  },
+  {
+    id: "j5",
+    type: "resume",
+    title: "Ищу работу — IT поддержка / системный администратор",
+    description:
+      "5 лет опыта в техподдержке и администрировании Windows/Linux. Есть ВНЖ, готов к работе сразу.",
+    contact: "@sysadmin_ba",
+    remote: false,
+    addedBy: "user_34",
+    createdAt: "2024-03-14",
+  },
+];
+
+export const HOUSING: Housing[] = [
+  {
+    id: "h1",
+    type: "rent",
+    title: "2-комнатная квартира в Ružinov",
+    description:
+      "Светлая квартира 55м², свежий ремонт, вся техника. Рядом метро Ružinovská. Только некурящие.",
+    price: 950,
+    address: "Ružinov, Bratislava",
+    rooms: 2,
+    photo:
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80",
+    contact: "@apartment_ba",
+    addedBy: "user_35",
+    createdAt: "2024-03-10",
+  },
+  {
+    id: "h2",
+    type: "rent",
+    title: "Комната в квартире с двумя соседями",
+    description:
+      "Комната 16м² в трёхкомнатной квартире. Соседи тихие, работающие. Petržalka, 10 мин до центра.",
+    price: 420,
+    address: "Petržalka, Bratislava",
+    rooms: 1,
+    contact: "@room_petrzalka",
+    addedBy: "user_36",
+    createdAt: "2024-03-11",
+  },
+  {
+    id: "h3",
+    type: "roommate",
+    title: "Ищу соседа в 3-комнатную квартиру",
+    description:
+      "Занята одна комната, ищем третьего. Квартира большая, есть балкон. Старый город, удобно везде добираться.",
+    price: 500,
+    address: "Staré Mesto, Bratislava",
+    contact: "@flatmate_search",
+    addedBy: "user_37",
+    createdAt: "2024-03-12",
+  },
+  {
+    id: "h4",
+    type: "buy",
+    title: "Продаётся 3-комнатная квартира",
+    description:
+      "Просторная квартира 78м², хороший этаж, два балкона. Документы в порядке, собственник. Район Karlova Ves.",
+    price: 185000,
+    address: "Karlova Ves, Bratislava",
+    rooms: 3,
+    photo:
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80",
+    contact: "@sell_flat_ba",
+    addedBy: "user_38",
+    createdAt: "2024-03-13",
+  },
+];
 
 export const BLACKLIST: BlacklistEntry[] = [
   {
