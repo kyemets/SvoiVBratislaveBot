@@ -389,8 +389,17 @@ export default function HomePage() {
         </div>
       )}
 
+      {/* ── Divider ── */}
+      <div
+        style={{
+          height: 1,
+          background: "var(--border)",
+          margin: "16px 16px 0",
+        }}
+      />
+
       {/* ── Specialist of the Day ── */}
-      <div style={{ padding: "16px 16px 4px" }}>
+      <div style={{ padding: "20px 16px 4px" }}>
         <h2
           className="anim-specialist-label"
           style={{
@@ -412,8 +421,7 @@ export default function HomePage() {
             <div
               className="pressable"
               style={{
-                background:
-                  "linear-gradient(135deg, var(--blue) 0%, #2B5499 100%)",
+                background: "linear-gradient(135deg, #2A4F8A 0%, #1E3A6E 100%)",
                 borderRadius: "var(--radius)",
                 padding: "16px",
                 display: "flex",
