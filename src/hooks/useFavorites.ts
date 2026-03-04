@@ -33,6 +33,7 @@ export function useFavorites() {
       return next;
     });
   }, []);
+  
 
   const isFavorite = useCallback(
     (id: string) => favorites.has(id),
