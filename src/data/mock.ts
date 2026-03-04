@@ -195,3 +195,45 @@ export const EVENTS: Event[] = [
     createdAt: "2024-02-15",
   },
 ];
+
+import type { BlacklistEntry } from "@/types";
+
+export const BLACKLIST: BlacklistEntry[] = [
+  {
+    id: "b1",
+    name: "Маклер Виктор",
+    type: "landlord",
+    description:
+      "Берёт залог за квартиру, показывает её, потом исчезает. Работает в районе Petržalka. Несколько человек пострадали.",
+    contact: "@viktor_realtor",
+    addedBy: "user_20",
+    createdAt: "2024-03-01",
+  },
+  {
+    id: "b2",
+    name: 'IT стартап "QuickDev s.r.o."',
+    type: "employer",
+    description:
+      'Не выплатили зарплату за 2 месяца троим разработчикам. Обещают "вот-вот" уже полгода. Офис на Bajkalská.',
+    addedBy: "user_21",
+    createdAt: "2024-03-05",
+  },
+  {
+    id: "b3",
+    name: "Андрей К.",
+    type: "person",
+    description:
+      "Продаёт технику которой нет — берёт предоплату и пропадает. В объявлениях пишет с разных аккаунтов.",
+    addedBy: "user_22",
+    createdAt: "2024-03-08",
+  },
+  {
+    id: "b4",
+    name: 'Агентство переводов "TransSK"',
+    type: "company",
+    description:
+      "Берут деньги за срочные переводы документов, затягивают на недели. На звонки не отвечают после оплаты.",
+    addedBy: "user_23",
+    createdAt: "2024-03-10",
+  },
+];

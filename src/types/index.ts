@@ -78,3 +78,30 @@ export const LISTING_TYPE_LABELS: Record<ListingType, string> = {
   rent: "Сниму",
   rentout: "Сдам",
 };
+
+export interface BlacklistEntry {
+  id: string;
+  name: string;
+  type: "person" | "employer" | "company" | "landlord" | "other";
+  description: string;
+  contact?: string;
+  proof?: string;
+  addedBy: string;
+  createdAt: string;
+}
+
+export const BLACKLIST_TYPE_LABELS: Record<BlacklistEntry["type"], string> = {
+  person: "Мошенник",
+  employer: "Работодатель",
+  company: "Компания",
+  landlord: "Арендодатель",
+  other: "Другое",
+};
+
+export const BLACKLIST_TYPE_ICONS: Record<BlacklistEntry["type"], string> = {
+  person: "👤",
+  employer: "💼",
+  company: "🏢",
+  landlord: "🏠",
+  other: "⚠️",
+};
