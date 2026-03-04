@@ -1,7 +1,19 @@
 {
-  "/listings/page": "app/listings/page.js",
-  "/page": "app/page.js",
-  "/events/page": "app/events/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/blacklist/[id]/page": "app/blacklist/[id]/page.js",
+  "/blacklist/page": "app/blacklist/page.js",
   "/catalog/[...slug]/page": "app/catalog/[...slug]/page.js",
-  "/catalog/page": "app/catalog/page.js"
+  "/catalog/page": "app/catalog/page.js",
+  "/events/page": "app/events/page.js",
+  "/listings/[id]/page": "app/listings/[id]/page.js",
+  "/jobs/page": "app/jobs/page.js",
+  "/jobs/[id]/page": "app/jobs/[id]/page.js",
+  "/events/[id]/page": "app/events/[id]/page.js",
+  "/housing/[id]/page": "app/housing/[id]/page.js",
+  "/listings/page": "app/listings/page.js",
+  "/more/page": "app/more/page.js",
+  "/page": "app/page.js",
+  "/search/page": "app/search/page.js",
+  "/add/page": "app/add/page.js",
+  "/onboarding/page": "app/onboarding/page.js"
 }

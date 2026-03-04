@@ -14,7 +14,7 @@ function readFromStorage(): Set<string> {
 }
 
 function writeToStorage(ids: Set<string>) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids]));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(ids)));
 }
 
 export function useFavorites() {
@@ -36,7 +36,7 @@ export function useFavorites() {
 
   const isFavorite = useCallback(
     (id: string) => favorites.has(id),
-    [favorites],
+    [favorites]
   );
 
   return { favorites, toggle, isFavorite };
