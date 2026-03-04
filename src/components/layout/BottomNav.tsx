@@ -14,6 +14,8 @@ const TABS = [
 export function BottomNav() {
   const pathname = usePathname();
 
+  if (pathname === "/onboarding") return null;
+
   return (
     <nav
       style={{
