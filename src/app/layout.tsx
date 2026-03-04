@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+
 import "./globals.css";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { OnboardingGate } from "@/components/ui/OnboardingGate";
@@ -37,6 +39,7 @@ export default function RootLayout({
           {children}
         </main>
         <BottomNav />
+        <Analytics />
       </body>
     </html>
   );
