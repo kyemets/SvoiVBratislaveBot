@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SPECIALISTS, LISTINGS, EVENTS } from "@/data/mock";
+import { SPECIALISTS, LISTINGS, EVENTS, JOBS, HOUSING } from "@/data/mock";
 import { CATEGORY_LABELS, LISTING_TYPE_LABELS } from "@/types";
 import { Card, Badge } from "@/components/ui";
 
@@ -38,11 +38,37 @@ const SECTIONS = [
   },
 ];
 
+// Admin banner — edit this to show announcements
+const ADMIN_BANNER = {
+  active: true,
+  emoji: "📌",
+  text: "Добро пожаловать! Мы только запустились — добавляй своих специалистов и помогай сообществу расти.",
+  link: "/add",
+  linkLabel: "Добавить →",
+};
+
+// Seeded random for "specialist of the day" — changes daily, stable within a day
+function getDailySpecialistIndex(total: number): number {
+  const day = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+  return day % total;
+}
+
 export default function HomePage() {
-  // Mix recent items from all sections
   const recentSpecialist = SPECIALISTS[SPECIALISTS.length - 1];
   const recentListing = LISTINGS[LISTINGS.length - 1];
   const recentEvent = EVENTS[EVENTS.length - 1];
+
+  const dailySpecialist =
+    SPECIALISTS[getDailySpecialistIndex(SPECIALISTS.length)];
+
+  // Counters across all sections
+  const counts = {
+    specialists: SPECIALISTS.length,
+    listings: LISTINGS.length,
+    events: EVENTS.length,
+    jobs: JOBS.length,
+    housing: HOUSING.length,
+  };
 
   return (
     <div>
@@ -109,15 +135,185 @@ export default function HomePage() {
         >
           Русскоязычное сообщество
         </p>
+
+        {/* Counters */}
+        <div
+          style={{
+            display: "flex",
+            gap: "16px",
+            marginTop: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { label: "специалистов", count: counts.specialists },
+            { label: "объявлений", count: counts.listings },
+            { label: "событий", count: counts.events },
+            { label: "вакансий", count: counts.jobs },
+          ].map((item) => (
+            <div key={item.label} style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  color: "#fff",
+                  fontWeight: 700,
+                  fontSize: "20px",
+                  fontFamily: "Unbounded, sans-serif",
+                  lineHeight: 1,
+                }}
+              >
+                {item.count}
+              </div>
+              <div
+                style={{
+                  color: "rgba(255,255,255,0.55)",
+                  fontSize: "11px",
+                  marginTop: "3px",
+                }}
+              >
+                {item.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Admin banner */}
+      {ADMIN_BANNER.active && (
+        <div
+          style={{
+            margin: "16px 16px 0",
+            background: "var(--accent)",
+            borderRadius: "var(--radius)",
+            padding: "14px 16px",
+            display: "flex",
+            gap: "10px",
+            alignItems: "flex-start",
+          }}
+        >
+          <span style={{ fontSize: "20px", flexShrink: 0 }}>
+            {ADMIN_BANNER.emoji}
+          </span>
+          <div style={{ flex: 1 }}>
+            <p
+              style={{
+                margin: 0,
+                fontSize: "13px",
+                color: "#0F1923",
+                lineHeight: 1.5,
+                fontWeight: 500,
+              }}
+            >
+              {ADMIN_BANNER.text}
+            </p>
+            {ADMIN_BANNER.link && (
+              <Link
+                href={ADMIN_BANNER.link}
+                style={{
+                  display: "inline-block",
+                  marginTop: "8px",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  color: "#0F1923",
+                  textDecoration: "none",
+                }}
+              >
+                {ADMIN_BANNER.linkLabel}
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Specialist of the day */}
+      <div style={{ padding: "16px 16px 4px" }}>
+        <h2
+          style={{
+            fontSize: "12px",
+            color: "var(--text-muted)",
+            fontWeight: 600,
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            margin: "0 0 10px",
+          }}
+        >
+          Специалист дня
+        </h2>
+        <Link
+          href={`/catalog/${dailySpecialist.category}/${dailySpecialist.id}`}
+          style={{ textDecoration: "none" }}
+        >
+          <div
+            style={{
+              background:
+                "linear-gradient(135deg, var(--blue) 0%, #2B5499 100%)",
+              borderRadius: "var(--radius)",
+              padding: "16px",
+              display: "flex",
+              gap: "14px",
+              alignItems: "center",
+            }}
+          >
+            {dailySpecialist.photo && (
+              <img
+                src={dailySpecialist.photo}
+                alt=""
+                style={{
+                  width: 56,
+                  height: 56,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  border: "2px solid rgba(255,255,255,0.3)",
+                  flexShrink: 0,
+                }}
+              />
+            )}
+            <div style={{ minWidth: 0, flex: 1 }}>
+              <div style={{ fontWeight: 700, fontSize: "15px", color: "#fff" }}>
+                {dailySpecialist.name}
+              </div>
+              <div
+                style={{
+                  fontSize: "12px",
+                  color: "rgba(255,255,255,0.6)",
+                  marginTop: "3px",
+                }}
+              >
+                {CATEGORY_LABELS[dailySpecialist.category]}
+              </div>
+              <p
+                style={{
+                  margin: "6px 0 0",
+                  fontSize: "12px",
+                  color: "rgba(255,255,255,0.7)",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
+                {dailySpecialist.description}
+              </p>
+            </div>
+            <span
+              style={{
+                color: "rgba(255,255,255,0.5)",
+                fontSize: "18px",
+                flexShrink: 0,
+              }}
+            >
+              ›
+            </span>
+          </div>
+        </Link>
       </div>
 
       {/* Section tiles */}
       <div
         style={{
-          padding: "20px 16px",
+          padding: "16px 16px",
           display: "flex",
           flexDirection: "column",
-          gap: "12px",
+          gap: "10px",
         }}
       >
         {SECTIONS.map((s) => (
@@ -131,7 +327,6 @@ export default function HomePage() {
                 display: "flex",
                 alignItems: "center",
                 gap: "16px",
-                transition: "transform 0.15s",
               }}
             >
               <span style={{ fontSize: "32px", lineHeight: 1 }}>{s.icon}</span>
@@ -180,7 +375,7 @@ export default function HomePage() {
       <div style={{ padding: "4px 16px 24px" }}>
         <h2
           style={{
-            fontSize: "14px",
+            fontSize: "12px",
             color: "var(--text-muted)",
             fontWeight: 600,
             letterSpacing: "0.06em",
@@ -191,9 +386,8 @@ export default function HomePage() {
           Недавно добавлено
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          {/* Recent specialist */}
           <Link
-            href={`/catalog/${recentSpecialist.id}`}
+            href={`/catalog/${recentSpecialist.category}/${recentSpecialist.id}`}
             style={{ textDecoration: "none" }}
           >
             <Card>
@@ -239,7 +433,6 @@ export default function HomePage() {
             </Card>
           </Link>
 
-          {/* Recent listing */}
           <Link
             href={`/listings/${recentListing.id}`}
             style={{ textDecoration: "none" }}
@@ -299,7 +492,6 @@ export default function HomePage() {
             </Card>
           </Link>
 
-          {/* Recent event */}
           <Link
             href={`/events/${recentEvent.id}`}
             style={{ textDecoration: "none" }}
