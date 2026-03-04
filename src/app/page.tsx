@@ -28,6 +28,14 @@ const SECTIONS = [
     color: "#F0FAF0",
     border: "#A8D8A8",
   },
+  {
+    href: "/blacklist",
+    icon: "⚠️",
+    label: "Чёрный список",
+    desc: "Кидалы и плохие работодатели",
+    color: "#0F1923",
+    border: "#2A3540",
+  },
 ];
 
 export default function HomePage() {
@@ -132,7 +140,7 @@ export default function HomePage() {
                   style={{
                     fontWeight: 700,
                     fontSize: "16px",
-                    color: "var(--text)",
+                    color: s.href === "/blacklist" ? "#fff" : "var(--text)",
                     fontFamily: "Unbounded, sans-serif",
                   }}
                 >
@@ -141,7 +149,10 @@ export default function HomePage() {
                 <div
                   style={{
                     fontSize: "13px",
-                    color: "var(--text-muted)",
+                    color:
+                      s.href === "/blacklist"
+                        ? "rgba(255,255,255,0.5)"
+                        : "var(--text-muted)",
                     marginTop: "2px",
                   }}
                 >
@@ -151,7 +162,10 @@ export default function HomePage() {
               <span
                 style={{
                   marginLeft: "auto",
-                  color: "var(--text-muted)",
+                  color:
+                    s.href === "/blacklist"
+                      ? "rgba(255,255,255,0.4)"
+                      : "var(--text-muted)",
                   fontSize: "18px",
                 }}
               >
