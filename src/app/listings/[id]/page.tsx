@@ -1,3 +1,5 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { LISTINGS } from "@/data/mock";
@@ -6,6 +8,8 @@ import { Card, Badge } from "@/components/ui";
 import { ViewCount } from "@/components/ui/ViewCount";
 import { AuthorAvatar } from "@/src/components/ui/AuthorAvatar";
 import { ShareButton } from "@/src/components/ui/ShareButton";
+import { FavoriteButton } from "@/components/ui/FavoriteButton";
+import { Comments } from "@/components/ui/Comments";
 
 interface Props {
   params: { id: string };
@@ -82,7 +86,14 @@ export default function ListingDetailPage({ params }: Props) {
           </div>
         )}
 
-        <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+        {/* Type badge + price + favorite */}
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            alignItems: "center",
+          }}
+        >
           <Badge>{LISTING_TYPE_LABELS[listing.type]}</Badge>
           {listing.price && (
             <span
@@ -95,8 +106,12 @@ export default function ListingDetailPage({ params }: Props) {
               {listing.price}€
             </span>
           )}
+          <div style={{ marginLeft: "auto" }}>
+            <FavoriteButton id={listing.id} />
+          </div>
         </div>
 
+        {/* Meta row */}
         <div
           style={{
             display: "flex",
@@ -111,6 +126,7 @@ export default function ListingDetailPage({ params }: Props) {
           <ShareButton title={listing.title} url={`/listings/${listing.id}`} />
         </div>
 
+        {/* Description */}
         <Card style={{ padding: "18px" }}>
           <div
             style={{
@@ -127,6 +143,7 @@ export default function ListingDetailPage({ params }: Props) {
           <p style={{ margin: 0, lineHeight: 1.6 }}>{listing.description}</p>
         </Card>
 
+        {/* Contact button */}
         <a
           href={
             listing.contact.startsWith("@")
@@ -147,6 +164,11 @@ export default function ListingDetailPage({ params }: Props) {
         >
           Связаться {listing.contact}
         </a>
+
+        {/* Comments */}
+        <Card style={{ padding: "18px" }}>
+          <Comments itemId={listing.id} />
+        </Card>
       </div>
     </div>
   );
