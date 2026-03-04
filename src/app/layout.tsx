@@ -14,15 +14,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <head>
+        <script src="https://telegram.org/js/telegram-web-app.js" />
+      </head>
       <body>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-    if (window.Telegram?.WebApp) {
-      window.Telegram.WebApp.expand();
-      window.Telegram.WebApp.disableClosingConfirmation();
-    }
-  `,
+          window.addEventListener('load', function() {
+            if (window.Telegram && window.Telegram.WebApp) {
+              window.Telegram.WebApp.ready();
+              window.Telegram.WebApp.expand();
+            }
+          });
+        `,
           }}
         />
         <main style={{ paddingBottom: "80px", minHeight: "100vh" }}>
