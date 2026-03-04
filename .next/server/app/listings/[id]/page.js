@@ -1,2 +1,675 @@
-(()=>{var e={};e.id=201,e.ids=[201],e.modules={7849:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external")},2934:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external.js")},5403:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external")},4580:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external.js")},4749:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external")},5869:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external.js")},399:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},3005:(e,t,r)=>{"use strict";r.r(t),r.d(t,{GlobalError:()=>a.a,__next_app__:()=>x,originalPathname:()=>p,pages:()=>c,routeModule:()=>u,tree:()=>d}),r(4681),r(9176),r(5866);var n=r(3191),i=r(8716),s=r(7922),a=r.n(s),o=r(5231),l={};for(let e in o)0>["default","tree","pages","GlobalError","originalPathname","__next_app__","routeModule"].indexOf(e)&&(l[e]=()=>o[e]);r.d(t,l);let d=["",{children:["listings",{children:["[id]",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(r.bind(r,4681)),"/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx"]}]},{}]},{}]},{layout:[()=>Promise.resolve().then(r.bind(r,9176)),"/Users/kostiantyn/Downloads/bratislava-app/src/app/layout.tsx"],"not-found":[()=>Promise.resolve().then(r.t.bind(r,5866,23)),"next/dist/client/components/not-found-error"]}],c=["/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx"],p="/listings/[id]/page",x={require:r,loadChunk:()=>Promise.resolve()},u=new n.AppPageRouteModule({definition:{kind:i.x.APP_PAGE,page:"/listings/[id]/page",pathname:"/listings/[id]",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:d}})},2521:(e,t,r)=>{Promise.resolve().then(r.bind(r,8802))},8802:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>h});var n=r(326),i=r(5047),s=r(434),a=r(1193),o=r(5342),l=r(2068);function d({id:e,style:t}){let r=function(e){let t=0;for(let r=0;r<e.length;r++)t=e.charCodeAt(r)+((t<<5)-t);return Math.abs(t)}(e)%200+12;return(0,n.jsxs)("span",{style:{fontSize:"12px",color:"var(--text-muted)",display:"flex",alignItems:"center",gap:"3px",...t},children:[n.jsx("span",{style:{fontSize:"13px"},children:"\uD83D\uDC41"}),r]})}var c=r(7577);function p({addedBy:e,name:t="Участник",size:r=28}){let[i,s]=(0,c.useState)(null),a=i?i.first_name:t,o=i?.photo_url;return(0,n.jsxs)("div",{style:{display:"flex",alignItems:"center",gap:"6px"},children:[o?n.jsx("img",{src:o,alt:"",style:{width:r,height:r,borderRadius:"50%",objectFit:"cover"}}):n.jsx("div",{style:{width:r,height:r,borderRadius:"50%",background:"var(--blue-muted)",color:"var(--blue)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:`${.38*r}px`,fontWeight:700,flexShrink:0},children:a.split(" ").map(e=>e[0]).join("").toUpperCase().slice(0,2)}),n.jsx("span",{style:{fontSize:"12px",color:"var(--text-muted)"},children:a})]})}function x({title:e,url:t}){return(0,n.jsxs)("button",{onClick:function(){let r=`https://bratislava-app.vercel.app${t}`;encodeURIComponent(`${e}
-${r}`),navigator.share?navigator.share({title:e,url:r}):(navigator.clipboard.writeText(r),alert("Ссылка скопирована!"))},style:{display:"flex",alignItems:"center",gap:"6px",padding:"8px 14px",borderRadius:"100px",border:"1.5px solid var(--border)",background:"transparent",cursor:"pointer",fontSize:"13px",fontWeight:600,color:"var(--text-muted)",transition:"all 0.15s"},children:[n.jsx("span",{style:{fontSize:"15px"},children:"↗"}),"Поделиться"]})}var u=r(4951),g=r(419);function h({params:e}){let t=a.RH.find(t=>t.id===e.id);return t?(0,n.jsxs)("div",{children:[t.photo&&n.jsx("img",{src:t.photo,alt:"",style:{width:"100%",height:"240px",objectFit:"cover"}}),n.jsx("div",{style:{background:t.photo?"transparent":"var(--blue)",padding:t.photo?"0":"24px 20px 20px"},children:!t.photo&&(0,n.jsxs)(n.Fragment,{children:[n.jsx(s.default,{href:"/listings",style:{color:"rgba(255,255,255,0.7)",fontSize:"13px",textDecoration:"none"},children:"← Объявления"}),n.jsx("h1",{style:{margin:"12px 0 0",color:"#fff",fontSize:"20px"},children:t.title})]})}),(0,n.jsxs)("div",{style:{padding:"16px",display:"flex",flexDirection:"column",gap:"12px"},children:[t.photo&&(0,n.jsxs)("div",{children:[n.jsx(s.default,{href:"/listings",style:{color:"var(--text-muted)",fontSize:"13px",textDecoration:"none"},children:"← Объявления"}),n.jsx("h1",{style:{margin:"8px 0",fontSize:"20px",fontFamily:"Unbounded, sans-serif"},children:t.title})]}),(0,n.jsxs)("div",{style:{display:"flex",gap:"8px",alignItems:"center"},children:[n.jsx(l.Badge,{children:o.Bv[t.type]}),t.price&&(0,n.jsxs)("span",{style:{fontWeight:700,fontSize:"20px",color:"var(--blue)"},children:[t.price,"€"]}),n.jsx("div",{style:{marginLeft:"auto"},children:n.jsx(u._,{id:t.id})})]}),(0,n.jsxs)("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between"},children:[(0,n.jsxs)("div",{style:{display:"flex",alignItems:"center",gap:"12px"},children:[n.jsx(d,{id:t.id}),n.jsx(p,{addedBy:t.addedBy})]}),n.jsx(x,{title:t.title,url:`/listings/${t.id}`})]}),(0,n.jsxs)(l.Card,{style:{padding:"18px"},children:[n.jsx("div",{style:{fontSize:"12px",color:"var(--text-muted)",fontWeight:600,letterSpacing:"0.06em",textTransform:"uppercase",marginBottom:"8px"},children:"Описание"}),n.jsx("p",{style:{margin:0,lineHeight:1.6},children:t.description})]}),(0,n.jsxs)("a",{href:t.contact.startsWith("@")?`https://t.me/${t.contact.slice(1)}`:`tel:${t.contact}`,style:{display:"block",background:"var(--blue)",color:"#fff",textAlign:"center",padding:"16px",borderRadius:"var(--radius)",textDecoration:"none",fontWeight:600,fontSize:"15px"},children:["Связаться ",t.contact]}),n.jsx(l.Card,{style:{padding:"18px"},children:n.jsx(g.H,{itemId:t.id})})]})]}):(0,i.notFound)()}},419:(e,t,r)=>{"use strict";r.d(t,{H:()=>a});var n=r(326),i=r(7577);function s(e,t){localStorage.setItem(`comments_v1:${e}`,JSON.stringify(t))}function a({itemId:e}){let{comments:t,add:r,remove:a}=function(e){let[t,r]=(0,i.useState)([]);return{comments:t,add:(0,i.useCallback)(t=>{let n={id:Date.now().toString(),text:t.trim(),createdAt:new Date().toISOString()};r(t=>{let r=[...t,n];return s(e,r),r})},[e]),remove:(0,i.useCallback)(t=>{r(r=>{let n=r.filter(e=>e.id!==t);return s(e,n),n})},[e])}}(e),[o,l]=(0,i.useState)("");function d(){o.trim()&&(r(o),l(""))}return(0,n.jsxs)("div",{style:{display:"flex",flexDirection:"column",gap:"12px"},children:[(0,n.jsxs)("div",{style:{fontSize:"12px",color:"var(--text-muted)",fontWeight:600,letterSpacing:"0.06em",textTransform:"uppercase"},children:["Обсуждение \xb7 ",t.length]}),0===t.length?n.jsx("p",{style:{margin:0,fontSize:"13px",color:"var(--text-muted)",fontStyle:"italic"},children:"Будь первым кто оставит комментарий"}):n.jsx("div",{style:{display:"flex",flexDirection:"column",gap:"8px"},children:t.map(e=>(0,n.jsxs)("div",{style:{background:"var(--card)",border:"1px solid var(--border)",borderRadius:"var(--radius)",padding:"12px 14px",display:"flex",gap:"10px",alignItems:"flex-start"},children:[(0,n.jsxs)("div",{style:{flex:1,minWidth:0},children:[n.jsx("p",{style:{margin:0,fontSize:"14px",lineHeight:1.5},children:e.text}),n.jsx("span",{style:{fontSize:"11px",color:"var(--text-muted)",marginTop:"4px",display:"block"},children:new Date(e.createdAt).toLocaleDateString("ru-RU",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})})]}),n.jsx("button",{onClick:()=>a(e.id),"aria-label":"Удалить",style:{background:"none",border:"none",cursor:"pointer",fontSize:"14px",color:"var(--text-muted)",padding:"2px 4px",flexShrink:0,lineHeight:1,WebkitTapHighlightColor:"transparent"},children:"✕"})]},e.id))}),(0,n.jsxs)("div",{style:{display:"flex",gap:"8px",alignItems:"flex-end"},children:[n.jsx("textarea",{value:o,onChange:e=>l(e.target.value),onKeyDown:function(e){"Enter"!==e.key||e.shiftKey||(e.preventDefault(),d())},placeholder:"Написать комментарий...",rows:2,style:{flex:1,padding:"10px 14px",borderRadius:"var(--radius)",border:"1px solid var(--border)",background:"var(--card)",color:"var(--text)",fontSize:"14px",resize:"none",fontFamily:"inherit",outline:"none",lineHeight:1.5}}),n.jsx("button",{onClick:d,disabled:!o.trim(),style:{background:o.trim()?"var(--blue)":"var(--border)",color:o.trim()?"#fff":"var(--text-muted)",border:"none",borderRadius:"var(--radius)",padding:"10px 16px",fontSize:"14px",fontWeight:600,cursor:o.trim()?"pointer":"default",transition:"background 200ms ease",flexShrink:0,WebkitTapHighlightColor:"transparent",height:"fit-content"},children:"Отправить"})]})]})}},4951:(e,t,r)=>{"use strict";r.d(t,{_:()=>s});var n=r(326),i=r(7577);function s({id:e}){let{isFavorite:t,toggle:r}=function(){let[e,t]=(0,i.useState)(new Set),r=(0,i.useCallback)(e=>{t(t=>{let r=new Set(t);return r.has(e)?r.delete(e):r.add(e),localStorage.setItem("favorites_v1",JSON.stringify(Array.from(r))),r})},[]),n=(0,i.useCallback)(t=>e.has(t),[e]);return{favorites:e,toggle:r,isFavorite:n}}(),s=t(e);return n.jsx("button",{onClick:()=>r(e),"aria-label":s?"Убрать из избранного":"Добавить в избранное",style:{background:s?"rgba(232,60,60,0.1)":"var(--card)",border:`1px solid ${s?"rgba(232,60,60,0.3)":"var(--border)"}`,borderRadius:"50%",width:40,height:40,display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",fontSize:"18px",flexShrink:0,transition:"transform 150ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease",WebkitTapHighlightColor:"transparent"},onMouseDown:e=>e.currentTarget.style.transform="scale(0.88)",onMouseUp:e=>e.currentTarget.style.transform="scale(1)",onTouchStart:e=>e.currentTarget.style.transform="scale(0.88)",onTouchEnd:e=>e.currentTarget.style.transform="scale(1)",children:s?"❤️":"\uD83E\uDD0D"})}},4681:(e,t,r)=>{"use strict";r.r(t),r.d(t,{$$typeof:()=>a,__esModule:()=>s,default:()=>o});var n=r(8570);let i=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx`),{__esModule:s,$$typeof:a}=i;i.default;let o=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx#default`)}};var t=require("../../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),n=t.X(0,[24,359],()=>r(3005));module.exports=n})();
+(() => {
+  var e = {};
+  ((e.id = 201),
+    (e.ids = [201]),
+    (e.modules = {
+      7849: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/action-async-storage.external");
+      },
+      2934: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/action-async-storage.external.js");
+      },
+      5403: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/request-async-storage.external");
+      },
+      4580: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/request-async-storage.external.js");
+      },
+      4749: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/static-generation-async-storage.external");
+      },
+      5869: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/static-generation-async-storage.external.js");
+      },
+      399: (e) => {
+        "use strict";
+        e.exports = require("next/dist/compiled/next-server/app-page.runtime.prod.js");
+      },
+      3005: (e, t, r) => {
+        "use strict";
+        (r.r(t),
+          r.d(t, {
+            GlobalError: () => a.a,
+            __next_app__: () => x,
+            originalPathname: () => p,
+            pages: () => c,
+            routeModule: () => u,
+            tree: () => d,
+          }),
+          r(4681),
+          r(9176),
+          r(5866));
+        var n = r(3191),
+          i = r(8716),
+          s = r(7922),
+          a = r.n(s),
+          o = r(5231),
+          l = {};
+        for (let e in o)
+          0 >
+            [
+              "default",
+              "tree",
+              "pages",
+              "GlobalError",
+              "originalPathname",
+              "__next_app__",
+              "routeModule",
+            ].indexOf(e) && (l[e] = () => o[e]);
+        r.d(t, l);
+        let d = [
+            "",
+            {
+              children: [
+                "listings",
+                {
+                  children: [
+                    "[id]",
+                    {
+                      children: [
+                        "__PAGE__",
+                        {},
+                        {
+                          page: [
+                            () => Promise.resolve().then(r.bind(r, 4681)),
+                            "/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx",
+                          ],
+                        },
+                      ],
+                    },
+                    {},
+                  ],
+                },
+                {},
+              ],
+            },
+            {
+              layout: [
+                () => Promise.resolve().then(r.bind(r, 9176)),
+                "/Users/kostiantyn/Downloads/bratislava-app/src/app/layout.tsx",
+              ],
+              "not-found": [
+                () => Promise.resolve().then(r.t.bind(r, 5866, 23)),
+                "next/dist/client/components/not-found-error",
+              ],
+            },
+          ],
+          c = [
+            "/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx",
+          ],
+          p = "/listings/[id]/page",
+          x = { require: r, loadChunk: () => Promise.resolve() },
+          u = new n.AppPageRouteModule({
+            definition: {
+              kind: i.x.APP_PAGE,
+              page: "/listings/[id]/page",
+              pathname: "/listings/[id]",
+              bundlePath: "",
+              filename: "",
+              appPaths: [],
+            },
+            userland: { loaderTree: d },
+          });
+      },
+      2521: (e, t, r) => {
+        Promise.resolve().then(r.bind(r, 8802));
+      },
+      8802: (e, t, r) => {
+        "use strict";
+        (r.r(t), r.d(t, { default: () => h }));
+        var n = r(326),
+          i = r(5047),
+          s = r(434),
+          a = r(1193),
+          o = r(5342),
+          l = r(2068);
+        function d({ id: e, style: t }) {
+          let r =
+            ((function (e) {
+              let t = 0;
+              for (let r = 0; r < e.length; r++)
+                t = e.charCodeAt(r) + ((t << 5) - t);
+              return Math.abs(t);
+            })(e) %
+              200) +
+            12;
+          return (0, n.jsxs)("span", {
+            style: {
+              fontSize: "12px",
+              color: "var(--text-muted)",
+              display: "flex",
+              alignItems: "center",
+              gap: "3px",
+              ...t,
+            },
+            children: [
+              n.jsx("span", {
+                style: { fontSize: "13px" },
+                children: "\uD83D\uDC41",
+              }),
+              r,
+            ],
+          });
+        }
+        var c = r(7577);
+        function p({ addedBy: e, name: t = "Участник", size: r = 28 }) {
+          let [i, s] = (0, c.useState)(null),
+            a = i ? i.first_name : t,
+            o = i?.photo_url;
+          return (0, n.jsxs)("div", {
+            style: { display: "flex", alignItems: "center", gap: "6px" },
+            children: [
+              o
+                ? n.jsx("img", {
+                    src: o,
+                    alt: "",
+                    style: {
+                      width: r,
+                      height: r,
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    },
+                  })
+                : n.jsx("div", {
+                    style: {
+                      width: r,
+                      height: r,
+                      borderRadius: "50%",
+                      background: "var(--blue-muted)",
+                      color: "var(--blue)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: `${0.38 * r}px`,
+                      fontWeight: 700,
+                      flexShrink: 0,
+                    },
+                    children: a
+                      .split(" ")
+                      .map((e) => e[0])
+                      .join("")
+                      .toUpperCase()
+                      .slice(0, 2),
+                  }),
+              n.jsx("span", {
+                style: { fontSize: "12px", color: "var(--text-muted)" },
+                children: a,
+              }),
+            ],
+          });
+        }
+        function x({ title: e, url: t }) {
+          return (0, n.jsxs)("button", {
+            onClick: function () {
+              let r = `https://bratislava-app.vercel.app${t}`;
+              (encodeURIComponent(`${e}
+${r}`),
+                navigator.share
+                  ? navigator.share({ title: e, url: r })
+                  : (navigator.clipboard.writeText(r),
+                    alert("Ссылка скопирована!")));
+            },
+            style: {
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              padding: "8px 14px",
+              borderRadius: "100px",
+              border: "1.5px solid var(--border)",
+              background: "transparent",
+              cursor: "pointer",
+              fontSize: "13px",
+              fontWeight: 600,
+              color: "var(--text-muted)",
+              transition: "all 0.15s",
+            },
+            children: [
+              n.jsx("span", { style: { fontSize: "15px" }, children: "↗" }),
+              "Поделиться",
+            ],
+          });
+        }
+        var u = r(4951),
+          g = r(419);
+        function h({ params: e }) {
+          let t = a.RH.find((t) => t.id === e.id);
+          return t
+            ? (0, n.jsxs)("div", {
+                children: [
+                  t.photo &&
+                    n.jsx("img", {
+                      src: t.photo,
+                      alt: "",
+                      style: {
+                        width: "100%",
+                        height: "240px",
+                        objectFit: "cover",
+                      },
+                    }),
+                  n.jsx("div", {
+                    style: {
+                      background: t.photo ? "transparent" : "var(--blue)",
+                      padding: t.photo ? "0" : "24px 20px 20px",
+                    },
+                    children:
+                      !t.photo &&
+                      (0, n.jsxs)(n.Fragment, {
+                        children: [
+                          n.jsx(s.default, {
+                            href: "/listings",
+                            style: {
+                              color: "rgba(255,255,255,0.7)",
+                              fontSize: "13px",
+                              textDecoration: "none",
+                            },
+                            children: "← Объявления",
+                          }),
+                          n.jsx("h1", {
+                            style: {
+                              margin: "12px 0 0",
+                              color: "#fff",
+                              fontSize: "20px",
+                            },
+                            children: t.title,
+                          }),
+                        ],
+                      }),
+                  }),
+                  (0, n.jsxs)("div", {
+                    style: {
+                      padding: "16px",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "12px",
+                    },
+                    children: [
+                      t.photo &&
+                        (0, n.jsxs)("div", {
+                          children: [
+                            n.jsx(s.default, {
+                              href: "/listings",
+                              style: {
+                                color: "var(--text-muted)",
+                                fontSize: "13px",
+                                textDecoration: "none",
+                              },
+                              children: "← Объявления",
+                            }),
+                            n.jsx("h1", {
+                              style: {
+                                margin: "8px 0",
+                                fontSize: "20px",
+                                fontFamily: "Unbounded, sans-serif",
+                              },
+                              children: t.title,
+                            }),
+                          ],
+                        }),
+                      (0, n.jsxs)("div", {
+                        style: {
+                          display: "flex",
+                          gap: "8px",
+                          alignItems: "center",
+                        },
+                        children: [
+                          n.jsx(l.Badge, { children: o.Bv[t.type] }),
+                          t.price &&
+                            (0, n.jsxs)("span", {
+                              style: {
+                                fontWeight: 700,
+                                fontSize: "20px",
+                                color: "var(--blue)",
+                              },
+                              children: [t.price, "€"],
+                            }),
+                          n.jsx("div", {
+                            style: { marginLeft: "auto" },
+                            children: n.jsx(u._, { id: t.id }),
+                          }),
+                        ],
+                      }),
+                      (0, n.jsxs)("div", {
+                        style: {
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                        },
+                        children: [
+                          (0, n.jsxs)("div", {
+                            style: {
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "12px",
+                            },
+                            children: [
+                              n.jsx(d, { id: t.id }),
+                              n.jsx(p, { addedBy: t.addedBy }),
+                            ],
+                          }),
+                          n.jsx(x, {
+                            title: t.title,
+                            url: `/listings/${t.id}`,
+                          }),
+                        ],
+                      }),
+                      (0, n.jsxs)(l.Card, {
+                        style: { padding: "18px" },
+                        children: [
+                          n.jsx("div", {
+                            style: {
+                              fontSize: "12px",
+                              color: "var(--text-muted)",
+                              fontWeight: 600,
+                              letterSpacing: "0.06em",
+                              textTransform: "uppercase",
+                              marginBottom: "8px",
+                            },
+                            children: "Описание",
+                          }),
+                          n.jsx("p", {
+                            style: { margin: 0, lineHeight: 1.6 },
+                            children: t.description,
+                          }),
+                        ],
+                      }),
+                      (0, n.jsxs)("a", {
+                        href: t.contact.startsWith("@")
+                          ? `https://t.me/${t.contact.slice(1)}`
+                          : `tel:${t.contact}`,
+                        style: {
+                          display: "block",
+                          background: "var(--blue)",
+                          color: "#fff",
+                          textAlign: "center",
+                          padding: "16px",
+                          borderRadius: "var(--radius)",
+                          textDecoration: "none",
+                          fontWeight: 600,
+                          fontSize: "15px",
+                        },
+                        children: ["Связаться ", t.contact],
+                      }),
+                      n.jsx(l.Card, {
+                        style: { padding: "18px" },
+                        children: n.jsx(g.H, { itemId: t.id }),
+                      }),
+                    ],
+                  }),
+                ],
+              })
+            : (0, i.notFound)();
+        }
+      },
+      419: (e, t, r) => {
+        "use strict";
+        r.d(t, { H: () => a });
+        var n = r(326),
+          i = r(7577);
+        function s(e, t) {
+          localStorage.setItem(`comments_v1:${e}`, JSON.stringify(t));
+        }
+        function a({ itemId: e }) {
+          let {
+              comments: t,
+              add: r,
+              remove: a,
+            } = (function (e) {
+              let [t, r] = (0, i.useState)([]);
+              return {
+                comments: t,
+                add: (0, i.useCallback)(
+                  (t) => {
+                    let n = {
+                      id: Date.now().toString(),
+                      text: t.trim(),
+                      createdAt: new Date().toISOString(),
+                    };
+                    r((t) => {
+                      let r = [...t, n];
+                      return (s(e, r), r);
+                    });
+                  },
+                  [e],
+                ),
+                remove: (0, i.useCallback)(
+                  (t) => {
+                    r((r) => {
+                      let n = r.filter((e) => e.id !== t);
+                      return (s(e, n), n);
+                    });
+                  },
+                  [e],
+                ),
+              };
+            })(e),
+            [o, l] = (0, i.useState)("");
+          function d() {
+            o.trim() && (r(o), l(""));
+          }
+          return (0, n.jsxs)("div", {
+            style: { display: "flex", flexDirection: "column", gap: "12px" },
+            children: [
+              (0, n.jsxs)("div", {
+                style: {
+                  fontSize: "12px",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                },
+                children: ["Обсуждение \xb7 ", t.length],
+              }),
+              0 === t.length
+                ? n.jsx("p", {
+                    style: {
+                      margin: 0,
+                      fontSize: "13px",
+                      color: "var(--text-muted)",
+                      fontStyle: "italic",
+                    },
+                    children: "Будь первым кто оставит комментарий",
+                  })
+                : n.jsx("div", {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    },
+                    children: t.map((e) =>
+                      (0, n.jsxs)(
+                        "div",
+                        {
+                          style: {
+                            background: "var(--card)",
+                            border: "1px solid var(--border)",
+                            borderRadius: "var(--radius)",
+                            padding: "12px 14px",
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "flex-start",
+                          },
+                          children: [
+                            (0, n.jsxs)("div", {
+                              style: { flex: 1, minWidth: 0 },
+                              children: [
+                                n.jsx("p", {
+                                  style: {
+                                    margin: 0,
+                                    fontSize: "14px",
+                                    lineHeight: 1.5,
+                                  },
+                                  children: e.text,
+                                }),
+                                n.jsx("span", {
+                                  style: {
+                                    fontSize: "11px",
+                                    color: "var(--text-muted)",
+                                    marginTop: "4px",
+                                    display: "block",
+                                  },
+                                  children: new Date(
+                                    e.createdAt,
+                                  ).toLocaleDateString("ru-RU", {
+                                    day: "numeric",
+                                    month: "short",
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                  }),
+                                }),
+                              ],
+                            }),
+                            n.jsx("button", {
+                              onClick: () => a(e.id),
+                              "aria-label": "Удалить",
+                              style: {
+                                background: "none",
+                                border: "none",
+                                cursor: "pointer",
+                                fontSize: "14px",
+                                color: "var(--text-muted)",
+                                padding: "2px 4px",
+                                flexShrink: 0,
+                                lineHeight: 1,
+                                WebkitTapHighlightColor: "transparent",
+                              },
+                              children: "✕",
+                            }),
+                          ],
+                        },
+                        e.id,
+                      ),
+                    ),
+                  }),
+              (0, n.jsxs)("div", {
+                style: { display: "flex", gap: "8px", alignItems: "flex-end" },
+                children: [
+                  n.jsx("textarea", {
+                    value: o,
+                    onChange: (e) => l(e.target.value),
+                    onKeyDown: function (e) {
+                      "Enter" !== e.key ||
+                        e.shiftKey ||
+                        (e.preventDefault(), d());
+                    },
+                    placeholder: "Написать комментарий...",
+                    rows: 2,
+                    style: {
+                      flex: 1,
+                      padding: "10px 14px",
+                      borderRadius: "var(--radius)",
+                      border: "1px solid var(--border)",
+                      background: "var(--card)",
+                      color: "var(--text)",
+                      fontSize: "14px",
+                      resize: "none",
+                      fontFamily: "inherit",
+                      outline: "none",
+                      lineHeight: 1.5,
+                    },
+                  }),
+                  n.jsx("button", {
+                    onClick: d,
+                    disabled: !o.trim(),
+                    style: {
+                      background: o.trim() ? "var(--blue)" : "var(--border)",
+                      color: o.trim() ? "#fff" : "var(--text-muted)",
+                      border: "none",
+                      borderRadius: "var(--radius)",
+                      padding: "10px 16px",
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      cursor: o.trim() ? "pointer" : "default",
+                      transition: "background 200ms ease",
+                      flexShrink: 0,
+                      WebkitTapHighlightColor: "transparent",
+                      height: "fit-content",
+                    },
+                    children: "Отправить",
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+      },
+      4951: (e, t, r) => {
+        "use strict";
+        r.d(t, { _: () => s });
+        var n = r(326),
+          i = r(7577);
+        function s({ id: e }) {
+          let { isFavorite: t, toggle: r } = (function () {
+              let [e, t] = (0, i.useState)(new Set()),
+                r = (0, i.useCallback)((e) => {
+                  t((t) => {
+                    let r = new Set(t);
+                    return (
+                      r.has(e) ? r.delete(e) : r.add(e),
+                      localStorage.setItem(
+                        "favorites_v1",
+                        JSON.stringify(Array.from(r)),
+                      ),
+                      r
+                    );
+                  });
+                }, []),
+                n = (0, i.useCallback)((t) => e.has(t), [e]);
+              return { favorites: e, toggle: r, isFavorite: n };
+            })(),
+            s = t(e);
+          return n.jsx("button", {
+            onClick: () => r(e),
+            "aria-label": s ? "Убрать из избранного" : "Добавить в избранное",
+            style: {
+              background: s ? "rgba(232,60,60,0.1)" : "var(--card)",
+              border: `1px solid ${s ? "rgba(232,60,60,0.3)" : "var(--border)"}`,
+              borderRadius: "50%",
+              width: 40,
+              height: 40,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              fontSize: "18px",
+              flexShrink: 0,
+              transition:
+                "transform 150ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease",
+              WebkitTapHighlightColor: "transparent",
+            },
+            onMouseDown: (e) =>
+              (e.currentTarget.style.transform = "scale(0.88)"),
+            onMouseUp: (e) => (e.currentTarget.style.transform = "scale(1)"),
+            onTouchStart: (e) =>
+              (e.currentTarget.style.transform = "scale(0.88)"),
+            onTouchEnd: (e) => (e.currentTarget.style.transform = "scale(1)"),
+            children: s ? "❤️" : "\uD83E\uDD0D",
+          });
+        }
+      },
+      4681: (e, t, r) => {
+        "use strict";
+        (r.r(t),
+          r.d(t, { $$typeof: () => a, __esModule: () => s, default: () => o }));
+        var n = r(8570);
+        let i = (0, n.createProxy)(
+            String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx`,
+          ),
+          { __esModule: s, $$typeof: a } = i;
+        i.default;
+        let o = (0, n.createProxy)(
+          String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/listings/[id]/page.tsx#default`,
+        );
+      },
+    }));
+  var t = require("../../../webpack-runtime.js");
+  t.C(e);
+  var r = (e) => t((t.s = e)),
+    n = t.X(0, [24, 359], () => r(3005));
+  module.exports = n;
+})();

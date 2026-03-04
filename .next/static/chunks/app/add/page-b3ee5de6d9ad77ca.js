@@ -1,1 +1,651 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[853],{7505:function(e,t,n){Promise.resolve().then(n.bind(n,913))},913:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return o}});var r=n(7437),s=n(2265),l=n(4451),a=n(8347);let i=[{value:"catalog",icon:"\uD83D\uDDC2",label:"Специалист",desc:"Врач, юрист, мастер и др."},{value:"listings",icon:"\uD83D\uDCE2",label:"Объявление",desc:"Купить, продать, отдать"},{value:"events",icon:"\uD83C\uDF89",label:"Событие",desc:"Встреча или место"}];function o(){let[e,t]=(0,s.useState)(null),[n,o]=(0,s.useState)(!1),[d,u]=(0,s.useState)("doctors"),[c,x]=(0,s.useState)(""),[p,h]=(0,s.useState)(""),[v,f]=(0,s.useState)(""),[g,y]=(0,s.useState)("sell"),[j,b]=(0,s.useState)(""),[m,D]=(0,s.useState)(""),[C,S]=(0,s.useState)(""),[k,z]=(0,s.useState)(""),[w,H]=(0,s.useState)(""),[B,E]=(0,s.useState)(""),[O,R]=(0,s.useState)(""),[T,W]=(0,s.useState)(""),[F,_]=(0,s.useState)(!1),A={width:"100%",padding:"13px 14px",borderRadius:"12px",border:"1.5px solid var(--border)",fontSize:"15px",fontFamily:"Inter, sans-serif",background:"#fff",outline:"none",boxSizing:"border-box",color:"var(--text)"},U={fontSize:"12px",fontWeight:600,color:"var(--text-muted)",letterSpacing:"0.06em",textTransform:"uppercase",marginBottom:"6px",display:"block"};return n?(0,r.jsxs)("div",{style:{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minHeight:"70vh",padding:"40px 20px",textAlign:"center"},children:[(0,r.jsx)("div",{style:{fontSize:"64px",marginBottom:"20px"},children:"✅"}),(0,r.jsx)("h2",{style:{fontFamily:"Unbounded, sans-serif",fontSize:"20px",margin:"0 0 12px"},children:"Добавлено!"}),(0,r.jsx)("p",{style:{color:"var(--text-muted)",margin:"0 0 24px"},children:"Запись появится после проверки модератором."}),(0,r.jsx)("button",{onClick:()=>{o(!1),t(null)},style:{background:"var(--blue)",color:"#fff",border:"none",padding:"14px 28px",borderRadius:"var(--radius)",fontSize:"15px",fontWeight:600,cursor:"pointer"},children:"Добавить ещё"})]}):(0,r.jsxs)("div",{children:[(0,r.jsx)("div",{style:{background:"var(--blue)",padding:"24px 20px 20px"},children:(0,r.jsx)("h1",{style:{margin:0,color:"#fff",fontSize:"22px",fontFamily:"Unbounded, sans-serif"},children:"Добавить"})}),(0,r.jsxs)("div",{style:{padding:"20px 16px",display:"flex",flexDirection:"column",gap:"16px"},children:[(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Что добавляем?"}),(0,r.jsx)("div",{style:{display:"flex",flexDirection:"column",gap:"8px"},children:i.map(n=>(0,r.jsxs)("button",{onClick:()=>t(n.value),style:{display:"flex",alignItems:"center",gap:"14px",padding:"14px 16px",borderRadius:"var(--radius)",cursor:"pointer",border:"2px solid ".concat(e===n.value?"var(--blue)":"var(--border)"),background:e===n.value?"var(--blue-muted)":"#fff",textAlign:"left",transition:"all 0.15s"},children:[(0,r.jsx)("span",{style:{fontSize:"26px"},children:n.icon}),(0,r.jsxs)("div",{children:[(0,r.jsx)("div",{style:{fontWeight:700,fontSize:"14px",color:"var(--text)"},children:n.label}),(0,r.jsx)("div",{style:{fontSize:"12px",color:"var(--text-muted)"},children:n.desc})]})]},n.value))})]}),"catalog"===e&&(0,r.jsxs)(a.Card,{style:{padding:"18px",display:"flex",flexDirection:"column",gap:"14px"},children:[(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Категория"}),(0,r.jsx)("select",{value:d,onChange:e=>u(e.target.value),style:{...A},children:Object.keys(l.Hs).map(e=>(0,r.jsxs)("option",{value:e,children:[l.gO[e]," ",l.Hs[e]]},e))})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Имя"}),(0,r.jsx)("input",{style:A,placeholder:"Иван Иванов",value:c,onChange:e=>x(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"О себе"}),(0,r.jsx)("textarea",{style:{...A,minHeight:"90px",resize:"vertical"},placeholder:"Опыт, специализация, как могу помочь...",value:p,onChange:e=>h(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Контакт"}),(0,r.jsx)("input",{style:A,placeholder:"@username или +421...",value:v,onChange:e=>f(e.target.value)})]})]}),"listings"===e&&(0,r.jsxs)(a.Card,{style:{padding:"18px",display:"flex",flexDirection:"column",gap:"14px"},children:[(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Тип"}),(0,r.jsx)("select",{value:g,onChange:e=>y(e.target.value),style:{...A},children:Object.keys(l.Bv).map(e=>(0,r.jsx)("option",{value:e,children:l.Bv[e]},e))})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Заголовок"}),(0,r.jsx)("input",{style:A,placeholder:"Детская коляска Bugaboo",value:j,onChange:e=>b(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Описание"}),(0,r.jsx)("textarea",{style:{...A,minHeight:"80px",resize:"vertical"},placeholder:"Подробности...",value:m,onChange:e=>D(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Цена (€, если есть)"}),(0,r.jsx)("input",{style:A,type:"number",placeholder:"350",value:C,onChange:e=>S(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Контакт"}),(0,r.jsx)("input",{style:A,placeholder:"@username или +421...",value:k,onChange:e=>z(e.target.value)})]})]}),"events"===e&&(0,r.jsxs)(a.Card,{style:{padding:"18px",display:"flex",flexDirection:"column",gap:"14px"},children:[(0,r.jsx)("div",{style:{display:"flex",gap:"8px"},children:[!1,!0].map(e=>(0,r.jsx)("button",{onClick:()=>_(e),style:{flex:1,padding:"10px",borderRadius:"12px",cursor:"pointer",fontWeight:600,fontSize:"13px",border:"2px solid ".concat(F===e?"var(--blue)":"var(--border)"),background:F===e?"var(--blue-muted)":"#fff",color:F===e?"var(--blue)":"var(--text-muted)"},children:e?"\uD83D\uDCCD Место":"\uD83C\uDF89 Событие"},String(e)))}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Название"}),(0,r.jsx)("input",{style:A,placeholder:"Встреча в кафе",value:w,onChange:e=>H(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Описание"}),(0,r.jsx)("textarea",{style:{...A,minHeight:"80px",resize:"vertical"},placeholder:"Подробности...",value:B,onChange:e=>E(e.target.value)})]}),!F&&(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Дата и время"}),(0,r.jsx)("input",{style:A,type:"datetime-local",value:O,onChange:e=>R(e.target.value)})]}),(0,r.jsxs)("div",{children:[(0,r.jsx)("span",{style:U,children:"Адрес"}),(0,r.jsx)("input",{style:A,placeholder:"Obchodn\xe1 18",value:T,onChange:e=>W(e.target.value)})]})]}),e&&(0,r.jsx)("button",{onClick:function(){o(!0)},style:{background:"var(--blue)",color:"#fff",border:"none",padding:"16px",borderRadius:"var(--radius)",fontSize:"15px",fontWeight:600,cursor:"pointer",width:"100%"},children:"Отправить на проверку"})]})]})}},8347:function(e,t,n){"use strict";n.d(t,{Badge:function(){return a},Card:function(){return s},PageHeader:function(){return l}});var r=n(7437);function s(e){let{children:t,onClick:n,style:s}=e;return(0,r.jsx)("div",{onClick:n,style:{background:"var(--card)",borderRadius:"var(--radius)",border:"1px solid var(--border)",overflow:"hidden",cursor:n?"pointer":"default",transition:"transform 0.15s ease, box-shadow 0.15s ease",...s},onMouseDown:e=>n&&(e.currentTarget.style.transform="scale(0.98)"),onMouseUp:e=>n&&(e.currentTarget.style.transform="scale(1)"),onTouchStart:e=>n&&(e.currentTarget.style.transform="scale(0.98)"),onTouchEnd:e=>n&&(e.currentTarget.style.transform="scale(1)"),children:t})}function l(e){let{title:t,subtitle:n}=e;return(0,r.jsxs)("div",{style:{padding:"24px 20px 16px",background:"var(--blue)"},children:[(0,r.jsx)("h1",{style:{margin:0,fontSize:"22px",color:"#fff",fontFamily:"Unbounded, sans-serif"},children:t}),n&&(0,r.jsx)("p",{style:{margin:"6px 0 0",color:"rgba(255,255,255,0.7)",fontSize:"13px"},children:n})]})}function a(e){let{children:t,color:n="var(--blue-muted)",textColor:s="var(--blue)"}=e;return(0,r.jsx)("span",{style:{display:"inline-block",padding:"3px 10px",borderRadius:"100px",background:n,color:s,fontSize:"11px",fontWeight:600,letterSpacing:"0.02em"},children:t})}n(2265)},4451:function(e,t,n){"use strict";n.d(t,{Bv:function(){return l},Hs:function(){return r},Zz:function(){return i},gO:function(){return s},wW:function(){return a}});let r={doctors:"Врачи",lawyers:"Юристы",masters:"Мастера",nannies:"Няни",tutors:"Репетиторы",accountants:"Бухгалтеры",other:"Другое"},s={doctors:"\uD83E\uDE7A",lawyers:"⚖️",masters:"\uD83D\uDD27",nannies:"\uD83D\uDC76",tutors:"\uD83D\uDCDA",accountants:"\uD83D\uDCCA",other:"✨"},l={sell:"Продам",buy:"Куплю",free:"Отдам",wanted:"Ищу",rent:"Сниму",rentout:"Сдам"},a={vacancy:"Вакансия",resume:"Резюме"},i={rent:"Аренда",buy:"Продажа",roommate:"Ищу соседа"}}},function(e){e.O(0,[971,23,744],function(){return e(e.s=7505)}),_N_E=e.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [853],
+  {
+    7505: function (e, t, n) {
+      Promise.resolve().then(n.bind(n, 913));
+    },
+    913: function (e, t, n) {
+      "use strict";
+      (n.r(t),
+        n.d(t, {
+          default: function () {
+            return o;
+          },
+        }));
+      var r = n(7437),
+        s = n(2265),
+        l = n(4451),
+        a = n(8347);
+      let i = [
+        {
+          value: "catalog",
+          icon: "\uD83D\uDDC2",
+          label: "Специалист",
+          desc: "Врач, юрист, мастер и др.",
+        },
+        {
+          value: "listings",
+          icon: "\uD83D\uDCE2",
+          label: "Объявление",
+          desc: "Купить, продать, отдать",
+        },
+        {
+          value: "events",
+          icon: "\uD83C\uDF89",
+          label: "Событие",
+          desc: "Встреча или место",
+        },
+      ];
+      function o() {
+        let [e, t] = (0, s.useState)(null),
+          [n, o] = (0, s.useState)(!1),
+          [d, u] = (0, s.useState)("doctors"),
+          [c, x] = (0, s.useState)(""),
+          [p, h] = (0, s.useState)(""),
+          [v, f] = (0, s.useState)(""),
+          [g, y] = (0, s.useState)("sell"),
+          [j, b] = (0, s.useState)(""),
+          [m, D] = (0, s.useState)(""),
+          [C, S] = (0, s.useState)(""),
+          [k, z] = (0, s.useState)(""),
+          [w, H] = (0, s.useState)(""),
+          [B, E] = (0, s.useState)(""),
+          [O, R] = (0, s.useState)(""),
+          [T, W] = (0, s.useState)(""),
+          [F, _] = (0, s.useState)(!1),
+          A = {
+            width: "100%",
+            padding: "13px 14px",
+            borderRadius: "12px",
+            border: "1.5px solid var(--border)",
+            fontSize: "15px",
+            fontFamily: "Inter, sans-serif",
+            background: "#fff",
+            outline: "none",
+            boxSizing: "border-box",
+            color: "var(--text)",
+          },
+          U = {
+            fontSize: "12px",
+            fontWeight: 600,
+            color: "var(--text-muted)",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            marginBottom: "6px",
+            display: "block",
+          };
+        return n
+          ? (0, r.jsxs)("div", {
+              style: {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: "70vh",
+                padding: "40px 20px",
+                textAlign: "center",
+              },
+              children: [
+                (0, r.jsx)("div", {
+                  style: { fontSize: "64px", marginBottom: "20px" },
+                  children: "✅",
+                }),
+                (0, r.jsx)("h2", {
+                  style: {
+                    fontFamily: "Unbounded, sans-serif",
+                    fontSize: "20px",
+                    margin: "0 0 12px",
+                  },
+                  children: "Добавлено!",
+                }),
+                (0, r.jsx)("p", {
+                  style: { color: "var(--text-muted)", margin: "0 0 24px" },
+                  children: "Запись появится после проверки модератором.",
+                }),
+                (0, r.jsx)("button", {
+                  onClick: () => {
+                    (o(!1), t(null));
+                  },
+                  style: {
+                    background: "var(--blue)",
+                    color: "#fff",
+                    border: "none",
+                    padding: "14px 28px",
+                    borderRadius: "var(--radius)",
+                    fontSize: "15px",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  },
+                  children: "Добавить ещё",
+                }),
+              ],
+            })
+          : (0, r.jsxs)("div", {
+              children: [
+                (0, r.jsx)("div", {
+                  style: {
+                    background: "var(--blue)",
+                    padding: "24px 20px 20px",
+                  },
+                  children: (0, r.jsx)("h1", {
+                    style: {
+                      margin: 0,
+                      color: "#fff",
+                      fontSize: "22px",
+                      fontFamily: "Unbounded, sans-serif",
+                    },
+                    children: "Добавить",
+                  }),
+                }),
+                (0, r.jsxs)("div", {
+                  style: {
+                    padding: "20px 16px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "16px",
+                  },
+                  children: [
+                    (0, r.jsxs)("div", {
+                      children: [
+                        (0, r.jsx)("span", {
+                          style: U,
+                          children: "Что добавляем?",
+                        }),
+                        (0, r.jsx)("div", {
+                          style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "8px",
+                          },
+                          children: i.map((n) =>
+                            (0, r.jsxs)(
+                              "button",
+                              {
+                                onClick: () => t(n.value),
+                                style: {
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: "14px",
+                                  padding: "14px 16px",
+                                  borderRadius: "var(--radius)",
+                                  cursor: "pointer",
+                                  border: "2px solid ".concat(
+                                    e === n.value
+                                      ? "var(--blue)"
+                                      : "var(--border)",
+                                  ),
+                                  background:
+                                    e === n.value
+                                      ? "var(--blue-muted)"
+                                      : "#fff",
+                                  textAlign: "left",
+                                  transition: "all 0.15s",
+                                },
+                                children: [
+                                  (0, r.jsx)("span", {
+                                    style: { fontSize: "26px" },
+                                    children: n.icon,
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                    children: [
+                                      (0, r.jsx)("div", {
+                                        style: {
+                                          fontWeight: 700,
+                                          fontSize: "14px",
+                                          color: "var(--text)",
+                                        },
+                                        children: n.label,
+                                      }),
+                                      (0, r.jsx)("div", {
+                                        style: {
+                                          fontSize: "12px",
+                                          color: "var(--text-muted)",
+                                        },
+                                        children: n.desc,
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              },
+                              n.value,
+                            ),
+                          ),
+                        }),
+                      ],
+                    }),
+                    "catalog" === e &&
+                      (0, r.jsxs)(a.Card, {
+                        style: {
+                          padding: "18px",
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "14px",
+                        },
+                        children: [
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Категория",
+                              }),
+                              (0, r.jsx)("select", {
+                                value: d,
+                                onChange: (e) => u(e.target.value),
+                                style: { ...A },
+                                children: Object.keys(l.Hs).map((e) =>
+                                  (0, r.jsxs)(
+                                    "option",
+                                    {
+                                      value: e,
+                                      children: [l.gO[e], " ", l.Hs[e]],
+                                    },
+                                    e,
+                                  ),
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", { style: U, children: "Имя" }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                placeholder: "Иван Иванов",
+                                value: c,
+                                onChange: (e) => x(e.target.value),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "О себе",
+                              }),
+                              (0, r.jsx)("textarea", {
+                                style: {
+                                  ...A,
+                                  minHeight: "90px",
+                                  resize: "vertical",
+                                },
+                                placeholder:
+                                  "Опыт, специализация, как могу помочь...",
+                                value: p,
+                                onChange: (e) => h(e.target.value),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Контакт",
+                              }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                placeholder: "@username или +421...",
+                                value: v,
+                                onChange: (e) => f(e.target.value),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    "listings" === e &&
+                      (0, r.jsxs)(a.Card, {
+                        style: {
+                          padding: "18px",
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "14px",
+                        },
+                        children: [
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", { style: U, children: "Тип" }),
+                              (0, r.jsx)("select", {
+                                value: g,
+                                onChange: (e) => y(e.target.value),
+                                style: { ...A },
+                                children: Object.keys(l.Bv).map((e) =>
+                                  (0, r.jsx)(
+                                    "option",
+                                    { value: e, children: l.Bv[e] },
+                                    e,
+                                  ),
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Заголовок",
+                              }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                placeholder: "Детская коляска Bugaboo",
+                                value: j,
+                                onChange: (e) => b(e.target.value),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Описание",
+                              }),
+                              (0, r.jsx)("textarea", {
+                                style: {
+                                  ...A,
+                                  minHeight: "80px",
+                                  resize: "vertical",
+                                },
+                                placeholder: "Подробности...",
+                                value: m,
+                                onChange: (e) => D(e.target.value),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Цена (€, если есть)",
+                              }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                type: "number",
+                                placeholder: "350",
+                                value: C,
+                                onChange: (e) => S(e.target.value),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Контакт",
+                              }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                placeholder: "@username или +421...",
+                                value: k,
+                                onChange: (e) => z(e.target.value),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    "events" === e &&
+                      (0, r.jsxs)(a.Card, {
+                        style: {
+                          padding: "18px",
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "14px",
+                        },
+                        children: [
+                          (0, r.jsx)("div", {
+                            style: { display: "flex", gap: "8px" },
+                            children: [!1, !0].map((e) =>
+                              (0, r.jsx)(
+                                "button",
+                                {
+                                  onClick: () => _(e),
+                                  style: {
+                                    flex: 1,
+                                    padding: "10px",
+                                    borderRadius: "12px",
+                                    cursor: "pointer",
+                                    fontWeight: 600,
+                                    fontSize: "13px",
+                                    border: "2px solid ".concat(
+                                      F === e ? "var(--blue)" : "var(--border)",
+                                    ),
+                                    background:
+                                      F === e ? "var(--blue-muted)" : "#fff",
+                                    color:
+                                      F === e
+                                        ? "var(--blue)"
+                                        : "var(--text-muted)",
+                                  },
+                                  children: e
+                                    ? "\uD83D\uDCCD Место"
+                                    : "\uD83C\uDF89 Событие",
+                                },
+                                String(e),
+                              ),
+                            ),
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Название",
+                              }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                placeholder: "Встреча в кафе",
+                                value: w,
+                                onChange: (e) => H(e.target.value),
+                              }),
+                            ],
+                          }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Описание",
+                              }),
+                              (0, r.jsx)("textarea", {
+                                style: {
+                                  ...A,
+                                  minHeight: "80px",
+                                  resize: "vertical",
+                                },
+                                placeholder: "Подробности...",
+                                value: B,
+                                onChange: (e) => E(e.target.value),
+                              }),
+                            ],
+                          }),
+                          !F &&
+                            (0, r.jsxs)("div", {
+                              children: [
+                                (0, r.jsx)("span", {
+                                  style: U,
+                                  children: "Дата и время",
+                                }),
+                                (0, r.jsx)("input", {
+                                  style: A,
+                                  type: "datetime-local",
+                                  value: O,
+                                  onChange: (e) => R(e.target.value),
+                                }),
+                              ],
+                            }),
+                          (0, r.jsxs)("div", {
+                            children: [
+                              (0, r.jsx)("span", {
+                                style: U,
+                                children: "Адрес",
+                              }),
+                              (0, r.jsx)("input", {
+                                style: A,
+                                placeholder: "Obchodn\xe1 18",
+                                value: T,
+                                onChange: (e) => W(e.target.value),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                    e &&
+                      (0, r.jsx)("button", {
+                        onClick: function () {
+                          o(!0);
+                        },
+                        style: {
+                          background: "var(--blue)",
+                          color: "#fff",
+                          border: "none",
+                          padding: "16px",
+                          borderRadius: "var(--radius)",
+                          fontSize: "15px",
+                          fontWeight: 600,
+                          cursor: "pointer",
+                          width: "100%",
+                        },
+                        children: "Отправить на проверку",
+                      }),
+                  ],
+                }),
+              ],
+            });
+      }
+    },
+    8347: function (e, t, n) {
+      "use strict";
+      n.d(t, {
+        Badge: function () {
+          return a;
+        },
+        Card: function () {
+          return s;
+        },
+        PageHeader: function () {
+          return l;
+        },
+      });
+      var r = n(7437);
+      function s(e) {
+        let { children: t, onClick: n, style: s } = e;
+        return (0, r.jsx)("div", {
+          onClick: n,
+          style: {
+            background: "var(--card)",
+            borderRadius: "var(--radius)",
+            border: "1px solid var(--border)",
+            overflow: "hidden",
+            cursor: n ? "pointer" : "default",
+            transition: "transform 0.15s ease, box-shadow 0.15s ease",
+            ...s,
+          },
+          onMouseDown: (e) =>
+            n && (e.currentTarget.style.transform = "scale(0.98)"),
+          onMouseUp: (e) => n && (e.currentTarget.style.transform = "scale(1)"),
+          onTouchStart: (e) =>
+            n && (e.currentTarget.style.transform = "scale(0.98)"),
+          onTouchEnd: (e) =>
+            n && (e.currentTarget.style.transform = "scale(1)"),
+          children: t,
+        });
+      }
+      function l(e) {
+        let { title: t, subtitle: n } = e;
+        return (0, r.jsxs)("div", {
+          style: { padding: "24px 20px 16px", background: "var(--blue)" },
+          children: [
+            (0, r.jsx)("h1", {
+              style: {
+                margin: 0,
+                fontSize: "22px",
+                color: "#fff",
+                fontFamily: "Unbounded, sans-serif",
+              },
+              children: t,
+            }),
+            n &&
+              (0, r.jsx)("p", {
+                style: {
+                  margin: "6px 0 0",
+                  color: "rgba(255,255,255,0.7)",
+                  fontSize: "13px",
+                },
+                children: n,
+              }),
+          ],
+        });
+      }
+      function a(e) {
+        let {
+          children: t,
+          color: n = "var(--blue-muted)",
+          textColor: s = "var(--blue)",
+        } = e;
+        return (0, r.jsx)("span", {
+          style: {
+            display: "inline-block",
+            padding: "3px 10px",
+            borderRadius: "100px",
+            background: n,
+            color: s,
+            fontSize: "11px",
+            fontWeight: 600,
+            letterSpacing: "0.02em",
+          },
+          children: t,
+        });
+      }
+      n(2265);
+    },
+    4451: function (e, t, n) {
+      "use strict";
+      n.d(t, {
+        Bv: function () {
+          return l;
+        },
+        Hs: function () {
+          return r;
+        },
+        Zz: function () {
+          return i;
+        },
+        gO: function () {
+          return s;
+        },
+        wW: function () {
+          return a;
+        },
+      });
+      let r = {
+          doctors: "Врачи",
+          lawyers: "Юристы",
+          masters: "Мастера",
+          nannies: "Няни",
+          tutors: "Репетиторы",
+          accountants: "Бухгалтеры",
+          other: "Другое",
+        },
+        s = {
+          doctors: "\uD83E\uDE7A",
+          lawyers: "⚖️",
+          masters: "\uD83D\uDD27",
+          nannies: "\uD83D\uDC76",
+          tutors: "\uD83D\uDCDA",
+          accountants: "\uD83D\uDCCA",
+          other: "✨",
+        },
+        l = {
+          sell: "Продам",
+          buy: "Куплю",
+          free: "Отдам",
+          wanted: "Ищу",
+          rent: "Сниму",
+          rentout: "Сдам",
+        },
+        a = { vacancy: "Вакансия", resume: "Резюме" },
+        i = { rent: "Аренда", buy: "Продажа", roommate: "Ищу соседа" };
+    },
+  },
+  function (e) {
+    (e.O(0, [971, 23, 744], function () {
+      return e((e.s = 7505));
+    }),
+      (_N_E = e.O()));
+  },
+]);

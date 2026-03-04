@@ -1,1 +1,761 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[797],{3110:function(e,t,r){Promise.resolve().then(r.bind(r,4250))},7138:function(e,t,r){"use strict";r.d(t,{default:function(){return a.a}});var i=r(231),a=r.n(i)},4250:function(e,t,r){"use strict";r.r(t),r.d(t,{default:function(){return c}});var i=r(7437),a=r(2265),o=r(7138),n=r(9774),d=r(4451),s=r(8347);function c(){let[e,t]=(0,a.useState)(""),r=(0,a.useMemo)(()=>(function(e){if(e.length<2)return[];let t=e.toLowerCase(),r=[];return n.jt.filter(e=>e.name.toLowerCase().includes(t)||e.description.toLowerCase().includes(t)).forEach(e=>r.push({id:e.id,href:"/catalog/".concat(e.category,"/").concat(e.id),title:e.name,subtitle:e.description.slice(0,60)+"...",badge:d.Hs[e.category],emoji:"\uD83D\uDDC2"})),n.RH.filter(e=>e.title.toLowerCase().includes(t)||e.description.toLowerCase().includes(t)).forEach(e=>r.push({id:e.id,href:"/listings/".concat(e.id),title:e.title,subtitle:e.description.slice(0,60)+"...",badge:d.Bv[e.type],badgeColor:"#FFF8EE",badgeText:"#B8860B",emoji:"\uD83D\uDCE2"})),n.FP.filter(e=>e.title.toLowerCase().includes(t)||e.description.toLowerCase().includes(t)).forEach(e=>r.push({id:e.id,href:"/events/".concat(e.id),title:e.title,subtitle:e.description.slice(0,60)+"...",badge:e.isPlace?"Место":"Событие",badgeColor:"#F0FAF0",badgeText:"#2D7A2D",emoji:"\uD83C\uDF89"})),n.WN.filter(e=>e.title.toLowerCase().includes(t)||e.description.toLowerCase().includes(t)||e.company&&e.company.toLowerCase().includes(t)).forEach(e=>r.push({id:e.id,href:"/jobs/".concat(e.id),title:e.title,subtitle:e.company||e.description.slice(0,60)+"...",badge:d.wW[e.type],badgeColor:"#EEF3FA",badgeText:"#1B3F6B",emoji:"\uD83D\uDCBC"})),n.H.filter(e=>e.title.toLowerCase().includes(t)||e.description.toLowerCase().includes(t)||e.address&&e.address.toLowerCase().includes(t)).forEach(e=>r.push({id:e.id,href:"/housing/".concat(e.id),title:e.title,subtitle:e.address||e.description.slice(0,60)+"...",badge:d.Zz[e.type],badgeColor:"#F5F0FF",badgeText:"#6B2FA0",emoji:"\uD83C\uDFE0"})),r})(e),[e]);return(0,i.jsxs)("div",{children:[(0,i.jsxs)("div",{style:{background:"var(--blue)",padding:"24px 20px 20px"},children:[(0,i.jsx)("h1",{style:{margin:"0 0 14px",color:"#fff",fontSize:"22px",fontFamily:"Unbounded, sans-serif"},children:"Поиск"}),(0,i.jsx)("input",{autoFocus:!0,placeholder:"Врач, квартира, работа...",value:e,onChange:e=>t(e.target.value),style:{width:"100%",padding:"13px 16px",borderRadius:"12px",border:"none",fontSize:"15px",fontFamily:"Inter, sans-serif",background:"#fff",color:"var(--text)",outline:"none",boxSizing:"border-box"}})]}),(0,i.jsxs)("div",{style:{padding:"16px",display:"flex",flexDirection:"column",gap:"8px"},children:[e.length<2&&(0,i.jsxs)("div",{style:{textAlign:"center",padding:"48px 20px",color:"var(--text-muted)"},children:[(0,i.jsx)("div",{style:{fontSize:"40px",marginBottom:"12px"},children:"\uD83D\uDD0D"}),(0,i.jsx)("div",{style:{fontSize:"15px"},children:"Начни вводить запрос"})]}),e.length>=2&&0===r.length&&(0,i.jsxs)("div",{style:{textAlign:"center",padding:"48px 20px",color:"var(--text-muted)"},children:[(0,i.jsx)("div",{style:{fontSize:"40px",marginBottom:"12px"},children:"\uD83D\uDE15"}),(0,i.jsx)("div",{style:{fontSize:"15px"},children:"Ничего не найдено"}),(0,i.jsx)("div",{style:{fontSize:"13px",marginTop:"6px"},children:"Попробуй другой запрос"})]}),r.map(e=>(0,i.jsx)(o.default,{href:e.href,style:{textDecoration:"none"},children:(0,i.jsx)(s.Card,{children:(0,i.jsxs)("div",{style:{padding:"14px 16px",display:"flex",gap:"12px",alignItems:"center"},children:[(0,i.jsx)("span",{style:{fontSize:"24px",flexShrink:0},children:e.emoji}),(0,i.jsxs)("div",{style:{minWidth:0,flex:1},children:[(0,i.jsx)("div",{style:{fontWeight:600,fontSize:"14px",marginBottom:"4px"},children:e.title}),(0,i.jsx)("div",{style:{fontSize:"12px",color:"var(--text-muted)",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",marginBottom:"4px"},children:e.subtitle}),(0,i.jsx)(s.Badge,{color:e.badgeColor,textColor:e.badgeText,children:e.badge})]}),(0,i.jsx)("span",{style:{color:"var(--text-muted)",flexShrink:0},children:"›"})]})})},"".concat(e.emoji,"-").concat(e.id))),r.length>0&&(0,i.jsxs)("div",{style:{textAlign:"center",fontSize:"12px",color:"var(--text-muted)",padding:"8px"},children:["Найдено: ",r.length]})]})]})}},8347:function(e,t,r){"use strict";r.d(t,{Badge:function(){return n},Card:function(){return a},PageHeader:function(){return o}});var i=r(7437);function a(e){let{children:t,onClick:r,style:a}=e;return(0,i.jsx)("div",{onClick:r,style:{background:"var(--card)",borderRadius:"var(--radius)",border:"1px solid var(--border)",overflow:"hidden",cursor:r?"pointer":"default",transition:"transform 0.15s ease, box-shadow 0.15s ease",...a},onMouseDown:e=>r&&(e.currentTarget.style.transform="scale(0.98)"),onMouseUp:e=>r&&(e.currentTarget.style.transform="scale(1)"),onTouchStart:e=>r&&(e.currentTarget.style.transform="scale(0.98)"),onTouchEnd:e=>r&&(e.currentTarget.style.transform="scale(1)"),children:t})}function o(e){let{title:t,subtitle:r}=e;return(0,i.jsxs)("div",{style:{padding:"24px 20px 16px",background:"var(--blue)"},children:[(0,i.jsx)("h1",{style:{margin:0,fontSize:"22px",color:"#fff",fontFamily:"Unbounded, sans-serif"},children:t}),r&&(0,i.jsx)("p",{style:{margin:"6px 0 0",color:"rgba(255,255,255,0.7)",fontSize:"13px"},children:r})]})}function n(e){let{children:t,color:r="var(--blue-muted)",textColor:a="var(--blue)"}=e;return(0,i.jsx)("span",{style:{display:"inline-block",padding:"3px 10px",borderRadius:"100px",background:r,color:a,fontSize:"11px",fontWeight:600,letterSpacing:"0.02em"},children:t})}r(2265)},9774:function(e,t,r){"use strict";r.d(t,{FP:function(){return o},H:function(){return d},RH:function(){return a},WN:function(){return n},jt:function(){return i}});let i=[{id:"s1",name:"Анна Ковалёва",category:"doctors",description:"Терапевт, 12 лет опыта. Принимаю на русском и словацком. Помогу с направлениями к специалистам и разберусь с местной системой здравоохранения.",contact:"@anna_doc_ba",photo:"https://i.pravatar.cc/150?img=47",addedBy:"user_1",createdAt:"2024-01-15"},{id:"s2",name:"Дмитрий Лисов",category:"lawyers",description:"Специализируюсь на трудовом праве и вопросах ВНЖ/ПМЖ в Словакии. Консультирую по открытию бизнеса и налоговым вопросам.",contact:"@dmitry_law_sk",photo:"https://i.pravatar.cc/150?img=12",addedBy:"user_2",createdAt:"2024-01-20"},{id:"s3",name:"Сергей Майстер",category:"masters",description:"Сантехника, электрика, мелкий ремонт. Работаю качественно и по честным ценам. Выезжаю по всей Братиславе.",contact:"+421 900 123 456",photo:"https://i.pravatar.cc/150?img=33",addedBy:"user_3",createdAt:"2024-02-01"},{id:"s4",name:"Мария Петренко",category:"nannies",description:"Опыт с детьми от 1 до 8 лет. Могу забирать из садика/школы, помогать с домашними заданиями. Есть рекомендации.",contact:"@masha_nanny",photo:"https://i.pravatar.cc/150?img=44",addedBy:"user_4",createdAt:"2024-02-10"},{id:"s5",name:"Игорь Шевченко",category:"tutors",description:"Математика и физика для школьников и студентов. Готовлю к экзаменам. Онлайн или офлайн.",contact:"@igor_tutor_ba",photo:"https://i.pravatar.cc/150?img=57",addedBy:"user_5",createdAt:"2024-02-15"},{id:"s6",name:"Елена Волкова",category:"accountants",description:"Бухгалтерия для фрилансеров и малого бизнеса в Словакии. Помогу разобраться с налогами, SZCO, s.r.o.",contact:"@elena_buh_sk",photo:"https://i.pravatar.cc/150?img=25",addedBy:"user_6",createdAt:"2024-02-20"},{id:"s7",name:"Николай Бондарь",category:"doctors",description:"Стоматолог. Работаю в частной клинике в центре. Первичная консультация бесплатно для своих.",contact:"@kolia_dentist",photo:"https://i.pravatar.cc/150?img=60",addedBy:"user_7",createdAt:"2024-03-01"},{id:"s8",name:"Оксана Ткач",category:"masters",description:"Уборка квартир и офисов. Индивидуальный подход, собственные средства. Регулярно или разово.",contact:"@oksana_clean",photo:"https://i.pravatar.cc/150?img=38",addedBy:"user_8",createdAt:"2024-03-05"}],a=[{id:"l1",type:"sell",title:"Детская коляска Bugaboo",description:"Почти новая, использовали 6 месяцев. Состояние отличное, все документы есть.",price:350,photo:"https://images.unsplash.com/photo-1591016432367-d7e8b8b3ee74?w=400&q=80",contact:"@user_kolya",addedBy:"user_9",createdAt:"2024-03-10"},{id:"l2",type:"free",title:"Книги на русском языке",description:"Отдам коробку книг — классика, современная проза. Самовывоз из Petržalka.",contact:"@marina_ba",addedBy:"user_10",createdAt:"2024-03-11"},{id:"l3",type:"wanted",title:"Ищу велосипед для взрослого",description:"Нужен городской велосипед в хорошем состоянии, бюджет до 150€.",contact:"+421 911 222 333",addedBy:"user_11",createdAt:"2024-03-12"},{id:"l4",type:"rentout",title:"Сдаю комнату в Ružinov",description:"Уютная комната 14м\xb2 в квартире с двумя соседями. Рядом метро. Только для порядочных людей.",price:450,contact:"@roman_room",addedBy:"user_12",createdAt:"2024-03-13"},{id:"l5",type:"sell",title:"iPhone 13 Pro, 256GB",description:"В отличном состоянии, со словацким чеком. Продаю в связи с переездом.",price:600,photo:"https://images.unsplash.com/photo-1632633173522-47456de71b76?w=400&q=80",contact:"@iphone_seller",addedBy:"user_13",createdAt:"2024-03-14"}],o=[{id:"e1",title:"Встреча русскоязычного сообщества",description:"Ежемесячная встреча в кафе. Знакомимся, общаемся, делимся опытом жизни в Братиславе. Все желающие приветствуются.",date:"2024-03-20T18:00:00",address:"Caf\xe9 Verne, Obchodn\xe1 18",isPlace:!1,addedBy:"user_14",createdAt:"2024-03-10"},{id:"e2",title:"Русская библиотека",description:"Небольшая библиотека с книгами на русском. Можно взять домой или читать на месте. Работает по субботам.",address:"Štef\xe1nikova 25, каждую субботу 10:00–14:00",isPlace:!0,addedBy:"user_15",createdAt:"2024-02-01"},{id:"e3",title:"Мастер-класс по словацкому языку",description:"Разговорный клуб для начинающих. Ведёт носитель языка, занятия проходят в неформальной обстановке.",date:"2024-03-22T17:30:00",address:"Coworking Hub, Primaci\xe1lne n\xe1mestie 1",isPlace:!1,addedBy:"user_16",createdAt:"2024-03-08"},{id:"e4",title:"Детская площадка у Дуная",description:"Место где собираются русскоязычные семьи с детьми по выходным. Неформально, без записи.",address:"N\xe1brežie arm. gen. L. Svobodu, рядом с фонтаном",isPlace:!0,addedBy:"user_17",createdAt:"2024-02-15"}],n=[{id:"j1",type:"vacancy",title:"Водитель категории B/C",company:"Slovak Logistics s.r.o.",description:"Развозка товаров по Братиславе и окрестностям. Опыт от 1 года. Оформление официальное, зарплата вовремя.",salary:"1400–1700€",contact:"@slovak_logistics",remote:!1,addedBy:"user_30",createdAt:"2024-03-10"},{id:"j2",type:"vacancy",title:"Разработчик React / Next.js",company:"Стартап (удалённо)",description:"Ищем фронтенд-разработчика в небольшую команду. Проект интересный, стек современный. Оплата в евро.",salary:"2500–3500€",contact:"@dev_hiring_ba",remote:!0,addedBy:"user_31",createdAt:"2024-03-11"},{id:"j3",type:"resume",title:"Ищу работу — бухгалтер / финансист",description:"8 лет опыта, знаю словацкое законодательство, работала в s.r.o. Готова к частичной занятости или полной. Русский, словацкий, английский.",contact:"@irina_fin",remote:!1,addedBy:"user_32",createdAt:"2024-03-12"},{id:"j4",type:"vacancy",title:"Повар / помощник повара",company:"Ресторан в центре",description:"Русская и европейская кухня. Опыт обязателен. Условия обсуждаем лично. Легальное оформление.",salary:"1200–1500€",contact:"+421 902 345 678",remote:!1,addedBy:"user_33",createdAt:"2024-03-13"},{id:"j5",type:"resume",title:"Ищу работу — IT поддержка / системный администратор",description:"5 лет опыта в техподдержке и администрировании Windows/Linux. Есть ВНЖ, готов к работе сразу.",contact:"@sysadmin_ba",remote:!1,addedBy:"user_34",createdAt:"2024-03-14"}],d=[{id:"h1",type:"rent",title:"2-комнатная квартира в Ružinov",description:"Светлая квартира 55м\xb2, свежий ремонт, вся техника. Рядом метро Ružinovsk\xe1. Только некурящие.",price:950,address:"Ružinov, Bratislava",rooms:2,photo:"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80",contact:"@apartment_ba",addedBy:"user_35",createdAt:"2024-03-10"},{id:"h2",type:"rent",title:"Комната в квартире с двумя соседями",description:"Комната 16м\xb2 в трёхкомнатной квартире. Соседи тихие, работающие. Petržalka, 10 мин до центра.",price:420,address:"Petržalka, Bratislava",rooms:1,contact:"@room_petrzalka",addedBy:"user_36",createdAt:"2024-03-11"},{id:"h3",type:"roommate",title:"Ищу соседа в 3-комнатную квартиру",description:"Занята одна комната, ищем третьего. Квартира большая, есть балкон. Старый город, удобно везде добираться.",price:500,address:"Star\xe9 Mesto, Bratislava",contact:"@flatmate_search",addedBy:"user_37",createdAt:"2024-03-12"},{id:"h4",type:"buy",title:"Продаётся 3-комнатная квартира",description:"Просторная квартира 78м\xb2, хороший этаж, два балкона. Документы в порядке, собственник. Район Karlova Ves.",price:185e3,address:"Karlova Ves, Bratislava",rooms:3,photo:"https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80",contact:"@sell_flat_ba",addedBy:"user_38",createdAt:"2024-03-13"}]},4451:function(e,t,r){"use strict";r.d(t,{Bv:function(){return o},Hs:function(){return i},Zz:function(){return d},gO:function(){return a},wW:function(){return n}});let i={doctors:"Врачи",lawyers:"Юристы",masters:"Мастера",nannies:"Няни",tutors:"Репетиторы",accountants:"Бухгалтеры",other:"Другое"},a={doctors:"\uD83E\uDE7A",lawyers:"⚖️",masters:"\uD83D\uDD27",nannies:"\uD83D\uDC76",tutors:"\uD83D\uDCDA",accountants:"\uD83D\uDCCA",other:"✨"},o={sell:"Продам",buy:"Куплю",free:"Отдам",wanted:"Ищу",rent:"Сниму",rentout:"Сдам"},n={vacancy:"Вакансия",resume:"Резюме"},d={rent:"Аренда",buy:"Продажа",roommate:"Ищу соседа"}}},function(e){e.O(0,[231,971,23,744],function(){return e(e.s=3110)}),_N_E=e.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [797],
+  {
+    3110: function (e, t, r) {
+      Promise.resolve().then(r.bind(r, 4250));
+    },
+    7138: function (e, t, r) {
+      "use strict";
+      r.d(t, {
+        default: function () {
+          return a.a;
+        },
+      });
+      var i = r(231),
+        a = r.n(i);
+    },
+    4250: function (e, t, r) {
+      "use strict";
+      (r.r(t),
+        r.d(t, {
+          default: function () {
+            return c;
+          },
+        }));
+      var i = r(7437),
+        a = r(2265),
+        o = r(7138),
+        n = r(9774),
+        d = r(4451),
+        s = r(8347);
+      function c() {
+        let [e, t] = (0, a.useState)(""),
+          r = (0, a.useMemo)(
+            () =>
+              (function (e) {
+                if (e.length < 2) return [];
+                let t = e.toLowerCase(),
+                  r = [];
+                return (
+                  n.jt
+                    .filter(
+                      (e) =>
+                        e.name.toLowerCase().includes(t) ||
+                        e.description.toLowerCase().includes(t),
+                    )
+                    .forEach((e) =>
+                      r.push({
+                        id: e.id,
+                        href: "/catalog/".concat(e.category, "/").concat(e.id),
+                        title: e.name,
+                        subtitle: e.description.slice(0, 60) + "...",
+                        badge: d.Hs[e.category],
+                        emoji: "\uD83D\uDDC2",
+                      }),
+                    ),
+                  n.RH.filter(
+                    (e) =>
+                      e.title.toLowerCase().includes(t) ||
+                      e.description.toLowerCase().includes(t),
+                  ).forEach((e) =>
+                    r.push({
+                      id: e.id,
+                      href: "/listings/".concat(e.id),
+                      title: e.title,
+                      subtitle: e.description.slice(0, 60) + "...",
+                      badge: d.Bv[e.type],
+                      badgeColor: "#FFF8EE",
+                      badgeText: "#B8860B",
+                      emoji: "\uD83D\uDCE2",
+                    }),
+                  ),
+                  n.FP.filter(
+                    (e) =>
+                      e.title.toLowerCase().includes(t) ||
+                      e.description.toLowerCase().includes(t),
+                  ).forEach((e) =>
+                    r.push({
+                      id: e.id,
+                      href: "/events/".concat(e.id),
+                      title: e.title,
+                      subtitle: e.description.slice(0, 60) + "...",
+                      badge: e.isPlace ? "Место" : "Событие",
+                      badgeColor: "#F0FAF0",
+                      badgeText: "#2D7A2D",
+                      emoji: "\uD83C\uDF89",
+                    }),
+                  ),
+                  n.WN.filter(
+                    (e) =>
+                      e.title.toLowerCase().includes(t) ||
+                      e.description.toLowerCase().includes(t) ||
+                      (e.company && e.company.toLowerCase().includes(t)),
+                  ).forEach((e) =>
+                    r.push({
+                      id: e.id,
+                      href: "/jobs/".concat(e.id),
+                      title: e.title,
+                      subtitle: e.company || e.description.slice(0, 60) + "...",
+                      badge: d.wW[e.type],
+                      badgeColor: "#EEF3FA",
+                      badgeText: "#1B3F6B",
+                      emoji: "\uD83D\uDCBC",
+                    }),
+                  ),
+                  n.H.filter(
+                    (e) =>
+                      e.title.toLowerCase().includes(t) ||
+                      e.description.toLowerCase().includes(t) ||
+                      (e.address && e.address.toLowerCase().includes(t)),
+                  ).forEach((e) =>
+                    r.push({
+                      id: e.id,
+                      href: "/housing/".concat(e.id),
+                      title: e.title,
+                      subtitle: e.address || e.description.slice(0, 60) + "...",
+                      badge: d.Zz[e.type],
+                      badgeColor: "#F5F0FF",
+                      badgeText: "#6B2FA0",
+                      emoji: "\uD83C\uDFE0",
+                    }),
+                  ),
+                  r
+                );
+              })(e),
+            [e],
+          );
+        return (0, i.jsxs)("div", {
+          children: [
+            (0, i.jsxs)("div", {
+              style: { background: "var(--blue)", padding: "24px 20px 20px" },
+              children: [
+                (0, i.jsx)("h1", {
+                  style: {
+                    margin: "0 0 14px",
+                    color: "#fff",
+                    fontSize: "22px",
+                    fontFamily: "Unbounded, sans-serif",
+                  },
+                  children: "Поиск",
+                }),
+                (0, i.jsx)("input", {
+                  autoFocus: !0,
+                  placeholder: "Врач, квартира, работа...",
+                  value: e,
+                  onChange: (e) => t(e.target.value),
+                  style: {
+                    width: "100%",
+                    padding: "13px 16px",
+                    borderRadius: "12px",
+                    border: "none",
+                    fontSize: "15px",
+                    fontFamily: "Inter, sans-serif",
+                    background: "#fff",
+                    color: "var(--text)",
+                    outline: "none",
+                    boxSizing: "border-box",
+                  },
+                }),
+              ],
+            }),
+            (0, i.jsxs)("div", {
+              style: {
+                padding: "16px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "8px",
+              },
+              children: [
+                e.length < 2 &&
+                  (0, i.jsxs)("div", {
+                    style: {
+                      textAlign: "center",
+                      padding: "48px 20px",
+                      color: "var(--text-muted)",
+                    },
+                    children: [
+                      (0, i.jsx)("div", {
+                        style: { fontSize: "40px", marginBottom: "12px" },
+                        children: "\uD83D\uDD0D",
+                      }),
+                      (0, i.jsx)("div", {
+                        style: { fontSize: "15px" },
+                        children: "Начни вводить запрос",
+                      }),
+                    ],
+                  }),
+                e.length >= 2 &&
+                  0 === r.length &&
+                  (0, i.jsxs)("div", {
+                    style: {
+                      textAlign: "center",
+                      padding: "48px 20px",
+                      color: "var(--text-muted)",
+                    },
+                    children: [
+                      (0, i.jsx)("div", {
+                        style: { fontSize: "40px", marginBottom: "12px" },
+                        children: "\uD83D\uDE15",
+                      }),
+                      (0, i.jsx)("div", {
+                        style: { fontSize: "15px" },
+                        children: "Ничего не найдено",
+                      }),
+                      (0, i.jsx)("div", {
+                        style: { fontSize: "13px", marginTop: "6px" },
+                        children: "Попробуй другой запрос",
+                      }),
+                    ],
+                  }),
+                r.map((e) =>
+                  (0, i.jsx)(
+                    o.default,
+                    {
+                      href: e.href,
+                      style: { textDecoration: "none" },
+                      children: (0, i.jsx)(s.Card, {
+                        children: (0, i.jsxs)("div", {
+                          style: {
+                            padding: "14px 16px",
+                            display: "flex",
+                            gap: "12px",
+                            alignItems: "center",
+                          },
+                          children: [
+                            (0, i.jsx)("span", {
+                              style: { fontSize: "24px", flexShrink: 0 },
+                              children: e.emoji,
+                            }),
+                            (0, i.jsxs)("div", {
+                              style: { minWidth: 0, flex: 1 },
+                              children: [
+                                (0, i.jsx)("div", {
+                                  style: {
+                                    fontWeight: 600,
+                                    fontSize: "14px",
+                                    marginBottom: "4px",
+                                  },
+                                  children: e.title,
+                                }),
+                                (0, i.jsx)("div", {
+                                  style: {
+                                    fontSize: "12px",
+                                    color: "var(--text-muted)",
+                                    whiteSpace: "nowrap",
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    marginBottom: "4px",
+                                  },
+                                  children: e.subtitle,
+                                }),
+                                (0, i.jsx)(s.Badge, {
+                                  color: e.badgeColor,
+                                  textColor: e.badgeText,
+                                  children: e.badge,
+                                }),
+                              ],
+                            }),
+                            (0, i.jsx)("span", {
+                              style: {
+                                color: "var(--text-muted)",
+                                flexShrink: 0,
+                              },
+                              children: "›",
+                            }),
+                          ],
+                        }),
+                      }),
+                    },
+                    "".concat(e.emoji, "-").concat(e.id),
+                  ),
+                ),
+                r.length > 0 &&
+                  (0, i.jsxs)("div", {
+                    style: {
+                      textAlign: "center",
+                      fontSize: "12px",
+                      color: "var(--text-muted)",
+                      padding: "8px",
+                    },
+                    children: ["Найдено: ", r.length],
+                  }),
+              ],
+            }),
+          ],
+        });
+      }
+    },
+    8347: function (e, t, r) {
+      "use strict";
+      r.d(t, {
+        Badge: function () {
+          return n;
+        },
+        Card: function () {
+          return a;
+        },
+        PageHeader: function () {
+          return o;
+        },
+      });
+      var i = r(7437);
+      function a(e) {
+        let { children: t, onClick: r, style: a } = e;
+        return (0, i.jsx)("div", {
+          onClick: r,
+          style: {
+            background: "var(--card)",
+            borderRadius: "var(--radius)",
+            border: "1px solid var(--border)",
+            overflow: "hidden",
+            cursor: r ? "pointer" : "default",
+            transition: "transform 0.15s ease, box-shadow 0.15s ease",
+            ...a,
+          },
+          onMouseDown: (e) =>
+            r && (e.currentTarget.style.transform = "scale(0.98)"),
+          onMouseUp: (e) => r && (e.currentTarget.style.transform = "scale(1)"),
+          onTouchStart: (e) =>
+            r && (e.currentTarget.style.transform = "scale(0.98)"),
+          onTouchEnd: (e) =>
+            r && (e.currentTarget.style.transform = "scale(1)"),
+          children: t,
+        });
+      }
+      function o(e) {
+        let { title: t, subtitle: r } = e;
+        return (0, i.jsxs)("div", {
+          style: { padding: "24px 20px 16px", background: "var(--blue)" },
+          children: [
+            (0, i.jsx)("h1", {
+              style: {
+                margin: 0,
+                fontSize: "22px",
+                color: "#fff",
+                fontFamily: "Unbounded, sans-serif",
+              },
+              children: t,
+            }),
+            r &&
+              (0, i.jsx)("p", {
+                style: {
+                  margin: "6px 0 0",
+                  color: "rgba(255,255,255,0.7)",
+                  fontSize: "13px",
+                },
+                children: r,
+              }),
+          ],
+        });
+      }
+      function n(e) {
+        let {
+          children: t,
+          color: r = "var(--blue-muted)",
+          textColor: a = "var(--blue)",
+        } = e;
+        return (0, i.jsx)("span", {
+          style: {
+            display: "inline-block",
+            padding: "3px 10px",
+            borderRadius: "100px",
+            background: r,
+            color: a,
+            fontSize: "11px",
+            fontWeight: 600,
+            letterSpacing: "0.02em",
+          },
+          children: t,
+        });
+      }
+      r(2265);
+    },
+    9774: function (e, t, r) {
+      "use strict";
+      r.d(t, {
+        FP: function () {
+          return o;
+        },
+        H: function () {
+          return d;
+        },
+        RH: function () {
+          return a;
+        },
+        WN: function () {
+          return n;
+        },
+        jt: function () {
+          return i;
+        },
+      });
+      let i = [
+          {
+            id: "s1",
+            name: "Анна Ковалёва",
+            category: "doctors",
+            description:
+              "Терапевт, 12 лет опыта. Принимаю на русском и словацком. Помогу с направлениями к специалистам и разберусь с местной системой здравоохранения.",
+            contact: "@anna_doc_ba",
+            photo: "https://i.pravatar.cc/150?img=47",
+            addedBy: "user_1",
+            createdAt: "2024-01-15",
+          },
+          {
+            id: "s2",
+            name: "Дмитрий Лисов",
+            category: "lawyers",
+            description:
+              "Специализируюсь на трудовом праве и вопросах ВНЖ/ПМЖ в Словакии. Консультирую по открытию бизнеса и налоговым вопросам.",
+            contact: "@dmitry_law_sk",
+            photo: "https://i.pravatar.cc/150?img=12",
+            addedBy: "user_2",
+            createdAt: "2024-01-20",
+          },
+          {
+            id: "s3",
+            name: "Сергей Майстер",
+            category: "masters",
+            description:
+              "Сантехника, электрика, мелкий ремонт. Работаю качественно и по честным ценам. Выезжаю по всей Братиславе.",
+            contact: "+421 900 123 456",
+            photo: "https://i.pravatar.cc/150?img=33",
+            addedBy: "user_3",
+            createdAt: "2024-02-01",
+          },
+          {
+            id: "s4",
+            name: "Мария Петренко",
+            category: "nannies",
+            description:
+              "Опыт с детьми от 1 до 8 лет. Могу забирать из садика/школы, помогать с домашними заданиями. Есть рекомендации.",
+            contact: "@masha_nanny",
+            photo: "https://i.pravatar.cc/150?img=44",
+            addedBy: "user_4",
+            createdAt: "2024-02-10",
+          },
+          {
+            id: "s5",
+            name: "Игорь Шевченко",
+            category: "tutors",
+            description:
+              "Математика и физика для школьников и студентов. Готовлю к экзаменам. Онлайн или офлайн.",
+            contact: "@igor_tutor_ba",
+            photo: "https://i.pravatar.cc/150?img=57",
+            addedBy: "user_5",
+            createdAt: "2024-02-15",
+          },
+          {
+            id: "s6",
+            name: "Елена Волкова",
+            category: "accountants",
+            description:
+              "Бухгалтерия для фрилансеров и малого бизнеса в Словакии. Помогу разобраться с налогами, SZCO, s.r.o.",
+            contact: "@elena_buh_sk",
+            photo: "https://i.pravatar.cc/150?img=25",
+            addedBy: "user_6",
+            createdAt: "2024-02-20",
+          },
+          {
+            id: "s7",
+            name: "Николай Бондарь",
+            category: "doctors",
+            description:
+              "Стоматолог. Работаю в частной клинике в центре. Первичная консультация бесплатно для своих.",
+            contact: "@kolia_dentist",
+            photo: "https://i.pravatar.cc/150?img=60",
+            addedBy: "user_7",
+            createdAt: "2024-03-01",
+          },
+          {
+            id: "s8",
+            name: "Оксана Ткач",
+            category: "masters",
+            description:
+              "Уборка квартир и офисов. Индивидуальный подход, собственные средства. Регулярно или разово.",
+            contact: "@oksana_clean",
+            photo: "https://i.pravatar.cc/150?img=38",
+            addedBy: "user_8",
+            createdAt: "2024-03-05",
+          },
+        ],
+        a = [
+          {
+            id: "l1",
+            type: "sell",
+            title: "Детская коляска Bugaboo",
+            description:
+              "Почти новая, использовали 6 месяцев. Состояние отличное, все документы есть.",
+            price: 350,
+            photo:
+              "https://images.unsplash.com/photo-1591016432367-d7e8b8b3ee74?w=400&q=80",
+            contact: "@user_kolya",
+            addedBy: "user_9",
+            createdAt: "2024-03-10",
+          },
+          {
+            id: "l2",
+            type: "free",
+            title: "Книги на русском языке",
+            description:
+              "Отдам коробку книг — классика, современная проза. Самовывоз из Petržalka.",
+            contact: "@marina_ba",
+            addedBy: "user_10",
+            createdAt: "2024-03-11",
+          },
+          {
+            id: "l3",
+            type: "wanted",
+            title: "Ищу велосипед для взрослого",
+            description:
+              "Нужен городской велосипед в хорошем состоянии, бюджет до 150€.",
+            contact: "+421 911 222 333",
+            addedBy: "user_11",
+            createdAt: "2024-03-12",
+          },
+          {
+            id: "l4",
+            type: "rentout",
+            title: "Сдаю комнату в Ružinov",
+            description:
+              "Уютная комната 14м\xb2 в квартире с двумя соседями. Рядом метро. Только для порядочных людей.",
+            price: 450,
+            contact: "@roman_room",
+            addedBy: "user_12",
+            createdAt: "2024-03-13",
+          },
+          {
+            id: "l5",
+            type: "sell",
+            title: "iPhone 13 Pro, 256GB",
+            description:
+              "В отличном состоянии, со словацким чеком. Продаю в связи с переездом.",
+            price: 600,
+            photo:
+              "https://images.unsplash.com/photo-1632633173522-47456de71b76?w=400&q=80",
+            contact: "@iphone_seller",
+            addedBy: "user_13",
+            createdAt: "2024-03-14",
+          },
+        ],
+        o = [
+          {
+            id: "e1",
+            title: "Встреча русскоязычного сообщества",
+            description:
+              "Ежемесячная встреча в кафе. Знакомимся, общаемся, делимся опытом жизни в Братиславе. Все желающие приветствуются.",
+            date: "2024-03-20T18:00:00",
+            address: "Caf\xe9 Verne, Obchodn\xe1 18",
+            isPlace: !1,
+            addedBy: "user_14",
+            createdAt: "2024-03-10",
+          },
+          {
+            id: "e2",
+            title: "Русская библиотека",
+            description:
+              "Небольшая библиотека с книгами на русском. Можно взять домой или читать на месте. Работает по субботам.",
+            address: "Štef\xe1nikova 25, каждую субботу 10:00–14:00",
+            isPlace: !0,
+            addedBy: "user_15",
+            createdAt: "2024-02-01",
+          },
+          {
+            id: "e3",
+            title: "Мастер-класс по словацкому языку",
+            description:
+              "Разговорный клуб для начинающих. Ведёт носитель языка, занятия проходят в неформальной обстановке.",
+            date: "2024-03-22T17:30:00",
+            address: "Coworking Hub, Primaci\xe1lne n\xe1mestie 1",
+            isPlace: !1,
+            addedBy: "user_16",
+            createdAt: "2024-03-08",
+          },
+          {
+            id: "e4",
+            title: "Детская площадка у Дуная",
+            description:
+              "Место где собираются русскоязычные семьи с детьми по выходным. Неформально, без записи.",
+            address: "N\xe1brežie arm. gen. L. Svobodu, рядом с фонтаном",
+            isPlace: !0,
+            addedBy: "user_17",
+            createdAt: "2024-02-15",
+          },
+        ],
+        n = [
+          {
+            id: "j1",
+            type: "vacancy",
+            title: "Водитель категории B/C",
+            company: "Slovak Logistics s.r.o.",
+            description:
+              "Развозка товаров по Братиславе и окрестностям. Опыт от 1 года. Оформление официальное, зарплата вовремя.",
+            salary: "1400–1700€",
+            contact: "@slovak_logistics",
+            remote: !1,
+            addedBy: "user_30",
+            createdAt: "2024-03-10",
+          },
+          {
+            id: "j2",
+            type: "vacancy",
+            title: "Разработчик React / Next.js",
+            company: "Стартап (удалённо)",
+            description:
+              "Ищем фронтенд-разработчика в небольшую команду. Проект интересный, стек современный. Оплата в евро.",
+            salary: "2500–3500€",
+            contact: "@dev_hiring_ba",
+            remote: !0,
+            addedBy: "user_31",
+            createdAt: "2024-03-11",
+          },
+          {
+            id: "j3",
+            type: "resume",
+            title: "Ищу работу — бухгалтер / финансист",
+            description:
+              "8 лет опыта, знаю словацкое законодательство, работала в s.r.o. Готова к частичной занятости или полной. Русский, словацкий, английский.",
+            contact: "@irina_fin",
+            remote: !1,
+            addedBy: "user_32",
+            createdAt: "2024-03-12",
+          },
+          {
+            id: "j4",
+            type: "vacancy",
+            title: "Повар / помощник повара",
+            company: "Ресторан в центре",
+            description:
+              "Русская и европейская кухня. Опыт обязателен. Условия обсуждаем лично. Легальное оформление.",
+            salary: "1200–1500€",
+            contact: "+421 902 345 678",
+            remote: !1,
+            addedBy: "user_33",
+            createdAt: "2024-03-13",
+          },
+          {
+            id: "j5",
+            type: "resume",
+            title: "Ищу работу — IT поддержка / системный администратор",
+            description:
+              "5 лет опыта в техподдержке и администрировании Windows/Linux. Есть ВНЖ, готов к работе сразу.",
+            contact: "@sysadmin_ba",
+            remote: !1,
+            addedBy: "user_34",
+            createdAt: "2024-03-14",
+          },
+        ],
+        d = [
+          {
+            id: "h1",
+            type: "rent",
+            title: "2-комнатная квартира в Ružinov",
+            description:
+              "Светлая квартира 55м\xb2, свежий ремонт, вся техника. Рядом метро Ružinovsk\xe1. Только некурящие.",
+            price: 950,
+            address: "Ružinov, Bratislava",
+            rooms: 2,
+            photo:
+              "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80",
+            contact: "@apartment_ba",
+            addedBy: "user_35",
+            createdAt: "2024-03-10",
+          },
+          {
+            id: "h2",
+            type: "rent",
+            title: "Комната в квартире с двумя соседями",
+            description:
+              "Комната 16м\xb2 в трёхкомнатной квартире. Соседи тихие, работающие. Petržalka, 10 мин до центра.",
+            price: 420,
+            address: "Petržalka, Bratislava",
+            rooms: 1,
+            contact: "@room_petrzalka",
+            addedBy: "user_36",
+            createdAt: "2024-03-11",
+          },
+          {
+            id: "h3",
+            type: "roommate",
+            title: "Ищу соседа в 3-комнатную квартиру",
+            description:
+              "Занята одна комната, ищем третьего. Квартира большая, есть балкон. Старый город, удобно везде добираться.",
+            price: 500,
+            address: "Star\xe9 Mesto, Bratislava",
+            contact: "@flatmate_search",
+            addedBy: "user_37",
+            createdAt: "2024-03-12",
+          },
+          {
+            id: "h4",
+            type: "buy",
+            title: "Продаётся 3-комнатная квартира",
+            description:
+              "Просторная квартира 78м\xb2, хороший этаж, два балкона. Документы в порядке, собственник. Район Karlova Ves.",
+            price: 185e3,
+            address: "Karlova Ves, Bratislava",
+            rooms: 3,
+            photo:
+              "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80",
+            contact: "@sell_flat_ba",
+            addedBy: "user_38",
+            createdAt: "2024-03-13",
+          },
+        ];
+    },
+    4451: function (e, t, r) {
+      "use strict";
+      r.d(t, {
+        Bv: function () {
+          return o;
+        },
+        Hs: function () {
+          return i;
+        },
+        Zz: function () {
+          return d;
+        },
+        gO: function () {
+          return a;
+        },
+        wW: function () {
+          return n;
+        },
+      });
+      let i = {
+          doctors: "Врачи",
+          lawyers: "Юристы",
+          masters: "Мастера",
+          nannies: "Няни",
+          tutors: "Репетиторы",
+          accountants: "Бухгалтеры",
+          other: "Другое",
+        },
+        a = {
+          doctors: "\uD83E\uDE7A",
+          lawyers: "⚖️",
+          masters: "\uD83D\uDD27",
+          nannies: "\uD83D\uDC76",
+          tutors: "\uD83D\uDCDA",
+          accountants: "\uD83D\uDCCA",
+          other: "✨",
+        },
+        o = {
+          sell: "Продам",
+          buy: "Куплю",
+          free: "Отдам",
+          wanted: "Ищу",
+          rent: "Сниму",
+          rentout: "Сдам",
+        },
+        n = { vacancy: "Вакансия", resume: "Резюме" },
+        d = { rent: "Аренда", buy: "Продажа", roommate: "Ищу соседа" };
+    },
+  },
+  function (e) {
+    (e.O(0, [231, 971, 23, 744], function () {
+      return e((e.s = 3110));
+    }),
+      (_N_E = e.O()));
+  },
+]);

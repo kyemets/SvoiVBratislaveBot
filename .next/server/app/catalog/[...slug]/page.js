@@ -1,1 +1,705 @@
-(()=>{var e={};e.id=374,e.ids=[374],e.modules={7849:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external")},2934:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external.js")},5403:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external")},4580:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external.js")},4749:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external")},5869:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external.js")},399:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},4352:(e,t,r)=>{"use strict";r.r(t),r.d(t,{GlobalError:()=>s.a,__next_app__:()=>p,originalPathname:()=>x,pages:()=>c,routeModule:()=>u,tree:()=>d}),r(9159),r(9176),r(5866);var n=r(3191),i=r(8716),a=r(7922),s=r.n(a),o=r(5231),l={};for(let e in o)0>["default","tree","pages","GlobalError","originalPathname","__next_app__","routeModule"].indexOf(e)&&(l[e]=()=>o[e]);r.d(t,l);let d=["",{children:["catalog",{children:["[...slug]",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(r.bind(r,9159)),"/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx"]}]},{}]},{}]},{layout:[()=>Promise.resolve().then(r.bind(r,9176)),"/Users/kostiantyn/Downloads/bratislava-app/src/app/layout.tsx"],"not-found":[()=>Promise.resolve().then(r.t.bind(r,5866,23)),"next/dist/client/components/not-found-error"]}],c=["/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx"],x="/catalog/[...slug]/page",p={require:r,loadChunk:()=>Promise.resolve()},u=new n.AppPageRouteModule({definition:{kind:i.x.APP_PAGE,page:"/catalog/[...slug]/page",pathname:"/catalog/[...slug]",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:d}})},9289:(e,t,r)=>{Promise.resolve().then(r.bind(r,7286))},7286:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>p});var n=r(326),i=r(434),a=r(7577),s=r(5047),o=r(1193),l=r(5342),d=r(2068),c=r(4951),x=r(419);function p({params:e}){let[t,r]=e.slug;return r?n.jsx(u,{id:r,category:t}):n.jsx(g,{category:t})}function u({id:e,category:t}){let r=o.jt.find(t=>t.id===e);return r?(0,n.jsxs)("div",{children:[(0,n.jsxs)("div",{style:{background:"var(--blue)",padding:"24px 20px 32px"},children:[(0,n.jsxs)(i.default,{href:`/catalog/${r.category}`,style:{color:"rgba(255,255,255,0.7)",fontSize:"13px",textDecoration:"none"},children:["← ",l.Hs[r.category]]}),(0,n.jsxs)("div",{style:{display:"flex",gap:"16px",alignItems:"center",marginTop:"20px"},children:[r.photo&&n.jsx("img",{src:r.photo,alt:"",style:{width:72,height:72,borderRadius:"50%",objectFit:"cover",border:"3px solid rgba(255,255,255,0.3)"}}),(0,n.jsxs)("div",{style:{flex:1,minWidth:0},children:[n.jsx("h1",{style:{margin:0,color:"#fff",fontSize:"20px"},children:r.name}),n.jsx("div",{style:{marginTop:"8px"},children:(0,n.jsxs)(d.Badge,{color:"rgba(255,255,255,0.15)",textColor:"#fff",children:[l.gO[r.category]," ",l.Hs[r.category]]})})]}),n.jsx("div",{style:{flexShrink:0},children:n.jsx(c._,{id:r.id})})]})]}),(0,n.jsxs)("div",{style:{padding:"20px 16px",display:"flex",flexDirection:"column",gap:"12px"},children:[(0,n.jsxs)(d.Card,{style:{padding:"18px"},children:[n.jsx("div",{style:{fontSize:"12px",color:"var(--text-muted)",fontWeight:600,letterSpacing:"0.06em",textTransform:"uppercase",marginBottom:"8px"},children:"О себе"}),n.jsx("p",{style:{margin:0,lineHeight:1.6,color:"var(--text)"},children:r.description})]}),(0,n.jsxs)("a",{href:r.contact.startsWith("@")?`https://t.me/${r.contact.slice(1)}`:`tel:${r.contact}`,style:{display:"block",background:"var(--blue)",color:"#fff",textAlign:"center",padding:"16px",borderRadius:"var(--radius)",textDecoration:"none",fontWeight:600,fontSize:"15px"},children:["Написать ",r.contact]}),n.jsx(d.Card,{style:{padding:"18px"},children:n.jsx(x.H,{itemId:r.id})})]})]}):(0,s.notFound)()}function g({category:e}){let[t,r]=(0,a.useState)("");if(!l.Hs[e])return(0,s.notFound)();let i=o.jt.filter(t=>t.category===e),c=t.trim()?i.filter(e=>e.name.toLowerCase().includes(t.toLowerCase())||e.description.toLowerCase().includes(t.toLowerCase())):i;return(0,n.jsxs)("div",{children:[n.jsx(d.PageHeader,{title:`${l.gO[e]} ${l.Hs[e]}`,subtitle:`${i.length} специалистов`}),n.jsx("div",{style:{padding:"12px 16px 4px"},children:(0,n.jsxs)("div",{style:{display:"flex",alignItems:"center",gap:"10px",background:"var(--card)",border:"1px solid var(--border)",borderRadius:"var(--radius)",padding:"10px 14px"},children:[n.jsx("span",{style:{fontSize:"16px",flexShrink:0,opacity:.5},children:"\uD83D\uDD0D"}),n.jsx("input",{type:"text",value:t,onChange:e=>r(e.target.value),placeholder:"Поиск по имени или описанию...",style:{flex:1,border:"none",background:"transparent",outline:"none",fontSize:"14px",color:"var(--text)",fontFamily:"inherit"}}),t&&n.jsx("button",{onClick:()=>r(""),style:{background:"none",border:"none",cursor:"pointer",fontSize:"14px",color:"var(--text-muted)",padding:0,lineHeight:1},children:"✕"})]})}),(0,n.jsxs)("div",{style:{padding:"12px 16px",display:"flex",flexDirection:"column",gap:"10px"},children:[0===c.length&&t&&(0,n.jsxs)("div",{style:{textAlign:"center",padding:"40px 20px",color:"var(--text-muted)"},children:["Ничего не найдено по \xab",t,"\xbb"]}),0===c.length&&!t&&n.jsx("div",{style:{textAlign:"center",padding:"40px 20px",color:"var(--text-muted)"},children:"Пока никого нет. Будь первым!"}),c.map(e=>n.jsx(h,{specialist:e},e.id))]})]})}function h({specialist:e}){return(0,n.jsxs)("div",{style:{display:"flex",gap:"10px",alignItems:"center"},children:[n.jsx(i.default,{href:`/catalog/${e.category}/${e.id}`,style:{textDecoration:"none",flex:1,minWidth:0},children:n.jsx(d.Card,{children:(0,n.jsxs)("div",{style:{padding:"16px",display:"flex",gap:"14px",alignItems:"flex-start"},children:[e.photo&&n.jsx("img",{src:e.photo,alt:"",style:{width:52,height:52,borderRadius:"50%",objectFit:"cover",flexShrink:0}}),(0,n.jsxs)("div",{style:{minWidth:0,flex:1},children:[n.jsx("div",{style:{fontWeight:700,fontSize:"15px"},children:e.name}),n.jsx("p",{style:{margin:"6px 0 0",fontSize:"13px",color:"var(--text-muted)",display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical",overflow:"hidden"},children:e.description})]}),n.jsx("span",{style:{color:"var(--text-muted)",fontSize:"18px",flexShrink:0},children:"›"})]})})}),n.jsx(c._,{id:e.id})]})}},419:(e,t,r)=>{"use strict";r.d(t,{H:()=>s});var n=r(326),i=r(7577);function a(e,t){localStorage.setItem(`comments_v1:${e}`,JSON.stringify(t))}function s({itemId:e}){let{comments:t,add:r,remove:s}=function(e){let[t,r]=(0,i.useState)([]);return{comments:t,add:(0,i.useCallback)(t=>{let n={id:Date.now().toString(),text:t.trim(),createdAt:new Date().toISOString()};r(t=>{let r=[...t,n];return a(e,r),r})},[e]),remove:(0,i.useCallback)(t=>{r(r=>{let n=r.filter(e=>e.id!==t);return a(e,n),n})},[e])}}(e),[o,l]=(0,i.useState)("");function d(){o.trim()&&(r(o),l(""))}return(0,n.jsxs)("div",{style:{display:"flex",flexDirection:"column",gap:"12px"},children:[(0,n.jsxs)("div",{style:{fontSize:"12px",color:"var(--text-muted)",fontWeight:600,letterSpacing:"0.06em",textTransform:"uppercase"},children:["Обсуждение \xb7 ",t.length]}),0===t.length?n.jsx("p",{style:{margin:0,fontSize:"13px",color:"var(--text-muted)",fontStyle:"italic"},children:"Будь первым кто оставит комментарий"}):n.jsx("div",{style:{display:"flex",flexDirection:"column",gap:"8px"},children:t.map(e=>(0,n.jsxs)("div",{style:{background:"var(--card)",border:"1px solid var(--border)",borderRadius:"var(--radius)",padding:"12px 14px",display:"flex",gap:"10px",alignItems:"flex-start"},children:[(0,n.jsxs)("div",{style:{flex:1,minWidth:0},children:[n.jsx("p",{style:{margin:0,fontSize:"14px",lineHeight:1.5},children:e.text}),n.jsx("span",{style:{fontSize:"11px",color:"var(--text-muted)",marginTop:"4px",display:"block"},children:new Date(e.createdAt).toLocaleDateString("ru-RU",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})})]}),n.jsx("button",{onClick:()=>s(e.id),"aria-label":"Удалить",style:{background:"none",border:"none",cursor:"pointer",fontSize:"14px",color:"var(--text-muted)",padding:"2px 4px",flexShrink:0,lineHeight:1,WebkitTapHighlightColor:"transparent"},children:"✕"})]},e.id))}),(0,n.jsxs)("div",{style:{display:"flex",gap:"8px",alignItems:"flex-end"},children:[n.jsx("textarea",{value:o,onChange:e=>l(e.target.value),onKeyDown:function(e){"Enter"!==e.key||e.shiftKey||(e.preventDefault(),d())},placeholder:"Написать комментарий...",rows:2,style:{flex:1,padding:"10px 14px",borderRadius:"var(--radius)",border:"1px solid var(--border)",background:"var(--card)",color:"var(--text)",fontSize:"14px",resize:"none",fontFamily:"inherit",outline:"none",lineHeight:1.5}}),n.jsx("button",{onClick:d,disabled:!o.trim(),style:{background:o.trim()?"var(--blue)":"var(--border)",color:o.trim()?"#fff":"var(--text-muted)",border:"none",borderRadius:"var(--radius)",padding:"10px 16px",fontSize:"14px",fontWeight:600,cursor:o.trim()?"pointer":"default",transition:"background 200ms ease",flexShrink:0,WebkitTapHighlightColor:"transparent",height:"fit-content"},children:"Отправить"})]})]})}},4951:(e,t,r)=>{"use strict";r.d(t,{_:()=>a});var n=r(326),i=r(7577);function a({id:e}){let{isFavorite:t,toggle:r}=function(){let[e,t]=(0,i.useState)(new Set),r=(0,i.useCallback)(e=>{t(t=>{let r=new Set(t);return r.has(e)?r.delete(e):r.add(e),localStorage.setItem("favorites_v1",JSON.stringify(Array.from(r))),r})},[]),n=(0,i.useCallback)(t=>e.has(t),[e]);return{favorites:e,toggle:r,isFavorite:n}}(),a=t(e);return n.jsx("button",{onClick:()=>r(e),"aria-label":a?"Убрать из избранного":"Добавить в избранное",style:{background:a?"rgba(232,60,60,0.1)":"var(--card)",border:`1px solid ${a?"rgba(232,60,60,0.3)":"var(--border)"}`,borderRadius:"50%",width:40,height:40,display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",fontSize:"18px",flexShrink:0,transition:"transform 150ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease",WebkitTapHighlightColor:"transparent"},onMouseDown:e=>e.currentTarget.style.transform="scale(0.88)",onMouseUp:e=>e.currentTarget.style.transform="scale(1)",onTouchStart:e=>e.currentTarget.style.transform="scale(0.88)",onTouchEnd:e=>e.currentTarget.style.transform="scale(1)",children:a?"❤️":"\uD83E\uDD0D"})}},9159:(e,t,r)=>{"use strict";r.r(t),r.d(t,{$$typeof:()=>s,__esModule:()=>a,default:()=>o});var n=r(8570);let i=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx`),{__esModule:a,$$typeof:s}=i;i.default;let o=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx#default`)}};var t=require("../../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),n=t.X(0,[24,359],()=>r(4352));module.exports=n})();
+(() => {
+  var e = {};
+  ((e.id = 374),
+    (e.ids = [374]),
+    (e.modules = {
+      7849: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/action-async-storage.external");
+      },
+      2934: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/action-async-storage.external.js");
+      },
+      5403: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/request-async-storage.external");
+      },
+      4580: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/request-async-storage.external.js");
+      },
+      4749: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/static-generation-async-storage.external");
+      },
+      5869: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/static-generation-async-storage.external.js");
+      },
+      399: (e) => {
+        "use strict";
+        e.exports = require("next/dist/compiled/next-server/app-page.runtime.prod.js");
+      },
+      4352: (e, t, r) => {
+        "use strict";
+        (r.r(t),
+          r.d(t, {
+            GlobalError: () => s.a,
+            __next_app__: () => p,
+            originalPathname: () => x,
+            pages: () => c,
+            routeModule: () => u,
+            tree: () => d,
+          }),
+          r(9159),
+          r(9176),
+          r(5866));
+        var n = r(3191),
+          i = r(8716),
+          a = r(7922),
+          s = r.n(a),
+          o = r(5231),
+          l = {};
+        for (let e in o)
+          0 >
+            [
+              "default",
+              "tree",
+              "pages",
+              "GlobalError",
+              "originalPathname",
+              "__next_app__",
+              "routeModule",
+            ].indexOf(e) && (l[e] = () => o[e]);
+        r.d(t, l);
+        let d = [
+            "",
+            {
+              children: [
+                "catalog",
+                {
+                  children: [
+                    "[...slug]",
+                    {
+                      children: [
+                        "__PAGE__",
+                        {},
+                        {
+                          page: [
+                            () => Promise.resolve().then(r.bind(r, 9159)),
+                            "/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx",
+                          ],
+                        },
+                      ],
+                    },
+                    {},
+                  ],
+                },
+                {},
+              ],
+            },
+            {
+              layout: [
+                () => Promise.resolve().then(r.bind(r, 9176)),
+                "/Users/kostiantyn/Downloads/bratislava-app/src/app/layout.tsx",
+              ],
+              "not-found": [
+                () => Promise.resolve().then(r.t.bind(r, 5866, 23)),
+                "next/dist/client/components/not-found-error",
+              ],
+            },
+          ],
+          c = [
+            "/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx",
+          ],
+          x = "/catalog/[...slug]/page",
+          p = { require: r, loadChunk: () => Promise.resolve() },
+          u = new n.AppPageRouteModule({
+            definition: {
+              kind: i.x.APP_PAGE,
+              page: "/catalog/[...slug]/page",
+              pathname: "/catalog/[...slug]",
+              bundlePath: "",
+              filename: "",
+              appPaths: [],
+            },
+            userland: { loaderTree: d },
+          });
+      },
+      9289: (e, t, r) => {
+        Promise.resolve().then(r.bind(r, 7286));
+      },
+      7286: (e, t, r) => {
+        "use strict";
+        (r.r(t), r.d(t, { default: () => p }));
+        var n = r(326),
+          i = r(434),
+          a = r(7577),
+          s = r(5047),
+          o = r(1193),
+          l = r(5342),
+          d = r(2068),
+          c = r(4951),
+          x = r(419);
+        function p({ params: e }) {
+          let [t, r] = e.slug;
+          return r
+            ? n.jsx(u, { id: r, category: t })
+            : n.jsx(g, { category: t });
+        }
+        function u({ id: e, category: t }) {
+          let r = o.jt.find((t) => t.id === e);
+          return r
+            ? (0, n.jsxs)("div", {
+                children: [
+                  (0, n.jsxs)("div", {
+                    style: {
+                      background: "var(--blue)",
+                      padding: "24px 20px 32px",
+                    },
+                    children: [
+                      (0, n.jsxs)(i.default, {
+                        href: `/catalog/${r.category}`,
+                        style: {
+                          color: "rgba(255,255,255,0.7)",
+                          fontSize: "13px",
+                          textDecoration: "none",
+                        },
+                        children: ["← ", l.Hs[r.category]],
+                      }),
+                      (0, n.jsxs)("div", {
+                        style: {
+                          display: "flex",
+                          gap: "16px",
+                          alignItems: "center",
+                          marginTop: "20px",
+                        },
+                        children: [
+                          r.photo &&
+                            n.jsx("img", {
+                              src: r.photo,
+                              alt: "",
+                              style: {
+                                width: 72,
+                                height: 72,
+                                borderRadius: "50%",
+                                objectFit: "cover",
+                                border: "3px solid rgba(255,255,255,0.3)",
+                              },
+                            }),
+                          (0, n.jsxs)("div", {
+                            style: { flex: 1, minWidth: 0 },
+                            children: [
+                              n.jsx("h1", {
+                                style: {
+                                  margin: 0,
+                                  color: "#fff",
+                                  fontSize: "20px",
+                                },
+                                children: r.name,
+                              }),
+                              n.jsx("div", {
+                                style: { marginTop: "8px" },
+                                children: (0, n.jsxs)(d.Badge, {
+                                  color: "rgba(255,255,255,0.15)",
+                                  textColor: "#fff",
+                                  children: [
+                                    l.gO[r.category],
+                                    " ",
+                                    l.Hs[r.category],
+                                  ],
+                                }),
+                              }),
+                            ],
+                          }),
+                          n.jsx("div", {
+                            style: { flexShrink: 0 },
+                            children: n.jsx(c._, { id: r.id }),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, n.jsxs)("div", {
+                    style: {
+                      padding: "20px 16px",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "12px",
+                    },
+                    children: [
+                      (0, n.jsxs)(d.Card, {
+                        style: { padding: "18px" },
+                        children: [
+                          n.jsx("div", {
+                            style: {
+                              fontSize: "12px",
+                              color: "var(--text-muted)",
+                              fontWeight: 600,
+                              letterSpacing: "0.06em",
+                              textTransform: "uppercase",
+                              marginBottom: "8px",
+                            },
+                            children: "О себе",
+                          }),
+                          n.jsx("p", {
+                            style: {
+                              margin: 0,
+                              lineHeight: 1.6,
+                              color: "var(--text)",
+                            },
+                            children: r.description,
+                          }),
+                        ],
+                      }),
+                      (0, n.jsxs)("a", {
+                        href: r.contact.startsWith("@")
+                          ? `https://t.me/${r.contact.slice(1)}`
+                          : `tel:${r.contact}`,
+                        style: {
+                          display: "block",
+                          background: "var(--blue)",
+                          color: "#fff",
+                          textAlign: "center",
+                          padding: "16px",
+                          borderRadius: "var(--radius)",
+                          textDecoration: "none",
+                          fontWeight: 600,
+                          fontSize: "15px",
+                        },
+                        children: ["Написать ", r.contact],
+                      }),
+                      n.jsx(d.Card, {
+                        style: { padding: "18px" },
+                        children: n.jsx(x.H, { itemId: r.id }),
+                      }),
+                    ],
+                  }),
+                ],
+              })
+            : (0, s.notFound)();
+        }
+        function g({ category: e }) {
+          let [t, r] = (0, a.useState)("");
+          if (!l.Hs[e]) return (0, s.notFound)();
+          let i = o.jt.filter((t) => t.category === e),
+            c = t.trim()
+              ? i.filter(
+                  (e) =>
+                    e.name.toLowerCase().includes(t.toLowerCase()) ||
+                    e.description.toLowerCase().includes(t.toLowerCase()),
+                )
+              : i;
+          return (0, n.jsxs)("div", {
+            children: [
+              n.jsx(d.PageHeader, {
+                title: `${l.gO[e]} ${l.Hs[e]}`,
+                subtitle: `${i.length} специалистов`,
+              }),
+              n.jsx("div", {
+                style: { padding: "12px 16px 4px" },
+                children: (0, n.jsxs)("div", {
+                  style: {
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "var(--radius)",
+                    padding: "10px 14px",
+                  },
+                  children: [
+                    n.jsx("span", {
+                      style: { fontSize: "16px", flexShrink: 0, opacity: 0.5 },
+                      children: "\uD83D\uDD0D",
+                    }),
+                    n.jsx("input", {
+                      type: "text",
+                      value: t,
+                      onChange: (e) => r(e.target.value),
+                      placeholder: "Поиск по имени или описанию...",
+                      style: {
+                        flex: 1,
+                        border: "none",
+                        background: "transparent",
+                        outline: "none",
+                        fontSize: "14px",
+                        color: "var(--text)",
+                        fontFamily: "inherit",
+                      },
+                    }),
+                    t &&
+                      n.jsx("button", {
+                        onClick: () => r(""),
+                        style: {
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          fontSize: "14px",
+                          color: "var(--text-muted)",
+                          padding: 0,
+                          lineHeight: 1,
+                        },
+                        children: "✕",
+                      }),
+                  ],
+                }),
+              }),
+              (0, n.jsxs)("div", {
+                style: {
+                  padding: "12px 16px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                },
+                children: [
+                  0 === c.length &&
+                    t &&
+                    (0, n.jsxs)("div", {
+                      style: {
+                        textAlign: "center",
+                        padding: "40px 20px",
+                        color: "var(--text-muted)",
+                      },
+                      children: ["Ничего не найдено по \xab", t, "\xbb"],
+                    }),
+                  0 === c.length &&
+                    !t &&
+                    n.jsx("div", {
+                      style: {
+                        textAlign: "center",
+                        padding: "40px 20px",
+                        color: "var(--text-muted)",
+                      },
+                      children: "Пока никого нет. Будь первым!",
+                    }),
+                  c.map((e) => n.jsx(h, { specialist: e }, e.id)),
+                ],
+              }),
+            ],
+          });
+        }
+        function h({ specialist: e }) {
+          return (0, n.jsxs)("div", {
+            style: { display: "flex", gap: "10px", alignItems: "center" },
+            children: [
+              n.jsx(i.default, {
+                href: `/catalog/${e.category}/${e.id}`,
+                style: { textDecoration: "none", flex: 1, minWidth: 0 },
+                children: n.jsx(d.Card, {
+                  children: (0, n.jsxs)("div", {
+                    style: {
+                      padding: "16px",
+                      display: "flex",
+                      gap: "14px",
+                      alignItems: "flex-start",
+                    },
+                    children: [
+                      e.photo &&
+                        n.jsx("img", {
+                          src: e.photo,
+                          alt: "",
+                          style: {
+                            width: 52,
+                            height: 52,
+                            borderRadius: "50%",
+                            objectFit: "cover",
+                            flexShrink: 0,
+                          },
+                        }),
+                      (0, n.jsxs)("div", {
+                        style: { minWidth: 0, flex: 1 },
+                        children: [
+                          n.jsx("div", {
+                            style: { fontWeight: 700, fontSize: "15px" },
+                            children: e.name,
+                          }),
+                          n.jsx("p", {
+                            style: {
+                              margin: "6px 0 0",
+                              fontSize: "13px",
+                              color: "var(--text-muted)",
+                              display: "-webkit-box",
+                              WebkitLineClamp: 2,
+                              WebkitBoxOrient: "vertical",
+                              overflow: "hidden",
+                            },
+                            children: e.description,
+                          }),
+                        ],
+                      }),
+                      n.jsx("span", {
+                        style: {
+                          color: "var(--text-muted)",
+                          fontSize: "18px",
+                          flexShrink: 0,
+                        },
+                        children: "›",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              n.jsx(c._, { id: e.id }),
+            ],
+          });
+        }
+      },
+      419: (e, t, r) => {
+        "use strict";
+        r.d(t, { H: () => s });
+        var n = r(326),
+          i = r(7577);
+        function a(e, t) {
+          localStorage.setItem(`comments_v1:${e}`, JSON.stringify(t));
+        }
+        function s({ itemId: e }) {
+          let {
+              comments: t,
+              add: r,
+              remove: s,
+            } = (function (e) {
+              let [t, r] = (0, i.useState)([]);
+              return {
+                comments: t,
+                add: (0, i.useCallback)(
+                  (t) => {
+                    let n = {
+                      id: Date.now().toString(),
+                      text: t.trim(),
+                      createdAt: new Date().toISOString(),
+                    };
+                    r((t) => {
+                      let r = [...t, n];
+                      return (a(e, r), r);
+                    });
+                  },
+                  [e],
+                ),
+                remove: (0, i.useCallback)(
+                  (t) => {
+                    r((r) => {
+                      let n = r.filter((e) => e.id !== t);
+                      return (a(e, n), n);
+                    });
+                  },
+                  [e],
+                ),
+              };
+            })(e),
+            [o, l] = (0, i.useState)("");
+          function d() {
+            o.trim() && (r(o), l(""));
+          }
+          return (0, n.jsxs)("div", {
+            style: { display: "flex", flexDirection: "column", gap: "12px" },
+            children: [
+              (0, n.jsxs)("div", {
+                style: {
+                  fontSize: "12px",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                },
+                children: ["Обсуждение \xb7 ", t.length],
+              }),
+              0 === t.length
+                ? n.jsx("p", {
+                    style: {
+                      margin: 0,
+                      fontSize: "13px",
+                      color: "var(--text-muted)",
+                      fontStyle: "italic",
+                    },
+                    children: "Будь первым кто оставит комментарий",
+                  })
+                : n.jsx("div", {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    },
+                    children: t.map((e) =>
+                      (0, n.jsxs)(
+                        "div",
+                        {
+                          style: {
+                            background: "var(--card)",
+                            border: "1px solid var(--border)",
+                            borderRadius: "var(--radius)",
+                            padding: "12px 14px",
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "flex-start",
+                          },
+                          children: [
+                            (0, n.jsxs)("div", {
+                              style: { flex: 1, minWidth: 0 },
+                              children: [
+                                n.jsx("p", {
+                                  style: {
+                                    margin: 0,
+                                    fontSize: "14px",
+                                    lineHeight: 1.5,
+                                  },
+                                  children: e.text,
+                                }),
+                                n.jsx("span", {
+                                  style: {
+                                    fontSize: "11px",
+                                    color: "var(--text-muted)",
+                                    marginTop: "4px",
+                                    display: "block",
+                                  },
+                                  children: new Date(
+                                    e.createdAt,
+                                  ).toLocaleDateString("ru-RU", {
+                                    day: "numeric",
+                                    month: "short",
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                  }),
+                                }),
+                              ],
+                            }),
+                            n.jsx("button", {
+                              onClick: () => s(e.id),
+                              "aria-label": "Удалить",
+                              style: {
+                                background: "none",
+                                border: "none",
+                                cursor: "pointer",
+                                fontSize: "14px",
+                                color: "var(--text-muted)",
+                                padding: "2px 4px",
+                                flexShrink: 0,
+                                lineHeight: 1,
+                                WebkitTapHighlightColor: "transparent",
+                              },
+                              children: "✕",
+                            }),
+                          ],
+                        },
+                        e.id,
+                      ),
+                    ),
+                  }),
+              (0, n.jsxs)("div", {
+                style: { display: "flex", gap: "8px", alignItems: "flex-end" },
+                children: [
+                  n.jsx("textarea", {
+                    value: o,
+                    onChange: (e) => l(e.target.value),
+                    onKeyDown: function (e) {
+                      "Enter" !== e.key ||
+                        e.shiftKey ||
+                        (e.preventDefault(), d());
+                    },
+                    placeholder: "Написать комментарий...",
+                    rows: 2,
+                    style: {
+                      flex: 1,
+                      padding: "10px 14px",
+                      borderRadius: "var(--radius)",
+                      border: "1px solid var(--border)",
+                      background: "var(--card)",
+                      color: "var(--text)",
+                      fontSize: "14px",
+                      resize: "none",
+                      fontFamily: "inherit",
+                      outline: "none",
+                      lineHeight: 1.5,
+                    },
+                  }),
+                  n.jsx("button", {
+                    onClick: d,
+                    disabled: !o.trim(),
+                    style: {
+                      background: o.trim() ? "var(--blue)" : "var(--border)",
+                      color: o.trim() ? "#fff" : "var(--text-muted)",
+                      border: "none",
+                      borderRadius: "var(--radius)",
+                      padding: "10px 16px",
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      cursor: o.trim() ? "pointer" : "default",
+                      transition: "background 200ms ease",
+                      flexShrink: 0,
+                      WebkitTapHighlightColor: "transparent",
+                      height: "fit-content",
+                    },
+                    children: "Отправить",
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+      },
+      4951: (e, t, r) => {
+        "use strict";
+        r.d(t, { _: () => a });
+        var n = r(326),
+          i = r(7577);
+        function a({ id: e }) {
+          let { isFavorite: t, toggle: r } = (function () {
+              let [e, t] = (0, i.useState)(new Set()),
+                r = (0, i.useCallback)((e) => {
+                  t((t) => {
+                    let r = new Set(t);
+                    return (
+                      r.has(e) ? r.delete(e) : r.add(e),
+                      localStorage.setItem(
+                        "favorites_v1",
+                        JSON.stringify(Array.from(r)),
+                      ),
+                      r
+                    );
+                  });
+                }, []),
+                n = (0, i.useCallback)((t) => e.has(t), [e]);
+              return { favorites: e, toggle: r, isFavorite: n };
+            })(),
+            a = t(e);
+          return n.jsx("button", {
+            onClick: () => r(e),
+            "aria-label": a ? "Убрать из избранного" : "Добавить в избранное",
+            style: {
+              background: a ? "rgba(232,60,60,0.1)" : "var(--card)",
+              border: `1px solid ${a ? "rgba(232,60,60,0.3)" : "var(--border)"}`,
+              borderRadius: "50%",
+              width: 40,
+              height: 40,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              fontSize: "18px",
+              flexShrink: 0,
+              transition:
+                "transform 150ms cubic-bezier(0.34,1.56,0.64,1), background 200ms ease",
+              WebkitTapHighlightColor: "transparent",
+            },
+            onMouseDown: (e) =>
+              (e.currentTarget.style.transform = "scale(0.88)"),
+            onMouseUp: (e) => (e.currentTarget.style.transform = "scale(1)"),
+            onTouchStart: (e) =>
+              (e.currentTarget.style.transform = "scale(0.88)"),
+            onTouchEnd: (e) => (e.currentTarget.style.transform = "scale(1)"),
+            children: a ? "❤️" : "\uD83E\uDD0D",
+          });
+        }
+      },
+      9159: (e, t, r) => {
+        "use strict";
+        (r.r(t),
+          r.d(t, { $$typeof: () => s, __esModule: () => a, default: () => o }));
+        var n = r(8570);
+        let i = (0, n.createProxy)(
+            String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx`,
+          ),
+          { __esModule: a, $$typeof: s } = i;
+        i.default;
+        let o = (0, n.createProxy)(
+          String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/app/catalog/[...slug]/page.tsx#default`,
+        );
+      },
+    }));
+  var t = require("../../../webpack-runtime.js");
+  t.C(e);
+  var r = (e) => t((t.s = e)),
+    n = t.X(0, [24, 359], () => r(4352));
+  module.exports = n;
+})();

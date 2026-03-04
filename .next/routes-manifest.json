@@ -1,1 +1,133 @@
-{"version":3,"pages404":true,"caseSensitive":false,"basePath":"","redirects":[{"source":"/:path+/","destination":"/:path+","internal":true,"statusCode":308,"regex":"^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"}],"headers":[],"dynamicRoutes":[{"page":"/blacklist/[id]","regex":"^/blacklist/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/blacklist/(?<nxtPid>[^/]+?)(?:/)?$"},{"page":"/catalog/[...slug]","regex":"^/catalog/(.+?)(?:/)?$","routeKeys":{"nxtPslug":"nxtPslug"},"namedRegex":"^/catalog/(?<nxtPslug>.+?)(?:/)?$"},{"page":"/events/[id]","regex":"^/events/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/events/(?<nxtPid>[^/]+?)(?:/)?$"},{"page":"/housing/[id]","regex":"^/housing/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/housing/(?<nxtPid>[^/]+?)(?:/)?$"},{"page":"/jobs/[id]","regex":"^/jobs/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/jobs/(?<nxtPid>[^/]+?)(?:/)?$"},{"page":"/listings/[id]","regex":"^/listings/([^/]+?)(?:/)?$","routeKeys":{"nxtPid":"nxtPid"},"namedRegex":"^/listings/(?<nxtPid>[^/]+?)(?:/)?$"}],"staticRoutes":[{"page":"/","regex":"^/(?:/)?$","routeKeys":{},"namedRegex":"^/(?:/)?$"},{"page":"/_not-found","regex":"^/_not\\-found(?:/)?$","routeKeys":{},"namedRegex":"^/_not\\-found(?:/)?$"},{"page":"/add","regex":"^/add(?:/)?$","routeKeys":{},"namedRegex":"^/add(?:/)?$"},{"page":"/blacklist","regex":"^/blacklist(?:/)?$","routeKeys":{},"namedRegex":"^/blacklist(?:/)?$"},{"page":"/catalog","regex":"^/catalog(?:/)?$","routeKeys":{},"namedRegex":"^/catalog(?:/)?$"},{"page":"/events","regex":"^/events(?:/)?$","routeKeys":{},"namedRegex":"^/events(?:/)?$"},{"page":"/jobs","regex":"^/jobs(?:/)?$","routeKeys":{},"namedRegex":"^/jobs(?:/)?$"},{"page":"/listings","regex":"^/listings(?:/)?$","routeKeys":{},"namedRegex":"^/listings(?:/)?$"},{"page":"/more","regex":"^/more(?:/)?$","routeKeys":{},"namedRegex":"^/more(?:/)?$"},{"page":"/onboarding","regex":"^/onboarding(?:/)?$","routeKeys":{},"namedRegex":"^/onboarding(?:/)?$"},{"page":"/search","regex":"^/search(?:/)?$","routeKeys":{},"namedRegex":"^/search(?:/)?$"}],"dataRoutes":[],"rsc":{"header":"RSC","varyHeader":"RSC, Next-Router-State-Tree, Next-Router-Prefetch","prefetchHeader":"Next-Router-Prefetch","didPostponeHeader":"x-nextjs-postponed","contentTypeHeader":"text/x-component","suffix":".rsc","prefetchSuffix":".prefetch.rsc"},"rewrites":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/blacklist/[id]",
+      "regex": "^/blacklist/([^/]+?)(?:/)?$",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "namedRegex": "^/blacklist/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/catalog/[...slug]",
+      "regex": "^/catalog/(.+?)(?:/)?$",
+      "routeKeys": { "nxtPslug": "nxtPslug" },
+      "namedRegex": "^/catalog/(?<nxtPslug>.+?)(?:/)?$"
+    },
+    {
+      "page": "/events/[id]",
+      "regex": "^/events/([^/]+?)(?:/)?$",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "namedRegex": "^/events/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/housing/[id]",
+      "regex": "^/housing/([^/]+?)(?:/)?$",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "namedRegex": "^/housing/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/jobs/[id]",
+      "regex": "^/jobs/([^/]+?)(?:/)?$",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "namedRegex": "^/jobs/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/listings/[id]",
+      "regex": "^/listings/([^/]+?)(?:/)?$",
+      "routeKeys": { "nxtPid": "nxtPid" },
+      "namedRegex": "^/listings/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/add",
+      "regex": "^/add(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/add(?:/)?$"
+    },
+    {
+      "page": "/blacklist",
+      "regex": "^/blacklist(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blacklist(?:/)?$"
+    },
+    {
+      "page": "/catalog",
+      "regex": "^/catalog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/catalog(?:/)?$"
+    },
+    {
+      "page": "/events",
+      "regex": "^/events(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/events(?:/)?$"
+    },
+    {
+      "page": "/jobs",
+      "regex": "^/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/jobs(?:/)?$"
+    },
+    {
+      "page": "/listings",
+      "regex": "^/listings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/listings(?:/)?$"
+    },
+    {
+      "page": "/more",
+      "regex": "^/more(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/more(?:/)?$"
+    },
+    {
+      "page": "/onboarding",
+      "regex": "^/onboarding(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/onboarding(?:/)?$"
+    },
+    {
+      "page": "/search",
+      "regex": "^/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/search(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc"
+  },
+  "rewrites": []
+}

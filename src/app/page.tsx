@@ -6,94 +6,55 @@ import { SPECIALISTS, LISTINGS, EVENTS, JOBS, HOUSING } from "@/data/mock";
 import { CATEGORY_LABELS, LISTING_TYPE_LABELS } from "@/types";
 import { Card, Badge } from "@/components/ui";
 
-// ─── Animation CSS ────────────────────────────────────────────────────────────
-// All timings use Apple's preferred ease-out curve.
-// Stagger is baked into animation-delay so zero JS is needed for entrances.
 const ANIMATION_STYLES = `
   :root {
     --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-spring: cubic-bezier(0.34, 1.42, 0.64, 1);
   }
 
-  /* ── Entrance keyframes ── */
   @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes fadeSlideDown {
     from { opacity: 0; transform: translateY(-14px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes fadeScaleIn {
     from { opacity: 0; transform: scale(0.96); }
     to   { opacity: 1; transform: scale(1); }
   }
-
   @keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 1; }
   }
 
-  /* ── Hero layer ── */
-  .anim-hero-label {
-    animation: fadeIn 400ms var(--ease-out) both;
-    animation-delay: 0ms;
-  }
-  .anim-hero-title {
-    animation: fadeSlideUp 500ms var(--ease-out) both;
-    animation-delay: 60ms;
-  }
-  .anim-hero-subtitle {
-    animation: fadeSlideUp 500ms var(--ease-out) both;
-    animation-delay: 120ms;
-  }
-  .anim-hero-counters {
-    animation: fadeSlideUp 500ms var(--ease-out) both;
-    animation-delay: 200ms;
-  }
+  .anim-hero-label   { animation: fadeIn      400ms var(--ease-out) both; animation-delay: 0ms;   }
+  .anim-hero-title   { animation: fadeSlideUp  500ms var(--ease-out) both; animation-delay: 60ms;  }
+  .anim-hero-subtitle{ animation: fadeSlideUp  500ms var(--ease-out) both; animation-delay: 120ms; }
+  .anim-hero-counters{ animation: fadeSlideUp  500ms var(--ease-out) both; animation-delay: 200ms; }
 
-  /* ── Banner ── */
-  .anim-banner {
-    animation: fadeSlideDown 450ms var(--ease-out) both;
-    animation-delay: 280ms;
-  }
+  .anim-banner { animation: fadeSlideDown 450ms var(--ease-out) both; animation-delay: 280ms; }
 
-  /* ── Specialist of day ── */
-  .anim-specialist-label {
-    animation: fadeIn 400ms var(--ease-out) both;
-    animation-delay: 360ms;
-  }
-  .anim-specialist-card {
-    animation: fadeScaleIn 480ms var(--ease-out) both;
-    animation-delay: 420ms;
-  }
+  .anim-specialist-label { animation: fadeIn       400ms var(--ease-out) both; animation-delay: 360ms; }
+  .anim-specialist-card  { animation: fadeScaleIn  480ms var(--ease-out) both; animation-delay: 420ms; }
 
-  /* ── Section tiles (stagger) ── */
   .anim-tile-0 { animation: fadeSlideUp 420ms var(--ease-out) both; animation-delay: 520ms; }
   .anim-tile-1 { animation: fadeSlideUp 420ms var(--ease-out) both; animation-delay: 590ms; }
   .anim-tile-2 { animation: fadeSlideUp 420ms var(--ease-out) both; animation-delay: 660ms; }
   .anim-tile-3 { animation: fadeSlideUp 420ms var(--ease-out) both; animation-delay: 730ms; }
 
-  /* ── Recent cards (stagger) ── */
-  .anim-recent-label {
-    animation: fadeIn 400ms var(--ease-out) both;
-    animation-delay: 800ms;
-  }
-  .anim-recent-0 { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 850ms; }
-  .anim-recent-1 { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 910ms; }
-  .anim-recent-2 { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 970ms; }
+  .anim-recent-label { animation: fadeIn      400ms var(--ease-out) both; animation-delay: 800ms; }
+  .anim-recent-0     { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 850ms; }
+  .anim-recent-1     { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 910ms; }
+  .anim-recent-2     { animation: fadeSlideUp 380ms var(--ease-out) both; animation-delay: 970ms; }
 
-  /* ── Skip all entrance animations on repeat visits ── */
-  /* Any .anim-* class inside .animations-done is instantly visible */
   .animations-done [class*="anim-"] {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
 
-  /* ── Tap / press feedback ── */
   .pressable {
     transition: transform 150ms var(--ease-spring);
     -webkit-tap-highlight-color: transparent;
@@ -104,22 +65,15 @@ const ANIMATION_STYLES = `
     transition: transform 80ms var(--ease-out);
   }
 
-  /* ── Arrow nudge on hover (desktop / pointer devices) ── */
   @media (hover: hover) {
-    .pressable:hover .arrow-hint {
-      transform: translateX(4px);
-      opacity: 1;
-    }
+    .pressable:hover .arrow-hint { transform: translateX(4px); opacity: 1; }
   }
   .arrow-hint {
     transition: transform 200ms var(--ease-out), opacity 200ms var(--ease-out);
   }
 `;
 
-// Session key — animations play once per browser session (tab lifetime)
 const ANIM_SESSION_KEY = "home_anim_played";
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const SECTIONS = [
   {
@@ -169,8 +123,8 @@ function getDailySpecialistIndex(total: number): number {
   return day % total;
 }
 
-// ─── Counter hook ──────────────────────────────────────────────────────────────
-// Animates a number from 0 → target over `duration` ms using easeOut.
+// ─── Counter hook ─────────────────────────────────────────────────────────────
+
 function useCountUp(target: number, duration = 1100, delay = 200) {
   const ref = useRef<HTMLSpanElement>(null);
 
@@ -182,6 +136,12 @@ function useCountUp(target: number, duration = 1100, delay = 200) {
     let raf: number;
 
     const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    // Guard: duration=0 means skip animation, show target immediately
+    if (duration === 0) {
+      el.textContent = String(target);
+      return;
+    }
 
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
@@ -205,6 +165,7 @@ function useCountUp(target: number, duration = 1100, delay = 200) {
 }
 
 // ─── Counter component ────────────────────────────────────────────────────────
+
 function AnimatedCounter({
   count,
   label,
@@ -250,7 +211,6 @@ export default function HomePage() {
   const recentSpecialist = SPECIALISTS[SPECIALISTS.length - 1];
   const recentListing = LISTINGS[LISTINGS.length - 1];
   const recentEvent = EVENTS[EVENTS.length - 1];
-
   const dailySpecialist =
     SPECIALISTS[getDailySpecialistIndex(SPECIALISTS.length)];
 
@@ -259,31 +219,22 @@ export default function HomePage() {
     listings: LISTINGS.length,
     events: EVENTS.length,
     jobs: JOBS.length,
-    housing: HOUSING.length,
   };
 
-  // True if user has already seen the entrance animation this session.
-  // Read synchronously so the first render already has the correct class —
-  // no flicker, no layout shift.
   const [animDone] = useState<boolean>(() => {
     if (typeof window === "undefined") return false;
     return sessionStorage.getItem(ANIM_SESSION_KEY) === "1";
   });
 
-  // Mark as played after mount so next visit skips animations
   useEffect(() => {
     sessionStorage.setItem(ANIM_SESSION_KEY, "1");
   }, []);
 
-  // Counter delays are offset from the hero-counters animation delay (200ms).
-  // When animDone is true, useCountUp still runs but starts at the target
-  // immediately (delay 0, duration 0).
   const counterBaseDelay = animDone ? 0 : 400;
   const counterDuration = animDone ? 0 : 1100;
 
   return (
     <div className={animDone ? "animations-done" : ""}>
-      {/* Inject animation styles once */}
       <style dangerouslySetInnerHTML={{ __html: ANIMATION_STYLES }} />
 
       {/* ── Hero ── */}
@@ -295,7 +246,6 @@ export default function HomePage() {
           overflow: "hidden",
         }}
       >
-        {/* Decorative circles — purely visual, no animation needed */}
         <div
           style={{
             position: "absolute",
@@ -332,7 +282,6 @@ export default function HomePage() {
         >
           Братислава
         </p>
-
         <h1
           className="anim-hero-title"
           style={{
@@ -345,7 +294,6 @@ export default function HomePage() {
           Свои
           <br />в Братиславе
         </h1>
-
         <p
           className="anim-hero-subtitle"
           style={{
@@ -357,7 +305,6 @@ export default function HomePage() {
           Русскоязычное сообщество
         </p>
 
-        {/* Counters — animate in as a group, numbers count up internally */}
         <div
           className="anim-hero-counters"
           style={{
@@ -457,7 +404,6 @@ export default function HomePage() {
         >
           Специалист дня
         </h2>
-
         <div className="anim-specialist-card">
           <Link
             href={`/catalog/${dailySpecialist.category}/${dailySpecialist.id}`}
@@ -618,9 +564,7 @@ export default function HomePage() {
         >
           Недавно добавлено
         </h2>
-
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          {/* Recent Specialist */}
           <div className="anim-recent-0">
             <Link
               href={`/catalog/${recentSpecialist.category}/${recentSpecialist.id}`}
@@ -675,7 +619,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Recent Listing */}
           <div className="anim-recent-1">
             <Link
               href={`/listings/${recentListing.id}`}
@@ -740,7 +683,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Recent Event */}
           <div className="anim-recent-2">
             <Link
               href={`/events/${recentEvent.id}`}

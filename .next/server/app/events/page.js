@@ -1,1 +1,436 @@
-(()=>{var e={};e.id=38,e.ids=[38],e.modules={7849:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external")},2934:e=>{"use strict";e.exports=require("next/dist/client/components/action-async-storage.external.js")},5403:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external")},4580:e=>{"use strict";e.exports=require("next/dist/client/components/request-async-storage.external.js")},4749:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external")},5869:e=>{"use strict";e.exports=require("next/dist/client/components/static-generation-async-storage.external.js")},399:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},4281:(e,t,r)=>{"use strict";r.r(t),r.d(t,{GlobalError:()=>a.a,__next_app__:()=>x,originalPathname:()=>p,pages:()=>c,routeModule:()=>u,tree:()=>d}),r(2072),r(9176),r(5866);var n=r(3191),s=r(8716),i=r(7922),a=r.n(i),o=r(5231),l={};for(let e in o)0>["default","tree","pages","GlobalError","originalPathname","__next_app__","routeModule"].indexOf(e)&&(l[e]=()=>o[e]);r.d(t,l);let d=["",{children:["events",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(r.bind(r,2072)),"/Users/kostiantyn/Downloads/bratislava-app/src/app/events/page.tsx"]}]},{}]},{layout:[()=>Promise.resolve().then(r.bind(r,9176)),"/Users/kostiantyn/Downloads/bratislava-app/src/app/layout.tsx"],"not-found":[()=>Promise.resolve().then(r.t.bind(r,5866,23)),"next/dist/client/components/not-found-error"]}],c=["/Users/kostiantyn/Downloads/bratislava-app/src/app/events/page.tsx"],p="/events/page",x={require:r,loadChunk:()=>Promise.resolve()},u=new n.AppPageRouteModule({definition:{kind:s.x.APP_PAGE,page:"/events/page",pathname:"/events",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:d}})},9465:(e,t,r)=>{Promise.resolve().then(r.t.bind(r,9404,23)),Promise.resolve().then(r.bind(r,2068))},2068:(e,t,r)=>{"use strict";r.d(t,{Badge:()=>a,Card:()=>s,PageHeader:()=>i});var n=r(326);function s({children:e,onClick:t,style:r}){return n.jsx("div",{onClick:t,style:{background:"var(--card)",borderRadius:"var(--radius)",border:"1px solid var(--border)",overflow:"hidden",cursor:t?"pointer":"default",transition:"transform 0.15s ease, box-shadow 0.15s ease",...r},onMouseDown:e=>t&&(e.currentTarget.style.transform="scale(0.98)"),onMouseUp:e=>t&&(e.currentTarget.style.transform="scale(1)"),onTouchStart:e=>t&&(e.currentTarget.style.transform="scale(0.98)"),onTouchEnd:e=>t&&(e.currentTarget.style.transform="scale(1)"),children:e})}function i({title:e,subtitle:t}){return(0,n.jsxs)("div",{style:{padding:"24px 20px 16px",background:"var(--blue)"},children:[n.jsx("h1",{style:{margin:0,fontSize:"22px",color:"#fff",fontFamily:"Unbounded, sans-serif"},children:e}),t&&n.jsx("p",{style:{margin:"6px 0 0",color:"rgba(255,255,255,0.7)",fontSize:"13px"},children:t})]})}function a({children:e,color:t="var(--blue-muted)",textColor:r="var(--blue)"}){return n.jsx("span",{style:{display:"inline-block",padding:"3px 10px",borderRadius:"100px",background:t,color:r,fontSize:"11px",fontWeight:600,letterSpacing:"0.02em"},children:e})}r(7577)},2072:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>o});var n=r(9510),s=r(7371),i=r(63),a=r(3718);function o(){let e=i.FP.filter(e=>!e.isPlace),t=i.FP.filter(e=>e.isPlace);return(0,n.jsxs)("div",{children:[n.jsx(a.mr,{title:"События и места",subtitle:"Встречи, тусовки, точки на карте"}),(0,n.jsxs)("div",{style:{padding:"20px 16px"},children:[e.length>0&&(0,n.jsxs)(n.Fragment,{children:[n.jsx("h2",{style:{fontSize:"12px",color:"var(--text-muted)",fontWeight:600,letterSpacing:"0.06em",textTransform:"uppercase",margin:"0 0 12px"},children:"Ближайшие события"}),n.jsx("div",{style:{display:"flex",flexDirection:"column",gap:"10px",marginBottom:"24px"},children:e.map(e=>n.jsx(s.default,{href:`/events/${e.id}`,style:{textDecoration:"none"},children:n.jsx(a.Zb,{children:(0,n.jsxs)("div",{style:{padding:"16px"},children:[(0,n.jsxs)("div",{style:{display:"flex",justifyContent:"space-between",gap:"8px",marginBottom:"8px"},children:[n.jsx("div",{style:{fontWeight:700,fontSize:"15px",flex:1},children:e.title}),n.jsx(a.Ct,{color:"#EEF3FA",textColor:"var(--blue)",children:"Событие"})]}),e.date&&(0,n.jsxs)("div",{style:{fontSize:"13px",color:"var(--blue)",fontWeight:600,marginBottom:"4px"},children:["\uD83D\uDCC5 ",new Date(e.date).toLocaleDateString("ru-RU",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"})]}),e.address&&(0,n.jsxs)("div",{style:{fontSize:"13px",color:"var(--text-muted)"},children:["\uD83D\uDCCD ",e.address]}),n.jsx("p",{style:{margin:"8px 0 0",fontSize:"13px",color:"var(--text-muted)",display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical",overflow:"hidden"},children:e.description})]})})},e.id))})]}),t.length>0&&(0,n.jsxs)(n.Fragment,{children:[n.jsx("h2",{style:{fontSize:"12px",color:"var(--text-muted)",fontWeight:600,letterSpacing:"0.06em",textTransform:"uppercase",margin:"0 0 12px"},children:"Места"}),n.jsx("div",{style:{display:"flex",flexDirection:"column",gap:"10px"},children:t.map(e=>n.jsx(s.default,{href:`/events/${e.id}`,style:{textDecoration:"none"},children:n.jsx(a.Zb,{children:(0,n.jsxs)("div",{style:{padding:"16px"},children:[(0,n.jsxs)("div",{style:{display:"flex",justifyContent:"space-between",gap:"8px",marginBottom:"8px"},children:[n.jsx("div",{style:{fontWeight:700,fontSize:"15px",flex:1},children:e.title}),n.jsx(a.Ct,{color:"#F0FAF0",textColor:"#2D7A2D",children:"Место"})]}),e.address&&(0,n.jsxs)("div",{style:{fontSize:"13px",color:"var(--text-muted)",marginBottom:"6px"},children:["\uD83D\uDCCD ",e.address]}),n.jsx("p",{style:{margin:0,fontSize:"13px",color:"var(--text-muted)",display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical",overflow:"hidden"},children:e.description})]})})},e.id))})]})]})]})}},3718:(e,t,r)=>{"use strict";r.d(t,{Ct:()=>d,Zb:()=>o,mr:()=>l});var n=r(8570);let s=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx`),{__esModule:i,$$typeof:a}=s;s.default;let o=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx#Card`),l=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx#PageHeader`),d=(0,n.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx#Badge`)}};var t=require("../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),n=t.X(0,[24,867],()=>r(4281));module.exports=n})();
+(() => {
+  var e = {};
+  ((e.id = 38),
+    (e.ids = [38]),
+    (e.modules = {
+      7849: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/action-async-storage.external");
+      },
+      2934: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/action-async-storage.external.js");
+      },
+      5403: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/request-async-storage.external");
+      },
+      4580: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/request-async-storage.external.js");
+      },
+      4749: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/static-generation-async-storage.external");
+      },
+      5869: (e) => {
+        "use strict";
+        e.exports = require("next/dist/client/components/static-generation-async-storage.external.js");
+      },
+      399: (e) => {
+        "use strict";
+        e.exports = require("next/dist/compiled/next-server/app-page.runtime.prod.js");
+      },
+      4281: (e, t, r) => {
+        "use strict";
+        (r.r(t),
+          r.d(t, {
+            GlobalError: () => a.a,
+            __next_app__: () => x,
+            originalPathname: () => p,
+            pages: () => c,
+            routeModule: () => u,
+            tree: () => d,
+          }),
+          r(2072),
+          r(9176),
+          r(5866));
+        var n = r(3191),
+          s = r(8716),
+          i = r(7922),
+          a = r.n(i),
+          o = r(5231),
+          l = {};
+        for (let e in o)
+          0 >
+            [
+              "default",
+              "tree",
+              "pages",
+              "GlobalError",
+              "originalPathname",
+              "__next_app__",
+              "routeModule",
+            ].indexOf(e) && (l[e] = () => o[e]);
+        r.d(t, l);
+        let d = [
+            "",
+            {
+              children: [
+                "events",
+                {
+                  children: [
+                    "__PAGE__",
+                    {},
+                    {
+                      page: [
+                        () => Promise.resolve().then(r.bind(r, 2072)),
+                        "/Users/kostiantyn/Downloads/bratislava-app/src/app/events/page.tsx",
+                      ],
+                    },
+                  ],
+                },
+                {},
+              ],
+            },
+            {
+              layout: [
+                () => Promise.resolve().then(r.bind(r, 9176)),
+                "/Users/kostiantyn/Downloads/bratislava-app/src/app/layout.tsx",
+              ],
+              "not-found": [
+                () => Promise.resolve().then(r.t.bind(r, 5866, 23)),
+                "next/dist/client/components/not-found-error",
+              ],
+            },
+          ],
+          c = [
+            "/Users/kostiantyn/Downloads/bratislava-app/src/app/events/page.tsx",
+          ],
+          p = "/events/page",
+          x = { require: r, loadChunk: () => Promise.resolve() },
+          u = new n.AppPageRouteModule({
+            definition: {
+              kind: s.x.APP_PAGE,
+              page: "/events/page",
+              pathname: "/events",
+              bundlePath: "",
+              filename: "",
+              appPaths: [],
+            },
+            userland: { loaderTree: d },
+          });
+      },
+      9465: (e, t, r) => {
+        (Promise.resolve().then(r.t.bind(r, 9404, 23)),
+          Promise.resolve().then(r.bind(r, 2068)));
+      },
+      2068: (e, t, r) => {
+        "use strict";
+        r.d(t, { Badge: () => a, Card: () => s, PageHeader: () => i });
+        var n = r(326);
+        function s({ children: e, onClick: t, style: r }) {
+          return n.jsx("div", {
+            onClick: t,
+            style: {
+              background: "var(--card)",
+              borderRadius: "var(--radius)",
+              border: "1px solid var(--border)",
+              overflow: "hidden",
+              cursor: t ? "pointer" : "default",
+              transition: "transform 0.15s ease, box-shadow 0.15s ease",
+              ...r,
+            },
+            onMouseDown: (e) =>
+              t && (e.currentTarget.style.transform = "scale(0.98)"),
+            onMouseUp: (e) =>
+              t && (e.currentTarget.style.transform = "scale(1)"),
+            onTouchStart: (e) =>
+              t && (e.currentTarget.style.transform = "scale(0.98)"),
+            onTouchEnd: (e) =>
+              t && (e.currentTarget.style.transform = "scale(1)"),
+            children: e,
+          });
+        }
+        function i({ title: e, subtitle: t }) {
+          return (0, n.jsxs)("div", {
+            style: { padding: "24px 20px 16px", background: "var(--blue)" },
+            children: [
+              n.jsx("h1", {
+                style: {
+                  margin: 0,
+                  fontSize: "22px",
+                  color: "#fff",
+                  fontFamily: "Unbounded, sans-serif",
+                },
+                children: e,
+              }),
+              t &&
+                n.jsx("p", {
+                  style: {
+                    margin: "6px 0 0",
+                    color: "rgba(255,255,255,0.7)",
+                    fontSize: "13px",
+                  },
+                  children: t,
+                }),
+            ],
+          });
+        }
+        function a({
+          children: e,
+          color: t = "var(--blue-muted)",
+          textColor: r = "var(--blue)",
+        }) {
+          return n.jsx("span", {
+            style: {
+              display: "inline-block",
+              padding: "3px 10px",
+              borderRadius: "100px",
+              background: t,
+              color: r,
+              fontSize: "11px",
+              fontWeight: 600,
+              letterSpacing: "0.02em",
+            },
+            children: e,
+          });
+        }
+        r(7577);
+      },
+      2072: (e, t, r) => {
+        "use strict";
+        (r.r(t), r.d(t, { default: () => o }));
+        var n = r(9510),
+          s = r(7371),
+          i = r(63),
+          a = r(3718);
+        function o() {
+          let e = i.FP.filter((e) => !e.isPlace),
+            t = i.FP.filter((e) => e.isPlace);
+          return (0, n.jsxs)("div", {
+            children: [
+              n.jsx(a.mr, {
+                title: "События и места",
+                subtitle: "Встречи, тусовки, точки на карте",
+              }),
+              (0, n.jsxs)("div", {
+                style: { padding: "20px 16px" },
+                children: [
+                  e.length > 0 &&
+                    (0, n.jsxs)(n.Fragment, {
+                      children: [
+                        n.jsx("h2", {
+                          style: {
+                            fontSize: "12px",
+                            color: "var(--text-muted)",
+                            fontWeight: 600,
+                            letterSpacing: "0.06em",
+                            textTransform: "uppercase",
+                            margin: "0 0 12px",
+                          },
+                          children: "Ближайшие события",
+                        }),
+                        n.jsx("div", {
+                          style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "10px",
+                            marginBottom: "24px",
+                          },
+                          children: e.map((e) =>
+                            n.jsx(
+                              s.default,
+                              {
+                                href: `/events/${e.id}`,
+                                style: { textDecoration: "none" },
+                                children: n.jsx(a.Zb, {
+                                  children: (0, n.jsxs)("div", {
+                                    style: { padding: "16px" },
+                                    children: [
+                                      (0, n.jsxs)("div", {
+                                        style: {
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          gap: "8px",
+                                          marginBottom: "8px",
+                                        },
+                                        children: [
+                                          n.jsx("div", {
+                                            style: {
+                                              fontWeight: 700,
+                                              fontSize: "15px",
+                                              flex: 1,
+                                            },
+                                            children: e.title,
+                                          }),
+                                          n.jsx(a.Ct, {
+                                            color: "#EEF3FA",
+                                            textColor: "var(--blue)",
+                                            children: "Событие",
+                                          }),
+                                        ],
+                                      }),
+                                      e.date &&
+                                        (0, n.jsxs)("div", {
+                                          style: {
+                                            fontSize: "13px",
+                                            color: "var(--blue)",
+                                            fontWeight: 600,
+                                            marginBottom: "4px",
+                                          },
+                                          children: [
+                                            "\uD83D\uDCC5 ",
+                                            new Date(e.date).toLocaleDateString(
+                                              "ru-RU",
+                                              {
+                                                day: "numeric",
+                                                month: "long",
+                                                hour: "2-digit",
+                                                minute: "2-digit",
+                                              },
+                                            ),
+                                          ],
+                                        }),
+                                      e.address &&
+                                        (0, n.jsxs)("div", {
+                                          style: {
+                                            fontSize: "13px",
+                                            color: "var(--text-muted)",
+                                          },
+                                          children: [
+                                            "\uD83D\uDCCD ",
+                                            e.address,
+                                          ],
+                                        }),
+                                      n.jsx("p", {
+                                        style: {
+                                          margin: "8px 0 0",
+                                          fontSize: "13px",
+                                          color: "var(--text-muted)",
+                                          display: "-webkit-box",
+                                          WebkitLineClamp: 2,
+                                          WebkitBoxOrient: "vertical",
+                                          overflow: "hidden",
+                                        },
+                                        children: e.description,
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              },
+                              e.id,
+                            ),
+                          ),
+                        }),
+                      ],
+                    }),
+                  t.length > 0 &&
+                    (0, n.jsxs)(n.Fragment, {
+                      children: [
+                        n.jsx("h2", {
+                          style: {
+                            fontSize: "12px",
+                            color: "var(--text-muted)",
+                            fontWeight: 600,
+                            letterSpacing: "0.06em",
+                            textTransform: "uppercase",
+                            margin: "0 0 12px",
+                          },
+                          children: "Места",
+                        }),
+                        n.jsx("div", {
+                          style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "10px",
+                          },
+                          children: t.map((e) =>
+                            n.jsx(
+                              s.default,
+                              {
+                                href: `/events/${e.id}`,
+                                style: { textDecoration: "none" },
+                                children: n.jsx(a.Zb, {
+                                  children: (0, n.jsxs)("div", {
+                                    style: { padding: "16px" },
+                                    children: [
+                                      (0, n.jsxs)("div", {
+                                        style: {
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          gap: "8px",
+                                          marginBottom: "8px",
+                                        },
+                                        children: [
+                                          n.jsx("div", {
+                                            style: {
+                                              fontWeight: 700,
+                                              fontSize: "15px",
+                                              flex: 1,
+                                            },
+                                            children: e.title,
+                                          }),
+                                          n.jsx(a.Ct, {
+                                            color: "#F0FAF0",
+                                            textColor: "#2D7A2D",
+                                            children: "Место",
+                                          }),
+                                        ],
+                                      }),
+                                      e.address &&
+                                        (0, n.jsxs)("div", {
+                                          style: {
+                                            fontSize: "13px",
+                                            color: "var(--text-muted)",
+                                            marginBottom: "6px",
+                                          },
+                                          children: [
+                                            "\uD83D\uDCCD ",
+                                            e.address,
+                                          ],
+                                        }),
+                                      n.jsx("p", {
+                                        style: {
+                                          margin: 0,
+                                          fontSize: "13px",
+                                          color: "var(--text-muted)",
+                                          display: "-webkit-box",
+                                          WebkitLineClamp: 2,
+                                          WebkitBoxOrient: "vertical",
+                                          overflow: "hidden",
+                                        },
+                                        children: e.description,
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              },
+                              e.id,
+                            ),
+                          ),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            ],
+          });
+        }
+      },
+      3718: (e, t, r) => {
+        "use strict";
+        r.d(t, { Ct: () => d, Zb: () => o, mr: () => l });
+        var n = r(8570);
+        let s = (0, n.createProxy)(
+            String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx`,
+          ),
+          { __esModule: i, $$typeof: a } = s;
+        s.default;
+        let o = (0, n.createProxy)(
+            String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx#Card`,
+          ),
+          l = (0, n.createProxy)(
+            String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx#PageHeader`,
+          ),
+          d = (0, n.createProxy)(
+            String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/index.tsx#Badge`,
+          );
+      },
+    }));
+  var t = require("../../webpack-runtime.js");
+  t.C(e);
+  var r = (e) => t((t.s = e)),
+    n = t.X(0, [24, 867], () => r(4281));
+  module.exports = n;
+})();

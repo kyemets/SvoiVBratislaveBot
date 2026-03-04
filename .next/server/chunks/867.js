@@ -1,8 +1,418 @@
-exports.id=867,exports.ids=[867],exports.modules={9363:(e,t,a)=>{Promise.resolve().then(a.t.bind(a,2994,23)),Promise.resolve().then(a.t.bind(a,6114,23)),Promise.resolve().then(a.t.bind(a,9727,23)),Promise.resolve().then(a.t.bind(a,9671,23)),Promise.resolve().then(a.t.bind(a,1868,23)),Promise.resolve().then(a.t.bind(a,4759,23))},7764:(e,t,a)=>{Promise.resolve().then(a.bind(a,9596)),Promise.resolve().then(a.bind(a,108))},9596:(e,t,a)=>{"use strict";a.d(t,{BottomNav:()=>o});var r=a(326),s=a(434),d=a(5047);let i=[{href:"/",icon:"\uD83C\uDFE0",label:"Главная"},{href:"/catalog",icon:"\uD83D\uDDC2",label:"Каталог"},{href:"/search",icon:"\uD83D\uDD0D",label:"Поиск"},{href:"/add",icon:"＋",label:"Добавить"},{href:"/more",icon:"⋯",label:"Ещё"}];function o(){let e=(0,d.usePathname)();return"/onboarding"===e?null:r.jsx("nav",{style:{position:"fixed",bottom:0,left:0,right:0,background:"#fff",borderTop:"1px solid var(--border)",display:"flex",zIndex:100,paddingBottom:"env(safe-area-inset-bottom)"},children:i.map(t=>{let a="/"===t.href?"/"===e:e.startsWith(t.href),d="/add"===t.href;return(0,r.jsxs)(s.default,{href:t.href,style:{flex:1,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:"10px 4px 8px",textDecoration:"none",gap:"3px"},children:[r.jsx("span",{style:{fontSize:d?"22px":"20px",lineHeight:1,display:"flex",alignItems:"center",justifyContent:"center",width:d?"36px":"auto",height:d?"36px":"auto",borderRadius:d?"50%":0,background:d?"var(--blue)":"transparent",color:d?"#fff":"inherit",marginBottom:d?"2px":0},children:t.icon}),r.jsx("span",{style:{fontSize:"10px",fontWeight:a?600:400,color:a?"var(--blue)":"var(--text-muted)",letterSpacing:"0.01em"},children:t.label})]},t.href)})})}},108:(e,t,a)=>{"use strict";a.d(t,{OnboardingGate:()=>s}),a(7577);var r=a(5047);function s(){return(0,r.useRouter)(),(0,r.usePathname)(),null}},7371:(e,t,a)=>{"use strict";a.d(t,{default:()=>s.a});var r=a(1812),s=a.n(r)},1812:(e,t,a)=>{"use strict";let{createProxy:r}=a(8570);e.exports=r("/Users/kostiantyn/Downloads/bratislava-app/node_modules/next/dist/client/link.js")},9176:(e,t,a)=>{"use strict";a.r(t),a.d(t,{default:()=>y,metadata:()=>u});var r=a(9510);a(5023);var s=a(8570);let d=(0,s.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/layout/BottomNav.tsx`),{__esModule:i,$$typeof:o}=d;d.default;let n=(0,s.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/layout/BottomNav.tsx#BottomNav`),c=(0,s.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/OnboardingGate.tsx`),{__esModule:l,$$typeof:p}=c;c.default;let m=(0,s.createProxy)(String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/OnboardingGate.tsx#OnboardingGate`),u={title:"Свои в Братиславе",description:"Русскоязычное сообщество в Братиславе"};function y({children:e}){return(0,r.jsxs)("html",{lang:"ru",children:[r.jsx("head",{children:r.jsx("script",{src:"https://telegram.org/js/telegram-web-app.js"})}),(0,r.jsxs)("body",{children:[r.jsx("script",{dangerouslySetInnerHTML:{__html:`
+((exports.id = 867),
+  (exports.ids = [867]),
+  (exports.modules = {
+    9363: (e, t, a) => {
+      (Promise.resolve().then(a.t.bind(a, 2994, 23)),
+        Promise.resolve().then(a.t.bind(a, 6114, 23)),
+        Promise.resolve().then(a.t.bind(a, 9727, 23)),
+        Promise.resolve().then(a.t.bind(a, 9671, 23)),
+        Promise.resolve().then(a.t.bind(a, 1868, 23)),
+        Promise.resolve().then(a.t.bind(a, 4759, 23)));
+    },
+    7764: (e, t, a) => {
+      (Promise.resolve().then(a.bind(a, 9596)),
+        Promise.resolve().then(a.bind(a, 108)));
+    },
+    9596: (e, t, a) => {
+      "use strict";
+      a.d(t, { BottomNav: () => o });
+      var r = a(326),
+        s = a(434),
+        d = a(5047);
+      let i = [
+        { href: "/", icon: "\uD83C\uDFE0", label: "Главная" },
+        { href: "/catalog", icon: "\uD83D\uDDC2", label: "Каталог" },
+        { href: "/search", icon: "\uD83D\uDD0D", label: "Поиск" },
+        { href: "/add", icon: "＋", label: "Добавить" },
+        { href: "/more", icon: "⋯", label: "Ещё" },
+      ];
+      function o() {
+        let e = (0, d.usePathname)();
+        return "/onboarding" === e
+          ? null
+          : r.jsx("nav", {
+              style: {
+                position: "fixed",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                background: "#fff",
+                borderTop: "1px solid var(--border)",
+                display: "flex",
+                zIndex: 100,
+                paddingBottom: "env(safe-area-inset-bottom)",
+              },
+              children: i.map((t) => {
+                let a = "/" === t.href ? "/" === e : e.startsWith(t.href),
+                  d = "/add" === t.href;
+                return (0, r.jsxs)(
+                  s.default,
+                  {
+                    href: t.href,
+                    style: {
+                      flex: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "10px 4px 8px",
+                      textDecoration: "none",
+                      gap: "3px",
+                    },
+                    children: [
+                      r.jsx("span", {
+                        style: {
+                          fontSize: d ? "22px" : "20px",
+                          lineHeight: 1,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: d ? "36px" : "auto",
+                          height: d ? "36px" : "auto",
+                          borderRadius: d ? "50%" : 0,
+                          background: d ? "var(--blue)" : "transparent",
+                          color: d ? "#fff" : "inherit",
+                          marginBottom: d ? "2px" : 0,
+                        },
+                        children: t.icon,
+                      }),
+                      r.jsx("span", {
+                        style: {
+                          fontSize: "10px",
+                          fontWeight: a ? 600 : 400,
+                          color: a ? "var(--blue)" : "var(--text-muted)",
+                          letterSpacing: "0.01em",
+                        },
+                        children: t.label,
+                      }),
+                    ],
+                  },
+                  t.href,
+                );
+              }),
+            });
+      }
+    },
+    108: (e, t, a) => {
+      "use strict";
+      (a.d(t, { OnboardingGate: () => s }), a(7577));
+      var r = a(5047);
+      function s() {
+        return ((0, r.useRouter)(), (0, r.usePathname)(), null);
+      }
+    },
+    7371: (e, t, a) => {
+      "use strict";
+      a.d(t, { default: () => s.a });
+      var r = a(1812),
+        s = a.n(r);
+    },
+    1812: (e, t, a) => {
+      "use strict";
+      let { createProxy: r } = a(8570);
+      e.exports = r(
+        "/Users/kostiantyn/Downloads/bratislava-app/node_modules/next/dist/client/link.js",
+      );
+    },
+    9176: (e, t, a) => {
+      "use strict";
+      (a.r(t), a.d(t, { default: () => y, metadata: () => u }));
+      var r = a(9510);
+      a(5023);
+      var s = a(8570);
+      let d = (0, s.createProxy)(
+          String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/layout/BottomNav.tsx`,
+        ),
+        { __esModule: i, $$typeof: o } = d;
+      d.default;
+      let n = (0, s.createProxy)(
+          String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/layout/BottomNav.tsx#BottomNav`,
+        ),
+        c = (0, s.createProxy)(
+          String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/OnboardingGate.tsx`,
+        ),
+        { __esModule: l, $$typeof: p } = c;
+      c.default;
+      let m = (0, s.createProxy)(
+          String.raw`/Users/kostiantyn/Downloads/bratislava-app/src/components/ui/OnboardingGate.tsx#OnboardingGate`,
+        ),
+        u = {
+          title: "Свои в Братиславе",
+          description: "Русскоязычное сообщество в Братиславе",
+        };
+      function y({ children: e }) {
+        return (0, r.jsxs)("html", {
+          lang: "ru",
+          children: [
+            r.jsx("head", {
+              children: r.jsx("script", {
+                src: "https://telegram.org/js/telegram-web-app.js",
+              }),
+            }),
+            (0, r.jsxs)("body", {
+              children: [
+                r.jsx("script", {
+                  dangerouslySetInnerHTML: {
+                    __html: `
           window.addEventListener('load', function() {
             if (window.Telegram && window.Telegram.WebApp) {
               window.Telegram.WebApp.ready();
               window.Telegram.WebApp.expand();
             }
           });
-        `}}),(0,r.jsxs)("main",{style:{paddingBottom:"80px",minHeight:"100vh"},children:[r.jsx(m,{}),e]}),r.jsx(n,{})]})]})}},63:(e,t,a)=>{"use strict";a.d(t,{FP:()=>s,WN:()=>d,hl:()=>i,jt:()=>r});let r=[{id:"s1",name:"Анна Ковалёва",category:"doctors",description:"Терапевт, 12 лет опыта. Принимаю на русском и словацком. Помогу с направлениями к специалистам и разберусь с местной системой здравоохранения.",contact:"@anna_doc_ba",photo:"https://i.pravatar.cc/150?img=47",addedBy:"user_1",createdAt:"2024-01-15"},{id:"s2",name:"Дмитрий Лисов",category:"lawyers",description:"Специализируюсь на трудовом праве и вопросах ВНЖ/ПМЖ в Словакии. Консультирую по открытию бизнеса и налоговым вопросам.",contact:"@dmitry_law_sk",photo:"https://i.pravatar.cc/150?img=12",addedBy:"user_2",createdAt:"2024-01-20"},{id:"s3",name:"Сергей Майстер",category:"masters",description:"Сантехника, электрика, мелкий ремонт. Работаю качественно и по честным ценам. Выезжаю по всей Братиславе.",contact:"+421 900 123 456",photo:"https://i.pravatar.cc/150?img=33",addedBy:"user_3",createdAt:"2024-02-01"},{id:"s4",name:"Мария Петренко",category:"nannies",description:"Опыт с детьми от 1 до 8 лет. Могу забирать из садика/школы, помогать с домашними заданиями. Есть рекомендации.",contact:"@masha_nanny",photo:"https://i.pravatar.cc/150?img=44",addedBy:"user_4",createdAt:"2024-02-10"},{id:"s5",name:"Игорь Шевченко",category:"tutors",description:"Математика и физика для школьников и студентов. Готовлю к экзаменам. Онлайн или офлайн.",contact:"@igor_tutor_ba",photo:"https://i.pravatar.cc/150?img=57",addedBy:"user_5",createdAt:"2024-02-15"},{id:"s6",name:"Елена Волкова",category:"accountants",description:"Бухгалтерия для фрилансеров и малого бизнеса в Словакии. Помогу разобраться с налогами, SZCO, s.r.o.",contact:"@elena_buh_sk",photo:"https://i.pravatar.cc/150?img=25",addedBy:"user_6",createdAt:"2024-02-20"},{id:"s7",name:"Николай Бондарь",category:"doctors",description:"Стоматолог. Работаю в частной клинике в центре. Первичная консультация бесплатно для своих.",contact:"@kolia_dentist",photo:"https://i.pravatar.cc/150?img=60",addedBy:"user_7",createdAt:"2024-03-01"},{id:"s8",name:"Оксана Ткач",category:"masters",description:"Уборка квартир и офисов. Индивидуальный подход, собственные средства. Регулярно или разово.",contact:"@oksana_clean",photo:"https://i.pravatar.cc/150?img=38",addedBy:"user_8",createdAt:"2024-03-05"}],s=[{id:"e1",title:"Встреча русскоязычного сообщества",description:"Ежемесячная встреча в кафе. Знакомимся, общаемся, делимся опытом жизни в Братиславе. Все желающие приветствуются.",date:"2024-03-20T18:00:00",address:"Caf\xe9 Verne, Obchodn\xe1 18",isPlace:!1,addedBy:"user_14",createdAt:"2024-03-10"},{id:"e2",title:"Русская библиотека",description:"Небольшая библиотека с книгами на русском. Можно взять домой или читать на месте. Работает по субботам.",address:"Štef\xe1nikova 25, каждую субботу 10:00–14:00",isPlace:!0,addedBy:"user_15",createdAt:"2024-02-01"},{id:"e3",title:"Мастер-класс по словацкому языку",description:"Разговорный клуб для начинающих. Ведёт носитель языка, занятия проходят в неформальной обстановке.",date:"2024-03-22T17:30:00",address:"Coworking Hub, Primaci\xe1lne n\xe1mestie 1",isPlace:!1,addedBy:"user_16",createdAt:"2024-03-08"},{id:"e4",title:"Детская площадка у Дуная",description:"Место где собираются русскоязычные семьи с детьми по выходным. Неформально, без записи.",address:"N\xe1brežie arm. gen. L. Svobodu, рядом с фонтаном",isPlace:!0,addedBy:"user_17",createdAt:"2024-02-15"}],d=[{id:"j1",type:"vacancy",title:"Водитель категории B/C",company:"Slovak Logistics s.r.o.",description:"Развозка товаров по Братиславе и окрестностям. Опыт от 1 года. Оформление официальное, зарплата вовремя.",salary:"1400–1700€",contact:"@slovak_logistics",remote:!1,addedBy:"user_30",createdAt:"2024-03-10"},{id:"j2",type:"vacancy",title:"Разработчик React / Next.js",company:"Стартап (удалённо)",description:"Ищем фронтенд-разработчика в небольшую команду. Проект интересный, стек современный. Оплата в евро.",salary:"2500–3500€",contact:"@dev_hiring_ba",remote:!0,addedBy:"user_31",createdAt:"2024-03-11"},{id:"j3",type:"resume",title:"Ищу работу — бухгалтер / финансист",description:"8 лет опыта, знаю словацкое законодательство, работала в s.r.o. Готова к частичной занятости или полной. Русский, словацкий, английский.",contact:"@irina_fin",remote:!1,addedBy:"user_32",createdAt:"2024-03-12"},{id:"j4",type:"vacancy",title:"Повар / помощник повара",company:"Ресторан в центре",description:"Русская и европейская кухня. Опыт обязателен. Условия обсуждаем лично. Легальное оформление.",salary:"1200–1500€",contact:"+421 902 345 678",remote:!1,addedBy:"user_33",createdAt:"2024-03-13"},{id:"j5",type:"resume",title:"Ищу работу — IT поддержка / системный администратор",description:"5 лет опыта в техподдержке и администрировании Windows/Linux. Есть ВНЖ, готов к работе сразу.",contact:"@sysadmin_ba",remote:!1,addedBy:"user_34",createdAt:"2024-03-14"}],i=[{id:"b1",name:"Маклер Виктор",type:"landlord",description:"Берёт залог за квартиру, показывает её, потом исчезает. Работает в районе Petržalka. Несколько человек пострадали.",contact:"@viktor_realtor",addedBy:"user_20",createdAt:"2024-03-01"},{id:"b2",name:'IT стартап "QuickDev s.r.o."',type:"employer",description:'Не выплатили зарплату за 2 месяца троим разработчикам. Обещают "вот-вот" уже полгода. Офис на Bajkalsk\xe1.',addedBy:"user_21",createdAt:"2024-03-05"},{id:"b3",name:"Андрей К.",type:"person",description:"Продаёт технику которой нет — берёт предоплату и пропадает. В объявлениях пишет с разных аккаунтов.",addedBy:"user_22",createdAt:"2024-03-08"},{id:"b4",name:'Агентство переводов "TransSK"',type:"company",description:"Берут деньги за срочные переводы документов, затягивают на недели. На звонки не отвечают после оплаты.",addedBy:"user_23",createdAt:"2024-03-10"}]},5023:()=>{}};
+        `,
+                  },
+                }),
+                (0, r.jsxs)("main", {
+                  style: { paddingBottom: "80px", minHeight: "100vh" },
+                  children: [r.jsx(m, {}), e],
+                }),
+                r.jsx(n, {}),
+              ],
+            }),
+          ],
+        });
+      }
+    },
+    63: (e, t, a) => {
+      "use strict";
+      a.d(t, { FP: () => s, WN: () => d, hl: () => i, jt: () => r });
+      let r = [
+          {
+            id: "s1",
+            name: "Анна Ковалёва",
+            category: "doctors",
+            description:
+              "Терапевт, 12 лет опыта. Принимаю на русском и словацком. Помогу с направлениями к специалистам и разберусь с местной системой здравоохранения.",
+            contact: "@anna_doc_ba",
+            photo: "https://i.pravatar.cc/150?img=47",
+            addedBy: "user_1",
+            createdAt: "2024-01-15",
+          },
+          {
+            id: "s2",
+            name: "Дмитрий Лисов",
+            category: "lawyers",
+            description:
+              "Специализируюсь на трудовом праве и вопросах ВНЖ/ПМЖ в Словакии. Консультирую по открытию бизнеса и налоговым вопросам.",
+            contact: "@dmitry_law_sk",
+            photo: "https://i.pravatar.cc/150?img=12",
+            addedBy: "user_2",
+            createdAt: "2024-01-20",
+          },
+          {
+            id: "s3",
+            name: "Сергей Майстер",
+            category: "masters",
+            description:
+              "Сантехника, электрика, мелкий ремонт. Работаю качественно и по честным ценам. Выезжаю по всей Братиславе.",
+            contact: "+421 900 123 456",
+            photo: "https://i.pravatar.cc/150?img=33",
+            addedBy: "user_3",
+            createdAt: "2024-02-01",
+          },
+          {
+            id: "s4",
+            name: "Мария Петренко",
+            category: "nannies",
+            description:
+              "Опыт с детьми от 1 до 8 лет. Могу забирать из садика/школы, помогать с домашними заданиями. Есть рекомендации.",
+            contact: "@masha_nanny",
+            photo: "https://i.pravatar.cc/150?img=44",
+            addedBy: "user_4",
+            createdAt: "2024-02-10",
+          },
+          {
+            id: "s5",
+            name: "Игорь Шевченко",
+            category: "tutors",
+            description:
+              "Математика и физика для школьников и студентов. Готовлю к экзаменам. Онлайн или офлайн.",
+            contact: "@igor_tutor_ba",
+            photo: "https://i.pravatar.cc/150?img=57",
+            addedBy: "user_5",
+            createdAt: "2024-02-15",
+          },
+          {
+            id: "s6",
+            name: "Елена Волкова",
+            category: "accountants",
+            description:
+              "Бухгалтерия для фрилансеров и малого бизнеса в Словакии. Помогу разобраться с налогами, SZCO, s.r.o.",
+            contact: "@elena_buh_sk",
+            photo: "https://i.pravatar.cc/150?img=25",
+            addedBy: "user_6",
+            createdAt: "2024-02-20",
+          },
+          {
+            id: "s7",
+            name: "Николай Бондарь",
+            category: "doctors",
+            description:
+              "Стоматолог. Работаю в частной клинике в центре. Первичная консультация бесплатно для своих.",
+            contact: "@kolia_dentist",
+            photo: "https://i.pravatar.cc/150?img=60",
+            addedBy: "user_7",
+            createdAt: "2024-03-01",
+          },
+          {
+            id: "s8",
+            name: "Оксана Ткач",
+            category: "masters",
+            description:
+              "Уборка квартир и офисов. Индивидуальный подход, собственные средства. Регулярно или разово.",
+            contact: "@oksana_clean",
+            photo: "https://i.pravatar.cc/150?img=38",
+            addedBy: "user_8",
+            createdAt: "2024-03-05",
+          },
+        ],
+        s = [
+          {
+            id: "e1",
+            title: "Встреча русскоязычного сообщества",
+            description:
+              "Ежемесячная встреча в кафе. Знакомимся, общаемся, делимся опытом жизни в Братиславе. Все желающие приветствуются.",
+            date: "2024-03-20T18:00:00",
+            address: "Caf\xe9 Verne, Obchodn\xe1 18",
+            isPlace: !1,
+            addedBy: "user_14",
+            createdAt: "2024-03-10",
+          },
+          {
+            id: "e2",
+            title: "Русская библиотека",
+            description:
+              "Небольшая библиотека с книгами на русском. Можно взять домой или читать на месте. Работает по субботам.",
+            address: "Štef\xe1nikova 25, каждую субботу 10:00–14:00",
+            isPlace: !0,
+            addedBy: "user_15",
+            createdAt: "2024-02-01",
+          },
+          {
+            id: "e3",
+            title: "Мастер-класс по словацкому языку",
+            description:
+              "Разговорный клуб для начинающих. Ведёт носитель языка, занятия проходят в неформальной обстановке.",
+            date: "2024-03-22T17:30:00",
+            address: "Coworking Hub, Primaci\xe1lne n\xe1mestie 1",
+            isPlace: !1,
+            addedBy: "user_16",
+            createdAt: "2024-03-08",
+          },
+          {
+            id: "e4",
+            title: "Детская площадка у Дуная",
+            description:
+              "Место где собираются русскоязычные семьи с детьми по выходным. Неформально, без записи.",
+            address: "N\xe1brežie arm. gen. L. Svobodu, рядом с фонтаном",
+            isPlace: !0,
+            addedBy: "user_17",
+            createdAt: "2024-02-15",
+          },
+        ],
+        d = [
+          {
+            id: "j1",
+            type: "vacancy",
+            title: "Водитель категории B/C",
+            company: "Slovak Logistics s.r.o.",
+            description:
+              "Развозка товаров по Братиславе и окрестностям. Опыт от 1 года. Оформление официальное, зарплата вовремя.",
+            salary: "1400–1700€",
+            contact: "@slovak_logistics",
+            remote: !1,
+            addedBy: "user_30",
+            createdAt: "2024-03-10",
+          },
+          {
+            id: "j2",
+            type: "vacancy",
+            title: "Разработчик React / Next.js",
+            company: "Стартап (удалённо)",
+            description:
+              "Ищем фронтенд-разработчика в небольшую команду. Проект интересный, стек современный. Оплата в евро.",
+            salary: "2500–3500€",
+            contact: "@dev_hiring_ba",
+            remote: !0,
+            addedBy: "user_31",
+            createdAt: "2024-03-11",
+          },
+          {
+            id: "j3",
+            type: "resume",
+            title: "Ищу работу — бухгалтер / финансист",
+            description:
+              "8 лет опыта, знаю словацкое законодательство, работала в s.r.o. Готова к частичной занятости или полной. Русский, словацкий, английский.",
+            contact: "@irina_fin",
+            remote: !1,
+            addedBy: "user_32",
+            createdAt: "2024-03-12",
+          },
+          {
+            id: "j4",
+            type: "vacancy",
+            title: "Повар / помощник повара",
+            company: "Ресторан в центре",
+            description:
+              "Русская и европейская кухня. Опыт обязателен. Условия обсуждаем лично. Легальное оформление.",
+            salary: "1200–1500€",
+            contact: "+421 902 345 678",
+            remote: !1,
+            addedBy: "user_33",
+            createdAt: "2024-03-13",
+          },
+          {
+            id: "j5",
+            type: "resume",
+            title: "Ищу работу — IT поддержка / системный администратор",
+            description:
+              "5 лет опыта в техподдержке и администрировании Windows/Linux. Есть ВНЖ, готов к работе сразу.",
+            contact: "@sysadmin_ba",
+            remote: !1,
+            addedBy: "user_34",
+            createdAt: "2024-03-14",
+          },
+        ],
+        i = [
+          {
+            id: "b1",
+            name: "Маклер Виктор",
+            type: "landlord",
+            description:
+              "Берёт залог за квартиру, показывает её, потом исчезает. Работает в районе Petržalka. Несколько человек пострадали.",
+            contact: "@viktor_realtor",
+            addedBy: "user_20",
+            createdAt: "2024-03-01",
+          },
+          {
+            id: "b2",
+            name: 'IT стартап "QuickDev s.r.o."',
+            type: "employer",
+            description:
+              'Не выплатили зарплату за 2 месяца троим разработчикам. Обещают "вот-вот" уже полгода. Офис на Bajkalsk\xe1.',
+            addedBy: "user_21",
+            createdAt: "2024-03-05",
+          },
+          {
+            id: "b3",
+            name: "Андрей К.",
+            type: "person",
+            description:
+              "Продаёт технику которой нет — берёт предоплату и пропадает. В объявлениях пишет с разных аккаунтов.",
+            addedBy: "user_22",
+            createdAt: "2024-03-08",
+          },
+          {
+            id: "b4",
+            name: 'Агентство переводов "TransSK"',
+            type: "company",
+            description:
+              "Берут деньги за срочные переводы документов, затягивают на недели. На звонки не отвечают после оплаты.",
+            addedBy: "user_23",
+            createdAt: "2024-03-10",
+          },
+        ];
+    },
+    5023: () => {},
+  }));
